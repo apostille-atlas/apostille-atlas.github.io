@@ -33,3 +33,6 @@ Live: Fingerprints & Apostilles on the FBI and Dept. of State guides (see resear
 ## Deploy (needs one free account, chosen by the owner)
 - **Cloudflare Pages / Netlify / Vercel**: drag and drop or connect the repo; output folder `dist`, build command `python3 build.py`. `netlify.toml` is included.
 - **GitHub Pages**: push to a repo; `.github/workflows/pages.yml` builds and publishes `dist/`.
+
+## IndexNow
+The IndexNow key file lives at  and ships to the site root (). After deploying new pages, resubmit with  (posts all sitemap URLs to api.indexnow.org).

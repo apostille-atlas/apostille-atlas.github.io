@@ -44,6 +44,7 @@ def main():
     global URLS; URLS = []
     if OUT.exists(): shutil.rmtree(OUT)
     OUT.mkdir(); shutil.copy(R / "static/style.css", OUT / "style.css")
+    for k in (R / "static").glob("*.txt"): shutil.copy(k, OUT / k.name)  # IndexNow key file
     states = [s for s in json.loads((R / "data/states.json").read_text()) if not s.get("draft") and s.get("sources")]
     states.sort(key=lambda s: s["name"])
     for s in states:
