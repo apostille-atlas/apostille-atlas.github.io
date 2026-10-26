@@ -35,4 +35,4 @@ Live: Fingerprints & Apostilles on the FBI and Dept. of State guides (see resear
 - **GitHub Pages**: push to a repo; `.github/workflows/pages.yml` builds and publishes `dist/`.
 
 ## IndexNow
-The IndexNow key file lives at  and ships to the site root (). After deploying new pages, resubmit with  (posts all sitemap URLs to api.indexnow.org).
+The IndexNow key file lives at `static/26ae579e5fc66c2b8c75f4af909903a4.txt` and ships to the site root (`/26ae579e5fc66c2b8c75f4af909903a4.txt`). After deploying new pages, resubmit with `python3 scripts/indexnow.py` (posts all sitemap URLs to api.indexnow.org).
