@@ -20,11 +20,14 @@ if kind == "state":
     if any(s["slug"] == slug for s in data): sys.exit(f"{slug} already exists")
     data.append({"slug": slug, "name": name, "abbr": "XX", "draft": True, "authority": "TODO", "fee": 0, "fee_note": "TODO",
                  "mail": True, "walk_in": False, "mail_time": "TODO (only if the office publishes it)", "walkin_time": "TODO",
-                 "payment": "TODO", "addresses": ["TODO"], "phone": "", "what_to_send": ["TODO"], "tips": ["TODO"], "sources": []})
+                 "payment": "TODO", "addresses": ["TODO"], "phone": "", "what_to_send": ["TODO"], "tips": ["TODO"], "sources": [],
+                 "summary": "TODO 2-3 sentence direct answer, official facts only", "last_reviewed": "TODO YYYY-MM-DD"})
     p.write_text(json.dumps(data, indent=1)); print(f"Added draft state '{name}' to data/states.json. Fill every TODO, add sources, delete \"draft\".")
 else:
     if kind == "country": slug = "apostille-for-" + slug
     f = R / "content/guides" / f"{slug}.html"
     if f.exists(): sys.exit(f"{f} exists")
-    meta = {"title": f"TODO title: {name}", "description": "TODO 150-char description", "h1": name, "category": kind.strip().title(), "draft": True, "sources": []}
+    meta = {"title": f"TODO title: {name}", "description": "TODO 150-char description", "h1": name, "category": kind.strip().title(), "draft": True, "sources": [],
+            "summary": "TODO 2-3 sentence direct answer, official facts only",
+            "faqs": [["TODO real question from research/questions.md", "TODO answer citing the official source"]], "last_reviewed": "TODO YYYY-MM-DD"}
     f.write_text(f"<!--{json.dumps(meta)}-->\n<p class=\"lede\">TODO</p>\n"); print("Created draft", f)

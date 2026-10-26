@@ -33,7 +33,9 @@
     "California SOS: Request an Apostille",
     "https://www.sos.ca.gov/notary/authentication"
    ]
-  ]
+  ],
+  "summary": "California apostilles are issued by the Secretary of State's Notary Public Section for $20 per apostille. You can mail your request to Sacramento, or get same-day service in person in Sacramento or Los Angeles, where a $6 special handling fee per official's signature also applies. Mail processing times vary, and the office posts its current processing dates online.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "new-york",
@@ -71,7 +73,9 @@
     "NY DOS: Obtain an Apostille/Certificate of Authentication",
     "https://dos.ny.gov/obtain-apostillecertificate-authentication"
    ]
-  ]
+  ],
+  "summary": "New York apostilles come from the Department of State's Apostille and Authentication Unit and cost $10 per document. Locally issued vital records and all notarized documents must be certified by the County Clerk first. Same-day walk-in service is offered in New York City, Albany, Binghamton, Buffalo and Utica, for up to 10 documents.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "texas",
@@ -120,7 +124,9 @@
     "Texas SOS: Authentication FAQs",
     "https://www.sos.state.tx.us/authfaqs.shtml"
    ]
-  ]
+  ],
+  "summary": "Texas apostilles are issued by the Secretary of State's Authentications Unit for $15 per document. Mailed requests can take up to two weeks from receipt, while in-person service is same-day for up to 10 documents (walk-in Monday and Friday, appointment Tuesday to Thursday). Certified records must have been issued within the past five years.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "florida",
@@ -153,7 +159,9 @@
     "Florida DOS: Apostilles & Notarial Certifications",
     "https://dos.fl.gov/sunbiz/other-services/apostille-notarial-certification/"
    ]
-  ]
+  ],
+  "summary": "Florida apostilles are issued by the Department of State, Division of Corporations, for $10 per document, or $20 for documents certified by a county Clerk of the Court. You mail the original with the request form and a return envelope. The official page does not publish a processing time.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "illinois",
@@ -187,7 +195,9 @@
     "Illinois SOS: Apostilles and Certifications",
     "https://www.ilsos.gov/departments/index/apostilles.html"
    ]
-  ]
+  ],
+  "summary": "Illinois apostilles come from the Secretary of State's Index Department and cost $2 each. Mail requests take 7 to 14 business days, and walk-in service is available in Springfield, Chicago and select DMV+ locations. Illinois cannot apostille FBI background checks or other federal documents.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "pennsylvania",
@@ -221,7 +231,9 @@
     "PA DOS: Get Document Certifications & Apostilles",
     "https://www.pa.gov/services/dos/get-document-certifications---apostilles"
    ]
-  ]
+  ],
+  "summary": "Pennsylvania apostilles are issued by the Department of State's Bureau of Notaries, Commissions and Legislation for $15 per document. Mail requests take 5 to 7 business days after receipt, not counting mailing time. Walk-ins are processed while you wait, Monday to Friday.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "north-carolina",
@@ -260,7 +272,9 @@
     "NC SOS: Process for Obtaining Authentication Certificates",
     "https://sosnc.gov/divisions/authentications/Obtaining_Auth_Certificate"
    ]
-  ]
+  ],
+  "summary": "North Carolina apostilles are issued by the Secretary of State's Authentications Division for $10 per document. Diplomas and transcripts from North Carolina schools must be notarized by a North Carolina notary first. Current turnaround is posted on the office's official Turn Around Times page.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "georgia",
@@ -293,7 +307,9 @@
     "GSCCCA: Apostille General Information",
     "https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information"
    ]
-  ]
+  ],
+  "summary": "In Georgia, apostilles come from the GSCCCA (Superior Court Clerks' Cooperative Authority), not the Secretary of State, and cost $3 each. Mail requests are normally processed in one to two business days, and walk-in requests typically take under twenty minutes.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "new-jersey",
@@ -330,7 +346,9 @@
     "NJ DORES: Registry Fee Schedules",
     "https://www.nj.gov/treasury/revenue/fees.shtml"
    ]
-  ]
+  ],
+  "summary": "New Jersey apostilles are handled by the Treasury's Division of Revenue and Enterprise Services (DORES) for $25 per certificate, or $5 in connection with an adoption. You start with the state's online Apostille/Certification Service, then send or drop off the documents with the confirmation page.",
+  "last_reviewed": "2026-10-26"
  },
  {
   "slug": "arizona",
@@ -364,6 +382,8 @@
     "Arizona SOS: Authentication",
     "https://azsos.gov/business/authentication"
    ]
-  ]
+  ],
+  "summary": "Arizona apostilles are issued by the Secretary of State's Business Services Division for $3 per document. Mail requests take 10 to 20 business days. In-person service adds a $25 expedite fee, and from November 2, 2026 it is by appointment only.",
+  "last_reviewed": "2026-10-26"
  }
 ]
