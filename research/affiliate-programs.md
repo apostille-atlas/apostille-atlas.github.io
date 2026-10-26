@@ -12,4 +12,18 @@
 | Translayte: affiliate | Certified translations | https://translayte.com/partner-with-us/affiliate | 10% per referred order |
 
 Unverified, so I haven't contacted these yet: Notaron (search snippet: 15%, 30-day window) and The Spanish Group (no rate published).
-All programs require the site owner to apply with their own details. **No applications were submitted.**
+## Application status (updated 2026-10-26)
+No passwords or secrets are stored in this repo. Logins live in the mangocapital@mail.grokbot.com inbox / the vault.
+
+| Program | Status | Notes |
+|---|---|---|
+| Fingerprints & Apostilles | **APPROVED, live** | Referral link: https://fingerprintsandapostilles.com?fpr=apostille-f818cb. $20 per referred customer, $25 after 5, $30 after 15 (FBI background check apostille orders). Live on /guides/fbi-background-check-apostille/ and /guides/us-department-of-state/ |
+| Apostille USA | Registered, tracking link not yet available | Partner dashboard: https://apostille-usa.com/affiliate-area/ (login details are in the mangocapital@mail.grokbot.com inbox). Placeholders stay until a tracking link is issued |
+| TuApostilla | Pending approval | |
+| Translayte | Inquiry sent | Reply expected within 3 working days |
+| Florida Document Specialists | RETIRED | Program no longer offered |
+| RushTranslate | Not applied | Application needs a PayPal email |
+| OneNotary | Not applied | Application needs a street address |
+| NotaryLive | Not applied | Requires a general account sign-up |
+| Proof (Notarize) | Not applied | |
+

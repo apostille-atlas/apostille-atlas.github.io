@@ -28,7 +28,7 @@ A static directory of U.S. apostille offices (state + federal) with fees, addres
 9. Monthly: re-check fees and addresses on existing pages, and update `last_verified` in `config.json`.
 
 ## Affiliate links
-Placeholders are `href="#affiliate-placeholder"` with `data-affiliate="..."` and `rel="sponsored nofollow"`. Once a program approves you, replace them with your tracking link (search for `affiliate-placeholder`) and update `/disclosure/` ("Current status").
+Live: Fingerprints & Apostilles on the FBI and Dept. of State guides (see research/affiliate-programs.md). Other placeholders are `href="#affiliate-placeholder"` with `data-affiliate="..."` and `rel="sponsored nofollow"`. Once a program approves you, replace them with your tracking link (search for `affiliate-placeholder`) and update `/disclosure/` ("Current status").
 
 ## Deploy (needs one free account, chosen by the owner)
 - **Cloudflare Pages / Netlify / Vercel**: drag and drop or connect the repo; output folder `dist`, build command `python3 build.py`. `netlify.toml` is included.
