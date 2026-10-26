@@ -1,0 +1,369 @@
+[
+ {
+  "slug": "california",
+  "name": "California",
+  "abbr": "CA",
+  "authority": "California Secretary of State, Notary Public Section",
+  "fee": 20,
+  "fee_note": "$20.00 per apostille. In person, a $6.00 special handling fee also applies for each different public official's signature authenticated.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Varies. The office publishes a Current Processing Times page; mail requests are processed in the order received and cannot be pulled for expedited service.",
+  "walkin_time": "Same-day service at the Sacramento and Los Angeles offices and at Apostille Pop-Up Shops.",
+  "payment": "Mail: check or money order payable to Secretary of State. Sacramento counter: Visa/Mastercard, check, money order, or cash. Los Angeles counter: card, check, or money order (no cash).",
+  "addresses": [
+   "USPS mail: Notary Public Section, P.O. Box 942877, Sacramento, CA 94277-0001",
+   "FedEx/UPS/DHL: Notary Public Section, 1500 11th Street, 2nd Floor, Sacramento, CA 95814",
+   "In person (Sacramento): 1500 11th Street, 3rd Floor, Sacramento, CA 95814",
+   "In person (Los Angeles): 300 South Spring Street, Room 12513, Los Angeles, CA 90013 (temporarily on the 1st floor, suite 1215, due to an elevator outage)"
+  ],
+  "phone": "(916) 653-6814",
+  "what_to_send": [
+   "The original document signed by a California public official, or an original notarized/certified document (no photocopies)",
+   "A cover sheet naming the country where the document will be used (the office provides an Apostille Mail Request Cover Sheet)",
+   "Check or money order for $20.00 per apostille",
+   "A self-addressed return envelope (prepaid postage if you want tracking; otherwise it returns by regular USPS mail)"
+  ],
+  "tips": [
+   "Pop-Up Shops bring in-person apostille service to county offices around the state; check the official Pop-Up Shop page for dates.",
+   "If you are on a deadline, the office itself points you to same-day in-person service rather than mail."
+  ],
+  "sources": [
+   [
+    "California SOS: Request an Apostille",
+    "https://www.sos.ca.gov/notary/authentication"
+   ]
+  ]
+ },
+ {
+  "slug": "new-york",
+  "name": "New York",
+  "abbr": "NY",
+  "authority": "New York Department of State, Division of Licensing Services, Apostille and Authentication Unit",
+  "fee": 10,
+  "fee_note": "$10 per document.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Not published on the official page. Drop-off requests (Albany and NYC) are processed by receipt date, not as priority.",
+  "walkin_time": "Same-day walk-in service in New York City, Albany, Binghamton, Buffalo and Utica; limited to 10 documents per customer.",
+  "payment": "Fee paid with the request form; the current form requires a CVV for all credit card payments.",
+  "addresses": [
+   "Mail: New York Department of State, Division of Licensing Services, Apostille and Authentication Unit, PO Box 22001, Albany, NY 12201-2001",
+   "Express carriers / Albany walk-in: 1 Commerce Plaza, 99 Washington Avenue, 6th Floor, Albany, NY 12231",
+   "NYC walk-in: 123 William St., 2nd Fl., New York, NY 10038-3804",
+   "Also walk-in: Binghamton (44 Hawley St, Room 1506), Buffalo (295 Main St, 8th Fl, Suite 821), Utica (207 Genesee St)"
+  ],
+  "phone": "(518) 474-4429",
+  "what_to_send": [
+   "The document, already certified by a New York State official or County Clerk where required",
+   "The Apostille/Certificate of Authentication Request Form (incomplete forms are returned)",
+   "$10 per document",
+   "Optional: a prepaid overnight shipping label (labels that bill your credit card or 'bill sender' are not accepted); otherwise documents return by first-class mail"
+  ],
+  "tips": [
+   "Birth, death and marriage certificates issued by a local or county official must first be certified by the County Clerk of the county where issued. Records issued by the NYS Department of Health with the Director of Vital Statistics / State Registrar signature do not need County Clerk certification.",
+   "For NYC birth and death certificates, request a 'Letter of Exemplification' when ordering the record.",
+   "Notarized documents must first be certified by the County Clerk of the county where the notary is commissioned.",
+   "FBI background checks go to the U.S. Department of State, not New York."
+  ],
+  "sources": [
+   [
+    "NY DOS: Obtain an Apostille/Certificate of Authentication",
+    "https://dos.ny.gov/obtain-apostillecertificate-authentication"
+   ]
+  ]
+ },
+ {
+  "slug": "texas",
+  "name": "Texas",
+  "abbr": "TX",
+  "authority": "Office of the Texas Secretary of State, Authentications Unit",
+  "fee": 15,
+  "fee_note": "$15 per document (not per page). Adoption proceedings: $10 per document, total not to exceed $100 per child (use Form 2103).",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Up to two weeks from the day of receipt, per the official page; actual times vary with volume.",
+  "walkin_time": "Same-day service, max 10 documents. Walk-in Monday and Friday only; appointment required Tuesday\u2013Thursday (fee must be paid 72 business hours before an appointment). Drop box for more than 10 documents: about 72 hours.",
+  "payment": "Mail: check or money order drawn on a U.S. bank and payable to the Office of the Texas Secretary of State, or a funded SOS Client Account. In person: check, money order, credit/debit card, or cash (exact change only).",
+  "addresses": [
+   "Mail: The Office of the Texas Secretary of State, Authentications Unit, P.O. Box 13550, Austin, TX 78711-3550",
+   "In person: Authentications Unit, 400 West 15th Street, Austin, TX 78701 (8:00am\u20135:00pm, Mon\u2013Fri)"
+  ],
+  "phone": "",
+  "what_to_send": [
+   "Completed Form 2102 \u2013 Request for Universal Apostille",
+   "The original Texas-notarized document or certified copy of the public record",
+   "Payment ($15 per document)",
+   "A prepaid, pre-addressed return envelope or printed carrier label (no 'Bill Sender' or handwritten air bills)"
+  ],
+  "tips": [
+   "Certified records must have been issued within the past five years to be eligible.",
+   "You must name the destination country on Form 2102. Texas does not apostille documents for use within the U.S. or its territories.",
+   "Documents using the term 'Notario Publico' are rejected.",
+   "Online (RON) notarizations can be apostilled if submitted with the notary's ledger details and a proper online-notarization certificate.",
+   "Mailed requests are not pulled for walk-in service; they are processed in order of receipt."
+  ],
+  "sources": [
+   [
+    "Texas SOS: Apostille/Authentication of Documents",
+    "https://www.sos.state.tx.us/authinfo.shtml"
+   ],
+   [
+    "Texas SOS: Request a Universal Apostille",
+    "https://www.sos.state.tx.us/statdoc/request.shtml"
+   ],
+   [
+    "Texas SOS: Form 2102 (PDF)",
+    "https://www.sos.state.tx.us/statdoc/forms/2102new.pdf"
+   ],
+   [
+    "Texas SOS: Authentication FAQs",
+    "https://www.sos.state.tx.us/authfaqs.shtml"
+   ]
+  ]
+ },
+ {
+  "slug": "florida",
+  "name": "Florida",
+  "abbr": "FL",
+  "authority": "Florida Department of State, Division of Corporations (Apostille Section)",
+  "fee": 10,
+  "fee_note": "$10.00 per document; or $20.00 per document for documents certified by any Florida county Clerk of the Court.",
+  "mail": true,
+  "walk_in": false,
+  "mail_time": "Not published on the official page.",
+  "walkin_time": "Not described on the official page; requests are mailed.",
+  "payment": "Check or money order payable to the Florida Department of State, U.S. funds from a U.S. bank. No cash or credit cards.",
+  "addresses": [
+   "Division of Corporations, 2415 N. Monroe Street, Suite 810, Tallahassee, FL 32303"
+  ],
+  "phone": "",
+  "what_to_send": [
+   "The Apostille and Notarial Certificate Request Form",
+   "The original certified copy or original notarized document (no photocopies)",
+   "A self-addressed stamped envelope, or a prepaid air bill with your name as both sender and recipient",
+   "Payment"
+  ],
+  "tips": [
+   "Accepted Florida documents include birth and death certificates, circuit court documents, county clerk documents, marriage and divorce certificates, school documents and Florida-notarized documents (see the full list on the official page).",
+   "Federal documents go to the U.S. Department of State; other states' documents go to that state."
+  ],
+  "sources": [
+   [
+    "Florida DOS: Apostilles & Notarial Certifications",
+    "https://dos.fl.gov/sunbiz/other-services/apostille-notarial-certification/"
+   ]
+  ]
+ },
+ {
+  "slug": "illinois",
+  "name": "Illinois",
+  "abbr": "IL",
+  "authority": "Illinois Secretary of State, Index Department",
+  "fee": 2,
+  "fee_note": "$2 for each apostille or certificate of authority; each document needs its own.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "7 to 14 business days.",
+  "walkin_time": "Available in Springfield, Chicago and select DMV+ locations.",
+  "payment": "Check or money order payable to the Illinois Secretary of State (confirm on the official page).",
+  "addresses": [
+   "Mail / Chicago office: Illinois Secretary of State, Index Department, 160 N. LaSalle Street, Suite 100, Chicago, IL 60601",
+   "Springfield office: 2701 S. Dirksen Parkway, Springfield, IL 62723",
+   "Select DMV+ locations: Chicago Flagship (125 W. Monroe), Aurora, Champaign, Lake Zurich, Melrose Park"
+  ],
+  "phone": "Chicago 312-814-8218; Springfield 217-782-7017",
+  "what_to_send": [
+   "Completed application from the official page",
+   "Original documents certified by a government official or notarized by an Illinois notary",
+   "Payment ($2 per document)",
+   "Self-addressed stamped return envelope"
+  ],
+  "tips": [
+   "Illinois cannot authenticate FBI background checks or federal documents. Those go to the U.S. Department of State."
+  ],
+  "sources": [
+   [
+    "Illinois SOS: Apostilles and Certifications",
+    "https://www.ilsos.gov/departments/index/apostilles.html"
+   ]
+  ]
+ },
+ {
+  "slug": "pennsylvania",
+  "name": "Pennsylvania",
+  "abbr": "PA",
+  "authority": "Pennsylvania Department of State, Bureau of Notaries, Commissions and Legislation",
+  "fee": 15,
+  "fee_note": "$15 per document (not per page).",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "5 to 7 business days after receipt (not including mailing time).",
+  "walkin_time": "Processed while you wait; walk-ins 8 a.m.\u20134:30 p.m. Mon\u2013Fri. The office asks you to arrive by 4 p.m., and notes the public entrance to the North Office Building closes at 3 p.m.",
+  "payment": "Personal check, money order or cashier's check payable to 'Commonwealth of Pennsylvania' (U.S. institution, or U.S. dollars with routing number). No cash by mail.",
+  "addresses": [
+   "North Office Building, 401 North Street, Room 201, Harrisburg, PA 17120"
+  ],
+  "phone": "717-787-5280 (email ra-certifications@pa.gov)",
+  "what_to_send": [
+   "Original documents signed by the proper Pennsylvania official with their seal",
+   "A cover letter or the Request for Legalization of Documents form naming the destination country and your contact details",
+   "$15 per document",
+   "A self-addressed stamped envelope, or a prepaid UPS air bill (FedEx and DHL are not accepted for return)"
+  ],
+  "tips": [
+   "County documents signed by an assistant or deputy clerk are not accepted.",
+   "Marriage certificates must be signed by the register of wills or clerk of the orphans' court.",
+   "Death certificates must be signed by the state registrar, not a local registrar."
+  ],
+  "sources": [
+   [
+    "PA DOS: Get Document Certifications & Apostilles",
+    "https://www.pa.gov/services/dos/get-document-certifications---apostilles"
+   ]
+  ]
+ },
+ {
+  "slug": "north-carolina",
+  "name": "North Carolina",
+  "abbr": "NC",
+  "authority": "North Carolina Secretary of State, Authentications Division",
+  "fee": 10,
+  "fee_note": "$10.00 per document. Duplicate originals: $10 each (adoption duplicates ordered at the same time: $5). The $10 fee may be refunded on request if a document is rejected and not processed.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "See the official 'Turn Around Times' page. Documented emergencies may qualify for expedited processing.",
+  "walkin_time": "In-person delivery is accepted; see the official 'Getting Documents To and From Us' schedule.",
+  "payment": "Check or money order payable to 'North Carolina Secretary of State'.",
+  "addresses": [
+   "Address listed at the bottom of the official Authentications home page"
+  ],
+  "phone": "919-814-5400",
+  "what_to_send": [
+   "Cover letter",
+   "Check or money order",
+   "Original document(s) with all certifications attached",
+   "A prepaid return envelope, or a courier label paid online with a bar code (see the official page for courier rules)"
+  ],
+  "tips": [
+   "Diplomas and transcripts from NC schools must be notarized by a North Carolina notary; a registrar's school seal alone is not acceptable.",
+   "Documents from NC Vital Records, Register of Deeds, Clerk of Superior Court and several state agencies do not need notarization.",
+   "North Carolina agency documents must be certified since April 1, 2000.",
+   "Non-English documents need a certified or notarized English translation."
+  ],
+  "sources": [
+   [
+    "NC SOS: Authentications fees",
+    "https://www.sosnc.gov/fees/by_title/_authentications"
+   ],
+   [
+    "NC SOS: Process for Obtaining Authentication Certificates",
+    "https://sosnc.gov/divisions/authentications/Obtaining_Auth_Certificate"
+   ]
+  ]
+ },
+ {
+  "slug": "georgia",
+  "name": "Georgia",
+  "abbr": "GA",
+  "authority": "Georgia Superior Court Clerks' Cooperative Authority (GSCCCA)",
+  "fee": 3,
+  "fee_note": "$3.00 per apostille.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Normally one to two business days.",
+  "walkin_time": "Typically under twenty minutes; 9:00 a.m.\u20134:00 p.m. Mon\u2013Fri, no appointment.",
+  "payment": "Check or money order payable to GSCCCA, or credit card through the GSCCCA Credit Card Pre-Payment Voucher System. See the official page for walk-in payment details.",
+  "addresses": [
+   "GSCCCA, Attn: Notary Division, 1875 Century Blvd., Ste. 100, Atlanta, GA 30345"
+  ],
+  "phone": "404-327-6023 or 800-304-5175 (notary@gsccca.org)",
+  "what_to_send": [
+   "Original documents (certified copies of public records, or properly notarized Georgia documents)",
+   "A cover/request letter naming the destination country and your contact info",
+   "Payment",
+   "A prepaid self-addressed envelope or computer-generated FedEx/UPS air bill (no handwritten air bills)"
+  ],
+  "tips": [
+   "In Georgia, apostilles come from the GSCCCA, not the Secretary of State. The Secretary of State issues the 'Great Seal Certification' for non-Hague countries (404-656-2871).",
+   "For documents issued before 2000, the GSCCCA recommends getting a new certified copy."
+  ],
+  "sources": [
+   [
+    "GSCCCA: Apostille General Information",
+    "https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information"
+   ]
+  ]
+ },
+ {
+  "slug": "new-jersey",
+  "name": "New Jersey",
+  "abbr": "NJ",
+  "authority": "NJ Department of the Treasury, Division of Revenue and Enterprise Services (DORES)",
+  "fee": 25,
+  "fee_note": "$25 per certificate (apostille); $5 per certificate when obtained in connection with the adoption of a child. A convenience fee may apply to online payment.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Shown inside the state's online Apostille/Certification Service.",
+  "walkin_time": "You can drop off documents with the confirmation page from the online service.",
+  "payment": "Order and pay online (credit card or e-check) through the state's online Apostille/Certification Service, then mail or drop off the documents with the confirmation page.",
+  "addresses": [
+   "Division of Revenue and Enterprise Services, PO Box 628, Trenton, NJ 08625-0628 (confirm the address shown on your online order confirmation)"
+  ],
+  "phone": "",
+  "what_to_send": [
+   "The original or certified copy bearing the original notarization or official certification",
+   "The confirmation page from the online Apostille/Certification Service",
+   "For notarized documents: the NJ notary's original inked signature and the signer's original inked signature"
+  ],
+  "tips": [
+   "Vital records from 1923 onward come from the NJ Department of Health; pre-1923 records from the NJ State Archives.",
+   "Attaching a notarized translation to a vital record means two apostilles and two fees.",
+   "New Jersey cannot apostille other states' vital records."
+  ],
+  "sources": [
+   [
+    "NJ DORES: Apostilles and Notary Certifications",
+    "https://www.nj.gov/treasury/revenue/apostilles.shtml"
+   ],
+   [
+    "NJ DORES: Registry Fee Schedules",
+    "https://www.nj.gov/treasury/revenue/fees.shtml"
+   ]
+  ]
+ },
+ {
+  "slug": "arizona",
+  "name": "Arizona",
+  "abbr": "AZ",
+  "authority": "Arizona Secretary of State, Business Services Division",
+  "fee": 3,
+  "fee_note": "$3 per document. In-person expedite fee: $25 (limit 6 documents). Documents going to Puerto Rico or a U.S. territory need an $18 notarial capacity certificate.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "10\u201320 business days by mail.",
+  "walkin_time": "In-person with $25 expedite fee. Effective November 2, 2026, Business Services operates by appointment only (book online).",
+  "payment": "See the official page for accepted payment methods.",
+  "addresses": [
+   "Filing by mail: Secretary of State, Attn: Apostille Dept., 1700 W. Washington Street, Fl. 7, Phoenix, AZ 85007-2808",
+   "Tucson office: 400 West Congress, Suite 221, Tucson, AZ 85701"
+  ],
+  "phone": "602-542-6187",
+  "what_to_send": [
+   "Original notarized or certified document (no photocopies)",
+   "The Apostille request form from the official page",
+   "$3 per document",
+   "Return postage"
+  ],
+  "tips": [
+   "Arizona does not issue electronic apostilles.",
+   "Documents recorded by another state must go to that state."
+  ],
+  "sources": [
+   [
+    "Arizona SOS: Authentication",
+    "https://azsos.gov/business/authentication"
+   ]
+  ]
+ }
+]
