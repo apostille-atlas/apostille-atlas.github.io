@@ -2,6 +2,9 @@
 Mark `[x]` when a page is published. Every page needs an official source before it ships.
 Order = real demand: how many real questions in `research/questions.md` (Qn) each page answers, plus the high-demand cases in `research/traffic-plan.md` (FBI checks and diplomas for teaching or studying abroad, Italian citizenship by descent, marriage abroad). No search-volume figures are claimed. Re-rank as GoatCounter / Search Console data arrives.
 
+## Extras (published outside the nightly slot)
+- [x] guide: Apostille services compared: DIY vs paid service (2026-10-27; Q40, Q41, Q44). Per-state table generated from data/states.json via `<!--DIY_TABLE-->`; service prices copied from each service's own page on 2026-10-27, re-verify when editing.
+
 ## Next up (buyer intent first, then highest demand)
 Reordered 2026-10-26: pages for people likely to need a paid service (cost, turnaround, "fast", deadline, from abroad) come first, but only where official data we can verify exists. Each needs its official source before it ships; never invent fees or timelines. **[data ready]** = every fact is already in `data/states.json` or on a cited official page on the site. **[needs official data]** = must be verified on the official pages listed before writing.
 - [ ] guide: Fastest way to get an FBI background check apostille (rush/deadline intent: DoS mail 5 weeks, walk-in drop-off 7 business days, same-day only for life-or-death emergencies; DIY vs service) [data ready: travel.state.gov request-services page; partner prices only as published on their own sites]
