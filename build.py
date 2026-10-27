@@ -18,9 +18,9 @@ AFF_JS = ("<script>document.addEventListener('click',function(e){var a=e.target.
 AUSA_SRC = "https://apostille-usa.com/partner-registration/"
 FA_SRC = "https://fingerprintsandapostilles.com/"
 AUSA_ORIG = "https://apstl.us/6YBeOr"; AUSA_FED = "https://apstl.us/8jTbZ5"; FA_URL = "https://fingerprintsandapostilles.com?fpr=apostille-f818cb"
-DISC = 'Disclosure: if you order through a link marked "(affiliate link)", we may earn a commission at no extra cost to you. See our <a href="/disclosure/">affiliate disclosure</a>.'
+DISC = 'Disclosure: if you order through a link marked "(paid link)", we may earn a commission at no extra cost to you. See our <a href="/disclosure/">affiliate disclosure</a>.'
 def alink(url, partner, slug, label):
-    return f'<a href="{url}" rel="sponsored nofollow noopener" data-aff="{partner}-{slug}">{label}</a> (affiliate link)'
+    return f'<a href="{url}" rel="sponsored nofollow noopener" data-aff="{partner}-{slug}">{label}</a> (paid link)'
 def aff_box(slug, office, fee, src, federal=False):
     """'Don't want to do it yourself?' box: DIY with the official office is cheaper; a service is optional."""
     why = "A paid service can be worth it if you are mailing from abroad, are up against a deadline, also need a translation, or don't have time to handle it."
@@ -139,7 +139,7 @@ def page(path, title, desc, body, h1=None, sources=None, schema=None, summary=No
 <meta name="robots" content="{'noindex' if noindex else 'index,follow,max-snippet:-1,max-image-preview:large'}">{'' if noindex else f'<link rel="canonical" href="{url}">'}
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:site_name" content="{NAME}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta property="og:type" content="{'article' if article and h1 else 'website'}"><meta property="og:image" content="{OG_IMG}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{NAME}: U.S. apostille offices by state"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{OG_IMG}">{f'<meta property="article:modified_time" content="{rv}">' if article and h1 else ''}
 <style>{CSS}</style>{ld}</head><body>
-<header><div class="wrap"><a class="brand" href="/">{NAME}</a><nav><a href="/directory/">Directory</a><a href="/faq/">FAQ</a><a href="/guides/">Guides</a><a href="/guides/state-or-federal-which-office/">Which office?</a><a href="/guides/hague-apostille-countries/">Hague countries</a><a href="/guides/apostille-services-compared/">DIY vs service</a><a href="/about/">About</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="/">{NAME}</a><nav><a href="/directory/">Directory</a><a href="/apostille-fees-by-state/">Fees &amp; times</a><a href="/faq/">FAQ</a><a href="/guides/">Guides</a><a href="/guides/state-or-federal-which-office/">Which office?</a><a href="/guides/hague-apostille-countries/">Hague countries</a><a href="/guides/apostille-services-compared/">DIY vs service</a><a href="/about/">About</a></nav></div></header>
 <main class="wrap">{top}{body}{faq_html(faqs)}{rel}{src}</main>
 <footer><div class="wrap">{NAME} is an independent guide, not a government website, and not legal advice. <a href="/disclosure/">Affiliate disclosure</a> · <a href="/about/">About</a> · <a href="/faq/">FAQ</a> · <a href="/sitemap.xml">Sitemap</a></div></footer>
 {GOAT}{AFF_JS if 'data-aff=' in body else ''}
@@ -180,10 +180,81 @@ def state_faqs(s):
             [f"Can {n} apostille my FBI background check?", f'No. FBI background checks are federal documents, so the <a href="/guides/us-department-of-state/">U.S. Department of State</a> apostilles them, not {e(n)}.'],
             [f"Can {n} apostille a document from another state?", "No. A state only apostilles documents issued or notarized in that state. Send a document from another state to that state's office (see the <a href=\"/directory/\">directory</a>)."]]
 
+# Which listed official source backs each value on the fees & times data page, for states that list more than one source.
+# Index into that state's "sources" list (checked against the official pages on 2026-10-27). States not listed here have
+# a single source, which backs every value. A list of indexes means the value is backed by those sources together.
+SRC_FOR = {"texas": {"fee": [3], "mail": [1], "walk": [1]},          # fee: Authentication FAQs; times/walk-in: Request a Universal Apostille
+           "north-carolina": {"fee": [0], "mail": [1], "walk": [1]},  # fee: Authentications fees; process page links Turn Around Times
+           "new-jersey": {"fee": [1], "mail": [0], "walk": [0]},      # fee: Registry Fee Schedules; online service + drop-off: apostilles page
+           "ohio": {"fee": [0, 1, 3], "mail": [0, 1], "walk": [2]}}   # walk-in: Form 8003 (per data note); others: listed Ohio pages
+DATA_PATH = "/apostille-fees-by-state/"; CSV_NAME = "apostille-fees-by-state.csv"
+def srcs(s, field):
+    idx = SRC_FOR.get(s["slug"], {}).get(field) or list(range(len(s["sources"])))
+    return [s["sources"][i] for i in idx]
+def data_page(states):
+    """Original cross-state dataset: every value comes from data/states.json and links to the official source it came from."""
+    import csv, io
+    cite = lambda s, f: " ".join(f'<a href="{e(u)}" rel="noopener" title="{e(t)}">[source]</a>' for t, u in srcs(s, f))
+    rows = "".join(
+        f'<tr><td><a href="/states/{s["slug"]}/">{e(s["name"])}</a></td><td>{e(s["authority"])}</td>'
+        f'<td><strong>${s["fee"]}</strong> {cite(s, "fee")}<br><small>{e(s["fee_note"])}</small></td>'
+        f'<td>{e(s["mail_time"])} {cite(s, "mail")}</td>'
+        f'<td>{"Yes" if s["walk_in"] else "Not listed"}: {e(s["walkin_time"])} {cite(s, "walk")}</td>'
+        f'<td><time datetime="{s["last_reviewed"]}">{s["last_reviewed"]}</time></td></tr>' for s in states)
+    buf = io.StringIO(); w = csv.writer(buf, lineterminator="\n")
+    w.writerow(["state", "abbr", "issuing_office", "fee_usd_per_document", "fee_details", "fee_source_url", "mail_available",
+                "mail_processing_time", "mail_time_source_url", "in_person_available", "in_person_details", "in_person_source_url",
+                "last_reviewed", "state_page_url"])
+    for s in states:
+        j = lambda f: " | ".join(u for t, u in srcs(s, f))
+        w.writerow([s["name"], s["abbr"], s["authority"], s["fee"], s["fee_note"], j("fee"), "yes" if s["mail"] else "not listed",
+                    s["mail_time"], j("mail"), "yes" if s["walk_in"] else "not listed", s["walkin_time"], j("walk"),
+                    s["last_reviewed"], f'{SITE}/states/{s["slug"]}/'])
+    (OUT / CSV_NAME).write_text(buf.getvalue())
+    fees = sorted(states, key=lambda s: s["fee"]); lo, hi = fees[0], fees[-1]
+    newest = max(s["last_reviewed"] for s in states); oldest = min(s["last_reviewed"] for s in states)
+    walk = sum(1 for s in states if s["walk_in"])
+    body = (f'<p class="lede">Official apostille fees, mail processing times and in-person options for the {len(states)} U.S. states we cover so far, '
+            'side by side. Every value is copied from the state\'s own official page, and the [source] link next to it opens that page.</p>'
+            f'<p><a href="/{CSV_NAME}" download><strong>Download the data (CSV) →</strong></a> · Free to reuse; please link to this page as the source.</p>'
+            '<h2>Apostille fee, processing time and in-person service by state</h2>'
+            '<div style="overflow-x:auto"><table class="data"><thead><tr><th>State</th><th>Issuing office</th><th>Official fee per document</th>'
+            f'<th>By mail: processing time</th><th>In person</th><th>Last checked</th></tr></thead><tbody>{rows}</tbody></table></div>'
+            '<h2>How was this data collected?</h2><ul>'
+            '<li>Each value comes from the state\'s official apostille page, fee schedule, FAQ or request form, linked next to the value and on the state\'s own page.</li>'
+            '<li>Where an office does not publish a figure, such as a mail processing time, the table says so instead of estimating one.</li>'
+            '<li>"Last checked" is the date the state\'s values were last compared with the official source. Fees and times change, so confirm with the office before sending anything.</li>'
+            '<li>Fees are per document, in U.S. dollars, and exclude your own postage. Extra fees (adoption rates, in-person handling or expedite fees) are in the fee details.</li>'
+            '<li>Only states we have fully checked are included. More are added over time.</li></ul>'
+            '<p>Federal documents, such as FBI background checks, are not apostilled by any state: see the <a href="/guides/us-department-of-state/">U.S. Department of State guide</a>. '
+            'To filter offices by fee or walk-in, use the <a href="/directory/">directory</a>. To compare doing it yourself with a paid service, see <a href="/guides/apostille-services-compared/">DIY vs paid apostille services</a>.</p>'
+            '<p class="meta">Found a value that no longer matches the official page? See <a href="/about/#corrections">how to report a correction</a>.</p>')
+    summary = (f"Among the {len(states)} states covered, official apostille fees range from ${lo['fee']} per document ({lo['name']}) to ${hi['fee']} ({hi['name']}). "
+               f"{walk} of the {len(states)} offices describe an in-person option on their official pages. Each value links to its official source, and the full table is downloadable as CSV.")
+    allsrc, seen = [], set()
+    for s in states:
+        for t, u in s["sources"]:
+            if u not in seen: seen.add(u); allsrc.append([t, u])
+    schema = {"@type": "Dataset", "name": "U.S. state apostille fees and processing times", "description":
+              f"Official apostille fee per document, fee details, mail processing time and in-person options for {len(states)} U.S. states, each value with the URL of the official government source it was taken from.",
+              "url": SITE + DATA_PATH, "creator": ORG, "publisher": ORG, "isAccessibleForFree": True, "inLanguage": "en-US",
+              "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": newest, "temporalCoverage": f"{oldest}/{newest}",
+              "spatialCoverage": {"@type": "Place", "name": "United States"},
+              "keywords": ["apostille", "apostille fees", "Secretary of State", "processing times", "United States"],
+              "isBasedOn": [u for t, u in allsrc],
+              "variableMeasured": ["Official fee per document (USD)", "Mail processing time", "In-person service"],
+              "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": SITE + "/" + CSV_NAME}]}
+    page(DATA_PATH, "Apostille Fees & Processing Times by State (Data)",
+         f"Official apostille fees, mail processing times and in-person options for {len(states)} U.S. states, each value linked to its source. Free CSV download.",
+         body, h1="Apostille fees and processing times by state", sources=allsrc, summary=summary, crumbs=[("Directory", "/directory/")],
+         reviewed=newest, schema=schema,
+         related=[(n, p) for n, p in GUIDE_LINKS] + [(f'{s["name"]} apostille', f'/states/{s["slug"]}/') for s in states])
+
 GUIDE_LINKS = [("Apostille FAQ", "/faq/"), ("State or federal: which office?", "/guides/state-or-federal-which-office/"),
                ("Birth certificate apostille", "/guides/birth-certificate-apostille/"), ("FBI background check apostille", "/guides/fbi-background-check-apostille/"),
                ("U.S. Department of State (federal)", "/guides/us-department-of-state/"), ("Which countries accept apostilles?", "/guides/hague-apostille-countries/"),
                ("Apostille services compared: DIY vs paid", "/guides/apostille-services-compared/"),
+               ("Apostille fees and processing times by state (data)", "/apostille-fees-by-state/"),
                ("Apostille directory by state", "/directory/")]
 
 def main():
@@ -204,6 +275,7 @@ def main():
              state_body(s, states), h1=f'{s["name"]} apostille: where to go, fee and steps', sources=s["sources"],
              summary=s.get("summary"), faqs=state_faqs(s), crumbs=[("States", "/directory/")], reviewed=s.get("last_reviewed", LV), related=rel,
              schema={"@type":"HowTo","name":f'Get an apostille in {s["name"]}',"step":[{"@type":"HowToStep","text":x} for x in s["what_to_send"]]})
+    data_page(states)
     guides = []
     for g in sorted((R / "content/guides").glob("*.html")):
         raw = g.read_text(); m = re.match(r"<!--(.*?)-->\s*", raw, re.S)
@@ -240,7 +312,7 @@ def main():
     d = d.replace('"@graph": [', '"@graph": [' + json.dumps(ld) + ", ", 1); hub.write_text(d)
     # guides index
     page("/guides/", f"Apostille Guides: Documents, Offices, Countries", "Plain-language apostille guides for U.S. documents: birth certificates, FBI checks, federal documents, Hague countries and which office to use.",
-         f'<p class="lede">Guides for specific documents and situations. Each one cites official government sources.</p><div class="cards">{gcards}</div><h2>Looking for a state?</h2><div class="cards">{scards}</div><p>Or open the full <a href="/directory/">apostille directory</a>.</p>',
+         f'<p class="lede">Guides for specific documents and situations. Each one cites official government sources.</p><div class="cards">{gcards}</div><h2>Looking for a state?</h2><div class="cards">{scards}</div><p>Or open the full <a href="/directory/">apostille directory</a>, or compare every state\'s <a href="/apostille-fees-by-state/">fees and processing times</a> (with CSV download).</p>',
          h1="Apostille guides", crumbs=[], article=False, reviewed=LV,
          summary="Start with the office: state and locally issued or notarized documents are apostilled by that state, and federal documents such as FBI checks by the U.S. Department of State. Then check whether your destination country accepts apostilles at all.")
     # directory
@@ -249,7 +321,7 @@ def main():
 function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody tr').forEach(r=>{const ok=r.dataset.name.includes(q.value.toLowerCase().trim())&&(+r.dataset.fee<=+f.value)&&(!w.checked||r.dataset.walkin==='1');r.style.display=ok?'':'none'})}
 [q,f,w].forEach(x=>x.addEventListener('input',run));run();</script>"""
     maxfee = max(s["fee"] for s in states); minfee = min(s["fee"] for s in states)
-    dbody = (f'<p class="lede">Apostille offices by state, plus the federal office. {len(states)} states covered so far, with one new page added regularly. Use the filters to narrow the list.</p>'
+    dbody = (f'<p class="lede">Apostille offices by state, plus the federal office. {len(states)} states covered so far, with one new page added regularly. Use the filters to narrow the list, or compare <a href="/apostille-fees-by-state/">fees and processing times side by side</a> (CSV download).</p>'
              f'<div class="filters"><input id="q" type="search" placeholder="Search state…" aria-label="Search state"><label>Max fee <input id="fee" type="range" min="1" max="{maxfee}" value="{maxfee}"> <span id="feeval"></span></label><label><input id="walk" type="checkbox"> Walk-in available</label></div>'
              f'<h2>Which office handles my state\'s apostilles?</h2><table id="tbl"><thead><tr><th>State</th><th>Issuing office</th><th>Fee / doc</th><th>Walk-in</th></tr></thead><tbody>{rows}</tbody></table>'
              f'<h2>Where do federal documents go?</h2><p><a href="/guides/us-department-of-state/">U.S. Department of State Office of Authentications</a>: $20 per document, for FBI checks and other federal records.</p>'
@@ -260,7 +332,7 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
              {"@type": "ListItem", "position": i + 1, "name": f'{s["name"]} apostille', "url": f'{SITE}/states/{s["slug"]}/'} for i, s in enumerate(states)]},
          summary=f"There is no single national apostille office: each state apostilles its own documents, and the U.S. Department of State handles federal ones for $20. Among the {len(states)} states covered so far, official fees range from ${minfee} to ${maxfee} per document.")
     home = (f'<p class="lede">{e(C["tagline"])} Requests get sent back when a document goes to the wrong office or misses a prep step.</p>'
-            '<p><a href="/directory/"><strong>Open the directory →</strong></a> · <a href="/faq/"><strong>Read the apostille FAQ →</strong></a></p>'
+            '<p><a href="/directory/"><strong>Open the directory →</strong></a> · <a href="/apostille-fees-by-state/"><strong>Compare fees and processing times →</strong></a> · <a href="/faq/"><strong>Read the apostille FAQ →</strong></a></p>'
             '<h2>Start here</h2><ol><li><a href="/guides/state-or-federal-which-office/">Is your document state or federal?</a></li><li><a href="/guides/hague-apostille-countries/">Does the destination country accept apostilles?</a></li><li>Open your state below.</li></ol>'
             f'<h2>States</h2><div class="cards">{scards}<a class="card" href="/guides/us-department-of-state/"><strong>Federal (U.S. Dept. of State)</strong><small>$20/doc · FBI checks, federal records</small></a></div>'
             f'<h2>Guides</h2><div class="cards">{gcards}</div>')
@@ -268,13 +340,24 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
          article=False, reviewed=LV,
          h1="Get the apostille right the first time",
          summary="A U.S. document is apostilled by the state that issued or notarized it, or by the U.S. Department of State if it is federal (such as an FBI background check). This site lists each office's official fee, address, processing time and requirements, with a link to the government source.")
-    page("/about/", f"About {NAME}", f"What {NAME} is, how pages are researched, and how to report an error.",
-         f'<p>{NAME} is an independent, plain-language directory of U.S. apostille offices. It is <strong>not</strong> a government website and does not give legal advice.</p><h2>How are pages made?</h2><ul><li>Every fact (fees, addresses, timing, requirements) comes from the official government page linked under "Official sources".</li><li>Each page shows the date it was last reviewed. Processing times and fees change, so always confirm with the office.</li><li>We don\'t publish estimated prices or processing times that the office itself hasn\'t published.</li><li>Questions answered on the site come from real questions people ask in forums and on official FAQ pages.</li></ul><h2>Privacy</h2><p>This site uses privacy-friendly, cookieless analytics (GoatCounter) to count page views, plus anonymous counts of clicks on affiliate links (which partner, from which page). No cookies, no personal data, no cross-site tracking.</p><h2>Corrections</h2><p>Found something out of date? Contact: <a href="mailto:{C["contact_email"]}">{C["contact_email"]}</a>.</p>',
+    page("/about/", f"About {NAME}: How Pages Are Made", f"Who runs {NAME}, how pages are drafted and fact-checked, how the site earns money, and how to report a correction.",
+         f'<p>{NAME} is an independent, plain-language directory of U.S. apostille offices. It is <strong>not</strong> a government website, is not affiliated with any government office, and does not give legal advice.</p>'
+         '<h2 id="how">How are pages made?</h2><ul>'
+         '<li><strong>Drafted with AI assistance.</strong> Pages are drafted with the help of AI tools. We say so because you should know how the content is produced.</li>'
+         '<li><strong>Every fact is checked against the official page.</strong> Before a page is published, each fee, address, processing time and requirement is checked against the official government page linked under "Official sources" on that same page. A page without an official source is not published.</li>'
+         '<li><strong>No guessing.</strong> We don\'t publish estimated prices or processing times. Where an office doesn\'t publish a figure, the page says so.</li>'
+         '<li><strong>Honest dates.</strong> "Last reviewed" shows when a page was last compared with its official sources. We change it only after a real re-check, not to make a page look fresh.</li>'
+         '<li><strong>Real questions.</strong> The questions answered on the site come from questions people ask in forums and on official FAQ pages.</li>'
+         '<li><strong>No invented experts.</strong> The site is not written by a lawyer or a former government official, and we don\'t claim credentials we don\'t have. Its value is that it puts the official facts in one place, with the source next to each one.</li></ul>'
+         '<p>You can see the facts side by side, with a source link next to each value, on the <a href="/apostille-fees-by-state/">fees and processing times by state</a> page (also downloadable as CSV).</p>'
+         '<h2 id="money">How does the site make money?</h2><p>Only through affiliate commissions. Some pages link to private apostille services; those links are labelled "(paid link)" and marked <code>rel="sponsored"</code>. If you order through one, we may earn a commission at no extra cost to you. There are no ads, and nobody pays to be listed. Every page explains how to do it yourself directly with the government office for the official fee, which is usually the cheapest option. Commissions never change the official facts on a page. Details: <a href="/disclosure/">affiliate disclosure</a>.</p>'
+         '<h2>Privacy</h2><p>This site uses privacy-friendly, cookieless analytics (GoatCounter) to count page views, plus anonymous counts of clicks on paid links (which partner, from which page). No cookies, no personal data, no cross-site tracking.</p>'
+         f'<h2 id="corrections">How do I report a correction?</h2><p>Offices change fees, addresses and procedures, and links break. If something on a page no longer matches the official source, email <a href="mailto:{C["contact_email"]}">{C["contact_email"]}</a> with:</p><ol><li>the page on this site (its URL),</li><li>what is wrong or out of date, and</li><li>a link to the official government page that shows the current information, if you have one.</li></ol><p>We check the report against the official source and, if it is right, fix the page and update its "Last reviewed" date. We don\'t change a fact based on a report alone without confirming it on the official page.</p>',
          h1=f"About {NAME}", article=False, crumbs=[], reviewed=LV,
-         summary=f"{NAME} is an independent, plain-language directory of U.S. apostille offices, not a government website. Every fee, address, processing time and requirement links to the official government page it comes from, and each page shows when it was last reviewed.")
+         summary=f"{NAME} is an independent, plain-language directory of U.S. apostille offices, not a government website. Pages are drafted with AI assistance, and every fee, address, processing time and requirement is checked against the official government page linked on that page. The site earns money only from affiliate commissions on clearly labelled paid links.")
     page("/disclosure/", f"Affiliate Disclosure | {NAME}", "How Apostille Atlas may earn money and how that affects (and does not affect) our content.",
-         f'<p>Some links on {NAME} may be affiliate links. If you use one to buy a service, such as a private apostille, courier, translation or online notary service, we may earn a commission at no extra cost to you. Affiliate links are marked with <code>rel="sponsored"</code> and appear in highlighted boxes. We count clicks on them anonymously with cookieless GoatCounter (only which partner and which page, never who clicked) to see which pages are useful.</p><p><strong>Current status:</strong> two affiliate partners are live, each labelled "(affiliate link)" where it appears:</p><ul><li><strong>Fingerprints &amp; Apostilles</strong> (a private service that handles FBI background check apostilles), on our <a href="/guides/fbi-background-check-apostille/">FBI background check guide</a> <a href="/guides/us-department-of-state/">U.S. Department of State guide</a> and <a href="/guides/apostille-services-compared/">apostille services comparison</a>.</li><li><strong>Apostille USA</strong> (a private service that files state and federal apostilles), on every state page, our <a href="/guides/birth-certificate-apostille/">birth certificate guide</a>, our FBI background check guide, our U.S. Department of State guide and our apostille services comparison.</li></ul><p>If you order through one of these links, we may earn a referral commission at no extra cost to you. No other affiliate partnerships are active. Our services comparison also lists services we have no relationship with, because they publish clear prices; we earn nothing from them.</p><p>Including a link does not mean we have tested, ranked or endorse a service over others. It is one option alongside doing it yourself directly with the government office.</p><p>Affiliate relationships never change the official facts on a page. You can always get an apostille directly from the government office for the official fee, and every page explains how.</p><p>This disclosure is meant to follow the U.S. FTC\'s guidance on endorsements (16 CFR Part 255).</p>', h1="Affiliate disclosure", reviewed=LV,
-         summary="Some links on this site are affiliate links, labelled \"(affiliate link)\", for two partners: Fingerprints & Apostilles and Apostille USA. If you order through one, we may earn a commission at no extra cost to you. It never changes the official facts on a page.",
+         f'<p>Some links on {NAME} may be affiliate links. If you use one to buy a service, such as a private apostille, courier, translation or online notary service, we may earn a commission at no extra cost to you. Affiliate links are marked with <code>rel="sponsored"</code> and appear in highlighted boxes. We count clicks on them anonymously with cookieless GoatCounter (only which partner and which page, never who clicked) to see which pages are useful.</p><p><strong>Current status:</strong> two affiliate partners are live, each labelled "(paid link)" where it appears:</p><ul><li><strong>Fingerprints &amp; Apostilles</strong> (a private service that handles FBI background check apostilles), on our <a href="/guides/fbi-background-check-apostille/">FBI background check guide</a> <a href="/guides/us-department-of-state/">U.S. Department of State guide</a> and <a href="/guides/apostille-services-compared/">apostille services comparison</a>.</li><li><strong>Apostille USA</strong> (a private service that files state and federal apostilles), on every state page, our <a href="/guides/birth-certificate-apostille/">birth certificate guide</a>, our FBI background check guide, our U.S. Department of State guide and our apostille services comparison.</li></ul><p>If you order through one of these links, we may earn a referral commission at no extra cost to you. No other affiliate partnerships are active. Our services comparison also lists services we have no relationship with, because they publish clear prices; we earn nothing from them.</p><p>Including a link does not mean we have tested, ranked or endorse a service over others. It is one option alongside doing it yourself directly with the government office.</p><p>Affiliate relationships never change the official facts on a page. You can always get an apostille directly from the government office for the official fee, and every page explains how.</p><p>This disclosure is meant to follow the U.S. FTC\'s guidance on endorsements (16 CFR Part 255).</p>', h1="Affiliate disclosure", reviewed=LV,
+         summary="Some links on this site are affiliate links, labelled \"(paid link)\", for two partners: Fingerprints & Apostilles and Apostille USA. If you order through one, we may earn a commission at no extra cost to you. It never changes the official facts on a page.",
          sources=[["FTC: Endorsement Guides (16 CFR Part 255)","https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255"]], article=False, crumbs=[])
     page("/404.html", f"Page not found | {NAME}", "This page does not exist. Find your state's apostille office in the directory or read the apostille FAQ.",
          f'<p class="lede">That page doesn\'t exist or has moved.</p><h2>Find what you need</h2><ul><li><a href="/directory/">Apostille directory by state</a></li><li><a href="/faq/">Apostille FAQ</a></li><li><a href="/guides/">All guides</a></li><li><a href="/guides/state-or-federal-which-office/">State or federal: which office?</a></li></ul><div class="cards">{scards}</div>',
@@ -289,10 +372,10 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
             f"cited to official government sources. Not a government site; not legal advice. Last reviewed {LV}.\n\n"
             "Key rule: a U.S. document is apostilled by the state that issued or notarized it; federal documents (such as FBI background checks) are apostilled by the U.S. Department of State ($20 per document, Form DS-4194). "
             "Facts on each page link to the official source; where an office publishes no figure, the page says so.\n\n"
-            "## Start here\n" + "\n".join(L(p) for p in ["/faq/", "/directory/", "/guides/state-or-federal-which-office/", "/guides/apostille-services-compared/"]) +
+            "## Start here\n" + "\n".join(L(p) for p in ["/faq/", "/directory/", "/apostille-fees-by-state/", "/guides/state-or-federal-which-office/", "/guides/apostille-services-compared/"]) +
             "\n\n## States\n" + "\n".join(L(f'/states/{s["slug"]}/') for s in states) +
             "\n\n## Guides\n" + "\n".join(L(f"/guides/{sl}/") for sl, m in guides) +
-            "\n\n## Optional\n" + "\n".join(L(p) for p in ["/about/", "/disclosure/"]) + "\n")
+            "\n\n## Optional\n" + "\n".join(L(p) for p in ["/about/", "/disclosure/"]) + f"\n- [Fees and processing times data (CSV)]({SITE}/{CSV_NAME}): fees, processing times and in-person options by state, with source URLs per value\n")
     llms = llms.replace("\n\n## Optional\n", "\n\n## Key facts by state (official fee per document)\n" + "\n".join(
         f'- {s["name"]}: {s["authority"]}; ${s["fee"]} per document; {"walk-in available" if s["walk_in"] else "by mail"}. Details: {SITE}/states/{s["slug"]}/' for s in states) +
         f"\n- Federal documents (FBI checks etc.): U.S. Department of State Office of Authentications; $20 per document; Form DS-4194. Details: {SITE}/guides/us-department-of-state/" +
