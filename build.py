@@ -9,6 +9,33 @@ SITE, NAME, LV = C["site_url"].rstrip("/"), C["site_name"], C["last_verified"]
 e = html.escape
 
 GOAT = '<script data-goatcounter="https://apostille-atlas.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+# Outbound affiliate click events: any <a data-aff="partner-slug"> sends a cookieless GoatCounter event "aff-partner-slug".
+# Guarded: does nothing if count.js has not loaded (blocked or slow); count.js sends with sendBeacon, so navigation is not delayed.
+AFF_JS = ("<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-aff]');if(!a)return;"
+          "try{if(window.goatcounter&&typeof goatcounter.count==='function')goatcounter.count({path:'aff-'+a.getAttribute('data-aff'),"
+          "title:'Affiliate click: '+a.textContent.trim()+' ('+location.pathname+')',event:true})}catch(x){}});</script>")
+# Partner facts below are quoted from each partner's own public pages (re-verified 2026-10-26); never add prices/speeds they don't publish.
+AUSA_SRC = "https://apostille-usa.com/partner-registration/"
+FA_SRC = "https://fingerprintsandapostilles.com/"
+AUSA_ORIG = "https://apstl.us/6YBeOr"; AUSA_FED = "https://apstl.us/8jTbZ5"; FA_URL = "https://fingerprintsandapostilles.com?fpr=apostille-f818cb"
+DISC = 'Disclosure: if you order through a link marked "(affiliate link)", we may earn a commission at no extra cost to you. See our <a href="/disclosure/">affiliate disclosure</a>.'
+def alink(url, partner, slug, label):
+    return f'<a href="{url}" rel="sponsored nofollow noopener" data-aff="{partner}-{slug}">{label}</a> (affiliate link)'
+def aff_box(slug, office, fee, src, federal=False):
+    """'Don't want to do it yourself?' box: DIY with the official office is cheaper; a service is optional."""
+    why = "A paid service can be worth it if you are mailing from abroad, are up against a deadline, also need a translation, or don't have time to handle it."
+    diy = (f'You don\'t need one: doing it yourself directly with the {e(office)} is cheaper, at the official ${fee} per document '
+           f'(<a href="{src}" rel="noopener">official source</a>).')
+    if federal:
+        opts = (f'<li>{alink(FA_URL, "fingerprints-apostilles", slug, "Fingerprints &amp; Apostilles")}: handles FBI background check and other federal apostilles; '
+                f'its site lists $120 for the first document and $95 for each additional, with U.S. return shipping included (<a href="{FA_SRC}" rel="noopener">its pricing</a>).</li>'
+                f'<li>{alink(AUSA_FED, "apostille-usa", slug, "Apostille USA")}: lists its federal apostille service at $199 + shipping &amp; handling '
+                f'(<a href="{AUSA_SRC}" rel="noopener">its pricing</a>).</li>')
+    else:
+        opts = (f'<li>{alink(AUSA_ORIG, "apostille-usa", slug, "Apostille USA")}: lists $199 + shipping &amp; handling for its 72-hour service and '
+                f'$299 + shipping &amp; handling for its 24-hour service (<a href="{AUSA_SRC}" rel="noopener">its pricing</a>).</li>')
+    return (f'<div class="aff aff-top"><strong>Don\'t want to do it yourself?</strong> {why} {diy}<ul>{opts}</ul>'
+            f'<p class="meta">{DISC}</p></div>')
 ORG_ID = SITE + "/#org"
 ORG_FULL = {"@type": "Organization", "@id": ORG_ID, "name": NAME, "url": SITE + "/", "logo": {"@type": "ImageObject", "url": SITE + "/apple-touch-icon.png", "width": 180, "height": 180},
             "email": C["contact_email"], "description": C["tagline"]}
@@ -104,7 +131,7 @@ def page(path, title, desc, body, h1=None, sources=None, schema=None, summary=No
 <header><div class="wrap"><a class="brand" href="/">{NAME}</a><nav><a href="/directory/">Directory</a><a href="/faq/">FAQ</a><a href="/guides/">Guides</a><a href="/guides/state-or-federal-which-office/">Which office?</a><a href="/guides/hague-apostille-countries/">Hague countries</a><a href="/about/">About</a></nav></div></header>
 <main class="wrap">{top}{body}{faq_html(faqs)}{rel}{src}</main>
 <footer><div class="wrap">{NAME} is an independent guide, not a government website, and not legal advice. <a href="/disclosure/">Affiliate disclosure</a> · <a href="/about/">About</a> · <a href="/faq/">FAQ</a> · <a href="/sitemap.xml">Sitemap</a></div></footer>
-{GOAT}
+{GOAT}{AFF_JS if 'data-aff=' in body else ''}
 </body></html>"""
     f = OUT / path.lstrip("/") / "index.html" if path.endswith("/") else OUT / path.lstrip("/")
     f.parent.mkdir(parents=True, exist_ok=True); f.write_text(doc); URLS.append(path)
@@ -125,11 +152,11 @@ def state_body(s, states):
     if pop: nearby += '<h2>Most-requested state apostille offices</h2><div class="cards">' + "".join(card(o) for o in pop) + "</div>"
     n = e(s["name"])
     return (f'<p class="lede">How to get an apostille on {AN(n)} document: which office issues it, the official fee (${s["fee"]} per document), how long it takes, and what to send. Every fact comes from the official {n} source listed at the bottom.</p>'
+            + aff_box(s["slug"], s["authority"], s["fee"], s["sources"][0][1]) +
             f'<h2>Where do I send {AN(n)} apostille request, what does it cost, and how long does it take?</h2><table class="facts">{t}</table>'
             f'<h2>What do I need to send for {AN(n)} apostille?</h2><ol>{li(s["what_to_send"])}</ol>'
             f'<h2>What trips people up with {n} apostilles?</h2><ul>{li(s["tips"])}</ul>'
             '<h2>Is my document state or federal?</h2><p>If a federal agency signed it, such as an FBI background check, it goes to the <a href="/guides/us-department-of-state/">U.S. Department of State</a>, not the state. Not sure? See <a href="/guides/state-or-federal-which-office/">state or federal: which office?</a> Also check whether the destination country <a href="/guides/hague-apostille-countries/">accepts apostilles</a>.</p>'
-            f'<div class="aff"><strong>Don\'t want to do it yourself?</strong> Apostille services can file in {n} for you, for a fee on top of the state fee. One such service: <a href="https://apstl.us/6YBeOr" rel="sponsored nofollow noopener" data-affiliate="apostille-usa-original">Apostille USA</a> (affiliate link), which says it handles apostilles in all 50 states and DC. If you order through this link, we may earn a commission at no extra cost to you. See our <a href="/disclosure/">affiliate disclosure</a>.</div>'
             + nearby +
             f'<p class="meta">Document from another state? Each state only apostilles its own documents: {others}, or the full <a href="/directory/">directory</a>.</p>')
 
@@ -173,7 +200,9 @@ def main():
             print("SKIP (draft or no sources):", g.name, file=sys.stderr); continue
         slug = g.stem; guides.append((slug, meta))
         rel = [(n, p) for n, p in GUIDE_LINKS if p != f"/guides/{slug}/"] + [(f'{s["name"]} apostille', f'/states/{s["slug"]}/') for s in states]
-        page(f'/guides/{slug}/', meta["title"], meta["description"], raw[m.end():], h1=meta["h1"], sources=meta["sources"],
+        gbody = raw[m.end():].replace("<!--AFF_BOX_FEDERAL-->", aff_box(slug, "U.S. Department of State Office of Authentications", 20,
+                "https://travel.state.gov/en/replace-certify/authenticate-documents/request-services.html", federal=True))
+        page(f'/guides/{slug}/', meta["title"], meta["description"], gbody, h1=meta["h1"], sources=meta["sources"],
              summary=meta.get("summary"), faqs=meta.get("faqs"), crumbs=[("Guides", "/guides/")], reviewed=meta.get("last_reviewed", LV), related=rel)
     gcards = "".join(f'<a class="card" href="/guides/{sl}/"><span class="badge">{e(m["category"])}</span><br><strong>{e(m["h1"])}</strong></a>' for sl, m in guides)
     scards = "".join(f'<a class="card" href="/states/{s["slug"]}/"><strong>{e(s["name"])}</strong><small>${s["fee"]}/doc · {e(s["authority"].split(",")[0])}</small></a>' for s in states)
@@ -226,11 +255,11 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
          h1="Get the apostille right the first time",
          summary="A U.S. document is apostilled by the state that issued or notarized it, or by the U.S. Department of State if it is federal (such as an FBI background check). This site lists each office's official fee, address, processing time and requirements, with a link to the government source.")
     page("/about/", f"About {NAME}", f"What {NAME} is, how pages are researched, and how to report an error.",
-         f'<p>{NAME} is an independent, plain-language directory of U.S. apostille offices. It is <strong>not</strong> a government website and does not give legal advice.</p><h2>How are pages made?</h2><ul><li>Every fact (fees, addresses, timing, requirements) comes from the official government page linked under "Official sources".</li><li>Each page shows the date it was last reviewed. Processing times and fees change, so always confirm with the office.</li><li>We don\'t publish estimated prices or processing times that the office itself hasn\'t published.</li><li>Questions answered on the site come from real questions people ask in forums and on official FAQ pages.</li></ul><h2>Privacy</h2><p>This site uses privacy-friendly, cookieless analytics (GoatCounter) to count page views.</p><h2>Corrections</h2><p>Found something out of date? Contact: <a href="mailto:{C["contact_email"]}">{C["contact_email"]}</a>.</p>',
+         f'<p>{NAME} is an independent, plain-language directory of U.S. apostille offices. It is <strong>not</strong> a government website and does not give legal advice.</p><h2>How are pages made?</h2><ul><li>Every fact (fees, addresses, timing, requirements) comes from the official government page linked under "Official sources".</li><li>Each page shows the date it was last reviewed. Processing times and fees change, so always confirm with the office.</li><li>We don\'t publish estimated prices or processing times that the office itself hasn\'t published.</li><li>Questions answered on the site come from real questions people ask in forums and on official FAQ pages.</li></ul><h2>Privacy</h2><p>This site uses privacy-friendly, cookieless analytics (GoatCounter) to count page views, plus anonymous counts of clicks on affiliate links (which partner, from which page). No cookies, no personal data, no cross-site tracking.</p><h2>Corrections</h2><p>Found something out of date? Contact: <a href="mailto:{C["contact_email"]}">{C["contact_email"]}</a>.</p>',
          h1=f"About {NAME}", article=False, crumbs=[], reviewed=LV,
          summary=f"{NAME} is an independent, plain-language directory of U.S. apostille offices, not a government website. Every fee, address, processing time and requirement links to the official government page it comes from, and each page shows when it was last reviewed.")
     page("/disclosure/", f"Affiliate Disclosure | {NAME}", "How Apostille Atlas may earn money and how that affects (and does not affect) our content.",
-         f'<p>Some links on {NAME} may be affiliate links. If you use one to buy a service, such as a private apostille, courier, translation or online notary service, we may earn a commission at no extra cost to you. Affiliate links are marked with <code>rel="sponsored"</code> and appear in highlighted boxes.</p><p><strong>Current status:</strong> two affiliate partners are live, each labelled "(affiliate link)" where it appears:</p><ul><li><strong>Fingerprints &amp; Apostilles</strong> (a private service that handles FBI background check apostilles), on our <a href="/guides/fbi-background-check-apostille/">FBI background check guide</a> and <a href="/guides/us-department-of-state/">U.S. Department of State guide</a>.</li><li><strong>Apostille USA</strong> (a private service that files state and federal apostilles), on every state page, our <a href="/guides/birth-certificate-apostille/">birth certificate guide</a>, our FBI background check guide and our U.S. Department of State guide.</li></ul><p>If you order through one of these links, we may earn a referral commission at no extra cost to you. No other affiliate partnerships are active.</p><p>Including a link does not mean we have tested, ranked or endorse a service over others. It is one option alongside doing it yourself directly with the government office.</p><p>Affiliate relationships never change the official facts on a page. You can always get an apostille directly from the government office for the official fee, and every page explains how.</p><p>This disclosure is meant to follow the U.S. FTC\'s guidance on endorsements (16 CFR Part 255).</p>', h1="Affiliate disclosure", reviewed=LV,
+         f'<p>Some links on {NAME} may be affiliate links. If you use one to buy a service, such as a private apostille, courier, translation or online notary service, we may earn a commission at no extra cost to you. Affiliate links are marked with <code>rel="sponsored"</code> and appear in highlighted boxes. We count clicks on them anonymously with cookieless GoatCounter (only which partner and which page, never who clicked) to see which pages are useful.</p><p><strong>Current status:</strong> two affiliate partners are live, each labelled "(affiliate link)" where it appears:</p><ul><li><strong>Fingerprints &amp; Apostilles</strong> (a private service that handles FBI background check apostilles), on our <a href="/guides/fbi-background-check-apostille/">FBI background check guide</a> and <a href="/guides/us-department-of-state/">U.S. Department of State guide</a>.</li><li><strong>Apostille USA</strong> (a private service that files state and federal apostilles), on every state page, our <a href="/guides/birth-certificate-apostille/">birth certificate guide</a>, our FBI background check guide and our U.S. Department of State guide.</li></ul><p>If you order through one of these links, we may earn a referral commission at no extra cost to you. No other affiliate partnerships are active.</p><p>Including a link does not mean we have tested, ranked or endorse a service over others. It is one option alongside doing it yourself directly with the government office.</p><p>Affiliate relationships never change the official facts on a page. You can always get an apostille directly from the government office for the official fee, and every page explains how.</p><p>This disclosure is meant to follow the U.S. FTC\'s guidance on endorsements (16 CFR Part 255).</p>', h1="Affiliate disclosure", reviewed=LV,
          summary="Some links on this site are affiliate links, labelled \"(affiliate link)\", for two partners: Fingerprints & Apostilles and Apostille USA. If you order through one, we may earn a commission at no extra cost to you. It never changes the official facts on a page.",
          sources=[["FTC: Endorsement Guides (16 CFR Part 255)","https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255"]], article=False, crumbs=[])
     page("/404.html", f"Page not found | {NAME}", "This page does not exist. Find your state's apostille office in the directory or read the apostille FAQ.",
