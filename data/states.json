@@ -31,7 +31,7 @@
   "sources": [
    [
     "California SOS: Request an Apostille",
-    "https://www.sos.ca.gov/notary/authentication"
+    "https://www.sos.ca.gov/notary/request-apostille"
    ]
   ],
   "summary": "California apostilles are issued by the Secretary of State's Notary Public Section for $20 per apostille. You can mail your request to Sacramento, or get same-day service in person in Sacramento or Los Angeles, where a $6 special handling fee per official's signature also applies. Mail processing times vary, and the office posts its current processing dates online.",
@@ -71,7 +71,7 @@
   "sources": [
    [
     "NY DOS: Obtain an Apostille/Certificate of Authentication",
-    "https://dos.ny.gov/obtain-apostillecertificate-authentication"
+    "https://dos.ny.gov/apostille-certificate-authentication"
    ]
   ],
   "summary": "New York apostilles come from the Department of State's Apostille and Authentication Unit and cost $10 per document. Locally issued vital records and all notarized documents must be certified by the County Clerk first. Same-day walk-in service is offered in New York City, Albany, Binghamton, Buffalo and Utica, for up to 10 documents.",
@@ -87,13 +87,13 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "Up to two weeks from the day of receipt, per the official page; actual times vary with volume.",
-  "walkin_time": "Same-day service, max 10 documents. Walk-in Monday and Friday only; appointment required Tuesday\u2013Thursday (fee must be paid 72 business hours before an appointment). Drop box for more than 10 documents: about 72 hours.",
+  "walkin_time": "Same-day service, max 10 documents. Walk-in Monday and Friday only; appointment required Tuesday\u2013Thursday. Drop box for more than 10 documents: about 72 hours.",
   "payment": "Mail: check or money order drawn on a U.S. bank and payable to the Office of the Texas Secretary of State, or a funded SOS Client Account. In person: check, money order, credit/debit card, or cash (exact change only).",
   "addresses": [
    "Mail: The Office of the Texas Secretary of State, Authentications Unit, P.O. Box 13550, Austin, TX 78711-3550",
    "In person: Authentications Unit, 400 West 15th Street, Austin, TX 78701 (8:00am\u20135:00pm, Mon\u2013Fri)"
   ],
-  "phone": "",
+  "phone": "(512) 463-5705",
   "what_to_send": [
    "Completed Form 2102 \u2013 Request for Universal Apostille",
    "The original Texas-notarized document or certified copy of the public record",
@@ -151,7 +151,7 @@
    "Payment"
   ],
   "tips": [
-   "Accepted Florida documents include birth and death certificates, circuit court documents, county clerk documents, marriage and divorce certificates, school documents and Florida-notarized documents (see the full list on the official page).",
+   "Accepted Florida documents include birth and death certificates, circuit court documents, county clerk documents, marriage and divorce certificates, school transcripts and Florida-notarized documents (see the full list on the official page).",
    "Federal documents go to the U.S. Department of State; other states' documents go to that state."
   ],
   "sources": [
@@ -173,14 +173,14 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "7 to 14 business days.",
-  "walkin_time": "Available in Springfield, Chicago and select DMV+ locations.",
-  "payment": "Check or money order payable to the Illinois Secretary of State (confirm on the official page).",
+  "walkin_time": "Available in Springfield, Chicago and select DMV+ locations; in most cases in-person requests are processed while you wait.",
+  "payment": "One check or money order payable to the Illinois Secretary of State for the total fee.",
   "addresses": [
    "Mail / Chicago office: Illinois Secretary of State, Index Department, 160 N. LaSalle Street, Suite 100, Chicago, IL 60601",
    "Springfield office: 2701 S. Dirksen Parkway, Springfield, IL 62723",
    "Select DMV+ locations: Chicago Flagship (125 W. Monroe), Aurora, Champaign, Lake Zurich, Melrose Park"
   ],
-  "phone": "Chicago 312-814-8218; Springfield 217-782-7017",
+  "phone": "Chicago 312-814-8218; Springfield 217-782-7017 (eAuthenticationsChicago@ilsos.gov, eAuthenticationsSpringfield@ilsos.gov)",
   "what_to_send": [
    "Completed application from the official page",
    "Original documents certified by a government official or notarized by an Illinois notary",
@@ -287,7 +287,7 @@
   "walk_in": true,
   "mail_time": "Normally one to two business days.",
   "walkin_time": "Typically under twenty minutes; 9:00 a.m.\u20134:00 p.m. Mon\u2013Fri, no appointment.",
-  "payment": "Check or money order payable to GSCCCA, or credit card through the GSCCCA Credit Card Pre-Payment Voucher System. See the official page for walk-in payment details.",
+  "payment": "By mail: check or money order payable to GSCCCA, or credit card through the GSCCCA Credit Card Pre-Payment Voucher System. Walk-in: cash, check, money order or credit card.",
   "addresses": [
    "GSCCCA, Attn: Notary Division, 1875 Century Blvd., Ste. 100, Atlanta, GA 30345"
   ],
@@ -324,7 +324,7 @@
   "walkin_time": "You can drop off documents with the confirmation page from the online service.",
   "payment": "Order and pay online (credit card or e-check) through the state's online Apostille/Certification Service, then mail or drop off the documents with the confirmation page.",
   "addresses": [
-   "Division of Revenue and Enterprise Services, PO Box 628, Trenton, NJ 08625-0628 (confirm the address shown on your online order confirmation)"
+   "The official page says to mail or drop off your documents, with the online order confirmation page, at the DORES Customer Service Center; it does not publish a separate apostille mailing address, so use the address given with your online order. (The Division's general address in the page footer is PO Box 628, Trenton, NJ 08625-0628.)"
   ],
   "phone": "",
   "what_to_send": [
@@ -360,13 +360,13 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "10\u201320 business days by mail.",
-  "walkin_time": "In-person with $25 expedite fee. Effective November 2, 2026, Business Services operates by appointment only (book online).",
-  "payment": "See the official page for accepted payment methods.",
+  "walkin_time": "In person (walk-in) with the $25 expedite fee, limit 6 documents. Effective November 2, 2026, Phoenix Business Services is by appointment only (book online); in-person service will no longer be at the 1700 W. Washington St. Executive Tower, and the appointment location is given when you book. Tucson office: 400 West Congress, Suite 221.",
+  "payment": "Check or money order payable to \"Arizona Secretary of State.\" Do not send cash by mail.",
   "addresses": [
    "Filing by mail: Secretary of State, Attn: Apostille Dept., 1700 W. Washington Street, Fl. 7, Phoenix, AZ 85007-2808",
    "Tucson office: 400 West Congress, Suite 221, Tucson, AZ 85701"
   ],
-  "phone": "602-542-6187",
+  "phone": "602-542-6187 or 1-800-458-5842",
   "what_to_send": [
    "Original notarized or certified document (no photocopies)",
    "The Apostille request form from the official page",
@@ -375,7 +375,8 @@
   ],
   "tips": [
    "Arizona does not issue electronic apostilles.",
-   "Documents recorded by another state must go to that state."
+   "Documents recorded by another state must go to that state.",
+   "Return labels (FedEx, UPS, DHL, etc.) must show your own mailing address as both sender and recipient."
   ],
   "sources": [
    [
@@ -383,7 +384,7 @@
     "https://azsos.gov/business/authentication"
    ]
   ],
-  "summary": "Arizona apostilles are issued by the Secretary of State's Business Services Division for $3 per document. Mail requests take 10 to 20 business days. In-person service adds a $25 expedite fee, and from November 2, 2026 it is by appointment only.",
+  "summary": "Arizona apostilles are issued by the Secretary of State's Business Services Division for $3 per document. Mail requests take 10 to 20 business days. In-person service adds a $25 expedite fee, and from November 2, 2026 in-person service in Phoenix is by appointment only.",
   "last_reviewed": "2026-10-26"
  },
  {
