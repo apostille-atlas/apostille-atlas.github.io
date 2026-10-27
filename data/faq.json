@@ -1,6 +1,6 @@
 {
  "title": "Apostille FAQ: Common U.S. Questions, Answered",
- "description": "Answers to the most common U.S. apostille questions: which office, cost, timing, FBI checks, birth certificates, photocopies, expiry and translations, each cited to an official source.",
+ "description": "Answers to common U.S. apostille questions: which office, cost, timing, FBI checks, birth certificates, photocopies, expiry. Cited to official sources.",
  "summary": "Most apostille mistakes come from sending a document to the wrong office or skipping a prep step. State-issued or state-notarized documents are apostilled by that state; federal documents such as FBI background checks are apostilled by the U.S. Department of State for $20. Where official sources don't give an answer, this page says so instead of guessing.",
  "items": [
   [
@@ -204,6 +204,54 @@
     [
      "Texas SOS: Apostille/Authentication of Documents",
      "https://www.sos.state.tx.us/authinfo.shtml"
+    ]
+   ]
+  ],
+  [
+   "Can I get a U.S. apostille while living abroad?",
+   "Yes, you don't have to apply in person. Every state office this site covers accepts requests by mail, and the U.S. Department of State accepts mailed requests for federal documents. The apostille still comes from the U.S. office: under the Convention it is issued by a Competent Authority of the country the document comes from (the \"State of origin\"), not by an authority in the country where you live. Return mailing to a foreign address varies by office, so check your <a href=\"/directory/\">state's page</a> and its official source.",
+   [
+    [
+     "HCCH: Apostille Handbook (PDF)",
+     "https://assets.hcch.net/docs/a19ae90b-27bf-4596-b5ee-0140858abeaa.pdf"
+    ],
+    [
+     "U.S. Department of State: Request Authentication Services",
+     "https://travel.state.gov/en/replace-certify/authenticate-documents/request-services.html"
+    ]
+   ]
+  ],
+  [
+   "Can I get an apostille myself, or do I need a service?",
+   "You can apply yourself. Every office on this site takes requests directly from the public for the official fee, by mail and in most states in person; each <a href=\"/directory/\">state page</a> lists the address, fee and what to send. Private apostille services are optional and charge their own fee on top of the government fee.",
+   [
+    [
+     "U.S. Department of State: Request Authentication Services",
+     "https://travel.state.gov/en/replace-certify/authenticate-documents/request-services.html"
+    ],
+    [
+     "California SOS: Request an Apostille",
+     "https://www.sos.ca.gov/notary/request-apostille"
+    ]
+   ]
+  ],
+  [
+   "How do I get my passport apostilled?",
+   "Not the passport itself: Washington's Secretary of State says to get a copy of your passport notarized as a true and correct copy by a Washington notary public, then apostille the notarized copy. Other states may handle passport copies differently, so check your state's office first.",
+   [
+    [
+     "WA SOS: Apostille FAQ",
+     "https://www.sos.wa.gov/corporations-charities/apostilles-program/apostille-frequently-asked-questions"
+    ]
+   ]
+  ],
+  [
+   "How do I get business documents (LLC or corporation) apostilled?",
+   "Start with a certified copy or certificate from the state agency that holds the record. Washington, for example, says entity documents on file with its Corporations Division must first be obtained as certified copies or certificates from that division, with a written request naming the destination country; the two departments charge separate fees.",
+   [
+    [
+     "WA SOS: Apostille FAQ",
+     "https://www.sos.wa.gov/corporations-charities/apostilles-program/apostille-frequently-asked-questions"
     ]
    ]
   ]
