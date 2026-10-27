@@ -2,7 +2,7 @@
 Mark `[x]` when a page is published. Every page needs an official source before it ships.
 
 ## States (official Secretary of State / equivalent page required)
-- [ ] state: Ohio (fee shown as $5 on the Ohio SOS forms & fees page; re-verify) — https://www.ohiosos.gov/records/apostilles-certifications/
+- [x] state: Ohio (fee shown as $5 on the Ohio SOS forms & fees page; re-verify) — https://www.ohiosos.gov/records/apostilles-certifications/
 - [ ] state: Michigan
 - [ ] state: Virginia
 - [ ] state: Washington

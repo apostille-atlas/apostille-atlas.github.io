@@ -385,5 +385,59 @@
   ],
   "summary": "Arizona apostilles are issued by the Secretary of State's Business Services Division for $3 per document. Mail requests take 10 to 20 business days. In-person service adds a $25 expedite fee, and from November 2, 2026 it is by appointment only.",
   "last_reviewed": "2026-10-26"
+ },
+ {
+  "slug": "ohio",
+  "name": "Ohio",
+  "abbr": "OH",
+  "authority": "Ohio Secretary of State, Client Service Center",
+  "fee": 5,
+  "fee_note": "$5 per document for each apostille or authentication. The exact fee is required; do not send cash by mail.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Documents are processed within two to three days of receipt, according to the office.",
+  "walkin_time": "The request form says documents may be delivered in person to the Secretary of State's office if you need faster service. The office does not publish a separate same-day turnaround or apostille-specific walk-in hours; general office hours are 8:00 a.m. to 5:00 p.m. Eastern, Monday to Friday.",
+  "payment": "Check, money order, or credit card. If you pay by card on a mailed request, include the office's Credit Card Authorization form (Form 100). Foreign checks or money orders are not accepted.",
+  "addresses": [
+   "Mail or in person: Ohio Secretary of State, Client Service Center, 180 Civic Center Dr., Columbus, OH 43215-4138"
+  ],
+  "phone": "614-728-9200 (Records: apostilles and authentications)",
+  "what_to_send": [
+   "A completed Authentication/Apostille Request Form (Form 8003)",
+   "The document(s): an original certified by an Ohio official, an Ohio birth or death certificate certified by the Ohio Department of Health, a certified copy from the probate court or county Clerk of Court, or a document properly notarized by an Ohio notary public",
+   "The exact fee of $5 per document by check, money order, or credit card authorization form (no cash)",
+   "A self-addressed stamped envelope or a prepaid express delivery label"
+  ],
+  "tips": [
+   "Documents notarized by a notary from another state or country, or certified by another state's official, will be rejected.",
+   "Ohio cannot apostille FBI background checks, documents issued under a federal seal or by a federal court, or citizenship documents unless issued by an Ohio county Clerk of Court.",
+   "Requests listing the United States as the destination country are rejected: apostilles cannot be used inside the U.S.",
+   "School records and transcripts must be notarized first; translations must be done, then notarized, before you submit them.",
+   "Never remove or reattach the apostille certificate; doing so invalidates it."
+  ],
+  "sources": [
+   [
+    "Ohio SOS: Authentications and Apostilles",
+    "https://www.ohiosos.gov/records/authentications-and-apostilles"
+   ],
+   [
+    "Ohio SOS: Authentications and Apostilles FAQs",
+    "https://www.ohiosos.gov/records/authentications-and-apostilles/frequently-asked-questions"
+   ],
+   [
+    "Ohio SOS: Authentication/Apostille Request Form (Form 8003, PDF)",
+    "https://www.ohiosos.gov/assets/r-authentication-apostille-request-form.pdf"
+   ],
+   [
+    "Ohio SOS: Forms & Fees",
+    "https://www.ohiosos.gov/records/forms-fees"
+   ],
+   [
+    "Ohio SOS: Contact Our Office",
+    "https://www.ohiosos.gov/contact-our-office"
+   ]
+  ],
+  "summary": "Ohio apostilles are issued by the Secretary of State's Client Service Center at 180 Civic Center Dr., Columbus, for $5 per document. Mailed requests are processed within two to three days of receipt, and you can deliver documents in person if you need faster service. Only documents issued by an Ohio official or notarized by an Ohio notary qualify.",
+  "last_reviewed": "2026-10-26"
  }
 ]
