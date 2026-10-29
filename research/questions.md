@@ -62,6 +62,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
 - State pages: 1–3, 6, 12, 15, 28–32 (per state)
 - FBI / Dept. of State guides: 7, 8, 26, 27, 33 (fastest FBI check apostille guide: 26, 27, 33)
+- Spain country guide (/guides/apostille-for-spain/): 8, 27, 33, 40
 - Apostille services compared (/guides/apostille-services-compared/): 40, 41, 44
 - Birth certificate guide: 4, 5, 13, 14, 22
 - Hague countries guide: 34–38
