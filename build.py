@@ -47,6 +47,18 @@ def diy_table(states):
     return ('<table><thead><tr><th>Where the document is from</th><th>Office</th><th>Official fee per document (DIY)</th><th>In person</th>'
             f'<th>Extra paid with a ${LOWEST_SERVICE} service</th></tr></thead><tbody>{rows}</tbody></table>'
             '<p class="meta">Official fees from each state page (each cites its official source). Some states add fees, for example California charges a $6 in-person handling fee for each different official\'s signature, and Florida charges $20 for documents certified by a county Clerk of the Court. Your own postage is not included.</p>')
+def walkin_table(states):
+    """In-person / same-day options per covered state, straight from data/states.json (walk_in, walkin_time, addresses), each cited."""
+    cite = lambda s, f: " ".join(f'<a href="{e(u)}" rel="noopener" title="{e(t)}">[source]</a>' for t, u in srcs(s, f))
+    order = sorted(states, key=lambda s: (not s["walk_in"], s["name"]))
+    rows = "".join(f'<tr><td><a href="/states/{s["slug"]}/">{e(s["name"])}</a></td><td>{"Yes" if s["walk_in"] else "Not listed"}</td>'
+                   f'<td>{e(s["walkin_time"])} {cite(s, "walk")}</td><td>${s["fee"]}</td></tr>' for s in order)
+    rows += ('<tr><td><a href="/guides/us-department-of-state/">Federal documents</a> (U.S. Department of State)</td><td>Drop-off only</td>'
+             '<td>Walk-in drop-off in Washington, DC, Monday to Thursday, 7:30 to 9:00 a.m., processed within 7 business days. Same-day service only by appointment '
+             'for a life-or-death family emergency abroad with travel within 2 weeks. <a href="https://travel.state.gov/en/replace-certify/authenticate-documents/request-services.html" rel="noopener">[source]</a></td><td>$20</td></tr>')
+    return ('<div style="overflow-x:auto"><table class="data"><thead><tr><th>Where the document is from</th><th>In person?</th><th>What the official page says about in-person and same-day service</th>'
+            f'<th>Official fee per document</th></tr></thead><tbody>{rows}</tbody></table></div>'
+            '<p class="meta">Copied from each office\'s official page (the [source] link opens it). Addresses and hours are on each state page. Offices change hours and rules, so check the official page the day before you go.</p>')
 ORG_ID = SITE + "/#org"
 ORG_FULL = {"@type": "Organization", "@id": ORG_ID, "name": NAME, "url": SITE + "/", "logo": {"@type": "ImageObject", "url": SITE + "/apple-touch-icon.png", "width": 180, "height": 180},
             "email": C["contact_email"], "description": C["tagline"]}
@@ -253,7 +265,7 @@ def data_page(states):
 GUIDE_LINKS = [("Apostille FAQ", "/faq/"), ("State or federal: which office?", "/guides/state-or-federal-which-office/"),
                ("Birth certificate apostille", "/guides/birth-certificate-apostille/"), ("FBI background check apostille", "/guides/fbi-background-check-apostille/"), ("Fastest way to apostille an FBI check", "/guides/fastest-fbi-background-check-apostille/"),
                ("U.S. Department of State (federal)", "/guides/us-department-of-state/"), ("Which countries accept apostilles?", "/guides/hague-apostille-countries/"),
-               ("Apostille services compared: DIY vs paid", "/guides/apostille-services-compared/"), ("Apostille for Spain", "/guides/apostille-for-spain/"),
+               ("Apostille services compared: DIY vs paid", "/guides/apostille-services-compared/"), ("Apostille for Spain", "/guides/apostille-for-spain/"), ("Same-day and walk-in apostille offices", "/guides/same-day-and-walk-in-apostille-offices/"),
                ("Apostille fees and processing times by state (data)", "/apostille-fees-by-state/"),
                ("Apostille directory by state", "/directory/")]
 
@@ -286,7 +298,7 @@ def main():
         rel = [(n, p) for n, p in GUIDE_LINKS if p != f"/guides/{slug}/"] + [(f'{s["name"]} apostille', f'/states/{s["slug"]}/') for s in states]
         gbody = raw[m.end():].replace("<!--AFF_BOX_FEDERAL-->", aff_box(slug, "U.S. Department of State Office of Authentications", 20,
                 "https://travel.state.gov/en/replace-certify/authenticate-documents/request-services.html", federal=True))
-        gbody = gbody.replace("<!--DIY_TABLE-->", diy_table(states))
+        gbody = gbody.replace("<!--DIY_TABLE-->", diy_table(states)).replace("<!--WALKIN_TABLE-->", walkin_table(states))
         gbody = re.sub(r"<!--AFF:([a-z-]+):(.*?)-->", lambda mm: alink(AFF_URLS[mm.group(1)], mm.group(1).replace("-orig", ""), slug, mm.group(2)), gbody)
         page(f'/guides/{slug}/', meta["title"], meta["description"], gbody, h1=meta["h1"], sources=meta["sources"],
              summary=meta.get("summary"), faqs=meta.get("faqs"), crumbs=[("Guides", "/guides/")], reviewed=meta.get("last_reviewed", LV), related=rel)
