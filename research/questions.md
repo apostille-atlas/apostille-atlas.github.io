@@ -57,6 +57,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 42. "Translation before or after apostille?" — https://www.reddit.com/r/GermanCitizenship/comments/1pqissv/translation_before_or_after_apostille/
 43. "Apostille clarification?" (does the apostille expire / timing) — https://www.reddit.com/r/expats/comments/1gwn4if/apostille_clarification/
 44. "Apostille service in the US?" (from the Philippines) — https://www.reddit.com/r/Philippines_Expats/comments/1qgobcb/apostille_service_in_the_us/
+45. "How much does a Universal Apostille cost? How can I pay for one?" (official FAQ, added 2026-10-30) — https://www.sos.state.tx.us/authfaqs.shtml
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -65,6 +66,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Spain country guide (/guides/apostille-for-spain/): 8, 27, 33, 40
 - Same-day and walk-in offices guide (/guides/same-day-and-walk-in-apostille-offices/): 26, 28, 29, 30, 31, 32
 - Apostille services compared (/guides/apostille-services-compared/): 40, 41, 44
+- Apostille cost by state guide (/guides/apostille-cost-by-state/): 40, 41, 45
 - Birth certificate guide: 4, 5, 13, 14, 22
 - Hague countries guide: 34–38
 - Backlog ideas this suggests: marriage certificate (12, 25), divorce decree (16), diploma/transcript (19, 20), power of attorney (24), RON (23), corporate documents (9)
