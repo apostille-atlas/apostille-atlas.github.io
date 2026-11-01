@@ -67,6 +67,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Same-day and walk-in offices guide (/guides/same-day-and-walk-in-apostille-offices/): 26, 28, 29, 30, 31, 32
 - Apostille services compared (/guides/apostille-services-compared/): 40, 41, 44
 - Apostille cost by state guide (/guides/apostille-cost-by-state/): 40, 41, 45
+- Living abroad guide (/guides/apostille-while-living-abroad/): 10, 11, 12, 39, 44
 - Birth certificate guide: 4, 5, 13, 14, 22
 - Hague countries guide: 34–38
 - Backlog ideas this suggests: marriage certificate (12, 25), divorce decree (16), diploma/transcript (19, 20), power of attorney (24), RON (23), corporate documents (9)
