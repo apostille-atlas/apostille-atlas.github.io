@@ -19,8 +19,8 @@ No passwords or secrets are stored in this repo. Logins live in the mangocapital
 |---|---|---|
 | Fingerprints & Apostilles | **APPROVED, live** | Referral link: https://fingerprintsandapostilles.com?fpr=apostille-f818cb. $20 per referred customer, $25 after 5, $30 after 15 (FBI background check apostille orders). Live on /guides/fbi-background-check-apostille/ and /guides/us-department-of-state/ |
 | Apostille USA | **APPROVED, live** (2026-10-26) | Referral links from the welcome email (each 302-redirects to apostille-usa.com with `utm_campaign=118`): Original Document Apostille https://apstl.us/6YBeOr (all state pages + birth certificate guide); Federal Apostille https://apstl.us/8jTbZ5 (FBI guide + Dept. of State guide); True Copy Apostille https://apstl.us/9exCNT (not used yet). $30 per document. Their site lists $249/doc + S&H (state) and $199 + S&H (federal), checked 2026-10-26. Payout preferences form exists (https://apostille-usa.com/partner-payment-preferences/) but is NOT filled: needs the user's bank details. CEO sent an intro email asking for background / a call (no reply sent). Dashboard: https://apostille-usa.com/affiliate-area/ (login is in the inbox/vault; not stored here) |
-| TuApostilla | Pending approval | |
-| Translayte | Inquiry sent | Reply expected within 3 working days |
+| TuApostilla | **APPROVED** (acceptance email 2026-10-27) | Affiliate area https://tuapostilla.org/affiliate-login/ (login not stored here). No referral link placed on the site yet. |
+| Translayte | Replied 2026-10-27, awaiting user decision | 10% commission (20% after 2,500 order volume), 1-year cookie, $100 payout minimum. Setup needs account owner's full name, business name and address, tax ID if any, and a contact phone number. Not provided: the user keeps personal details off this project. |
 | Florida Document Specialists | RETIRED | Program no longer offered |
 | RushTranslate | Not applied | Application needs a PayPal email |
 | OneNotary | Not applied | Application needs a street address |
