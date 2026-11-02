@@ -58,6 +58,8 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 43. "Apostille clarification?" (does the apostille expire / timing) — https://www.reddit.com/r/expats/comments/1gwn4if/apostille_clarification/
 44. "Apostille service in the US?" (from the Philippines) — https://www.reddit.com/r/Philippines_Expats/comments/1qgobcb/apostille_service_in_the_us/
 45. "How much does a Universal Apostille cost? How can I pay for one?" (official FAQ, added 2026-10-30) — https://www.sos.state.tx.us/authfaqs.shtml
+46. "I need apostilles on my school transcripts, grades, or diplomas. How should they be prepared?" (official FAQ, added 2026-11-02) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
+47. "How can I get a Universal Apostille for a school transcript or diploma?" (official FAQ, added 2026-11-02) — https://www.sos.state.tx.us/authfaqs.shtml
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -68,6 +70,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Apostille services compared (/guides/apostille-services-compared/): 40, 41, 44
 - Apostille cost by state guide (/guides/apostille-cost-by-state/): 40, 41, 45
 - Living abroad guide (/guides/apostille-while-living-abroad/): 10, 11, 12, 39, 44
+- Diploma and transcript guide (/guides/diploma-and-transcript-apostille/): 19, 20, 46, 47
 - Birth certificate guide: 4, 5, 13, 14, 22
 - Hague countries guide: 34–38
 - Backlog ideas this suggests: marriage certificate (12, 25), divorce decree (16), diploma/transcript (19, 20), power of attorney (24), RON (23), corporate documents (9)
