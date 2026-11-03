@@ -71,6 +71,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Apostille cost by state guide (/guides/apostille-cost-by-state/): 40, 41, 45
 - Living abroad guide (/guides/apostille-while-living-abroad/): 10, 11, 12, 39, 44
 - Diploma and transcript guide (/guides/diploma-and-transcript-apostille/): 19, 20, 46, 47
+- Italy country guide (/guides/apostille-for-italy/): 6, 14, 15, 21, 24
 - Birth certificate guide: 4, 5, 13, 14, 22
 - Hague countries guide: 34–38
 - Backlog ideas this suggests: marriage certificate (12, 25), divorce decree (16), diploma/transcript (19, 20), power of attorney (24), RON (23), corporate documents (9)
