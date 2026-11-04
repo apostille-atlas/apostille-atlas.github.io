@@ -73,5 +73,6 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Diploma and transcript guide (/guides/diploma-and-transcript-apostille/): 19, 20, 46, 47
 - Italy country guide (/guides/apostille-for-italy/): 6, 14, 15, 21, 24
 - Birth certificate guide: 4, 5, 13, 14, 22
+- Marriage certificate guide (/guides/marriage-certificate-apostille/): 12, 13, 22, 25
 - Hague countries guide: 34–38
 - Backlog ideas this suggests: marriage certificate (12, 25), divorce decree (16), diploma/transcript (19, 20), power of attorney (24), RON (23), corporate documents (9)
