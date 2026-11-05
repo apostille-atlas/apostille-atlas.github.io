@@ -60,6 +60,8 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 45. "How much does a Universal Apostille cost? How can I pay for one?" (official FAQ, added 2026-10-30) — https://www.sos.state.tx.us/authfaqs.shtml
 46. "I need apostilles on my school transcripts, grades, or diplomas. How should they be prepared?" (official FAQ, added 2026-11-02) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
 47. "How can I get a Universal Apostille for a school transcript or diploma?" (official FAQ, added 2026-11-02) — https://www.sos.state.tx.us/authfaqs.shtml
+48. "My document is in a foreign language. Do I need to translate it into English before I get the apostille?" (official FAQ, added 2026-11-04) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
+49. "What if my documents need to be translated?" (official FAQ, added 2026-11-04) — https://www.sos.state.tx.us/authfaqs.shtml
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -74,5 +76,6 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Italy country guide (/guides/apostille-for-italy/): 6, 14, 15, 21, 24
 - Birth certificate guide: 4, 5, 13, 14, 22
 - Marriage certificate guide (/guides/marriage-certificate-apostille/): 12, 13, 22, 25
+- Apostille and certified translation guide (/guides/apostille-and-certified-translation/): 8, 42, 48, 49
 - Hague countries guide: 34–38
 - Backlog ideas this suggests: marriage certificate (12, 25), divorce decree (16), diploma/transcript (19, 20), power of attorney (24), RON (23), corporate documents (9)
