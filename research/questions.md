@@ -64,6 +64,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 49. "What if my documents need to be translated?" (official FAQ, added 2026-11-04) — https://www.sos.state.tx.us/authfaqs.shtml
 50. "For other documents, such as power of attorney, obtain a notarized copy of the document" (official how-to step, added 2026-11-05) — https://dos.ny.gov/apostille-certificate-authentication
 51. "Georgia Notarized Documents (examples: powers of attorney, affidavits, corporate documents, translations, diplomas or school transcripts, etc.)" (official FAQ category, added 2026-11-05) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
+52. "How do I get an apostille on a divorce decree?" (official FAQ, added 2026-11-06) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -81,4 +82,5 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Apostille and certified translation guide (/guides/apostille-and-certified-translation/): 8, 42, 48, 49
 - Power of attorney guide (/guides/power-of-attorney-apostille/): 17, 21, 24, 50, 51 (RON detail left to backlog Q23)
 - Hague countries guide: 34–38
-- Backlog ideas this suggests: divorce decree (16), RON (23), corporate documents (9)
+- Divorce decree guide (/guides/divorce-decree-apostille/): 16, 52
+- Backlog ideas this suggests: RON (23), corporate documents (9)
