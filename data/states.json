@@ -440,5 +440,58 @@
   ],
   "summary": "Ohio apostilles are issued by the Secretary of State's Client Service Center at 180 Civic Center Dr., Columbus, for $5 per document. Mailed requests are processed within two to three days of receipt, and you can deliver documents in person if you need faster service. Only documents issued by an Ohio official or notarized by an Ohio notary qualify.",
   "last_reviewed": "2026-10-26"
+ },
+ {
+  "slug": "michigan",
+  "name": "Michigan",
+  "abbr": "MI",
+  "authority": "Michigan Department of State, Office of the Great Seal",
+  "fee": 1,
+  "fee_note": "$1 per document (per authentication, not per page), by check or money order payable to the State of Michigan. Do not send cash.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The request form says to allow 4 to 6 weeks of processing after the office receives your request; the office's FAQ page gives a turnaround of 1 to 2 weeks. Expedited service is not available, and courier or priority mail is not processed any faster.",
+  "walkin_time": "In-person service is by appointment only: at the Office of the Great Seal in Lansing on Mondays and Wednesdays from 8:30 a.m. to 4 p.m., or at eight select Secretary of State offices. The office does not publish a same-day turnaround, and asks visitors to arrive at least one hour before closing.",
+  "payment": "Check or money order payable to the State of Michigan for mailed requests (no cash). The office does not publish which payment methods are accepted at in-person appointments.",
+  "addresses": [
+   "Mail: Michigan Department of State, Office of the Great Seal, 7064 Crowner Drive, Lansing, MI 48918",
+   "In person (appointment only): Office of the Great Seal, Richard H. Austin Building, 1st floor, 430 W. Allegan Street, Lansing, MI",
+   "Select Secretary of State offices (appointment only): Clinton Township (37015 Gratiot Ave.), Detroit (3046 W. Grand Blvd. L650, Cadillac Place), Flint (G-5512 Fenton Rd.), Grand Rapids (3665 28th Street SE, Centerpointe Mall 6-B), Lansing (3315 E. Michigan Ave.), Livonia (17176 Farmington Rd.), Marquette (2025 Highway 41 West, Marquette Mall), Pontiac (1270 Pontiac Rd.)"
+  ],
+  "phone": "888-767-6424 (888-SOS-MICH); email MDOS-Notary@Michigan.gov",
+  "what_to_send": [
+   "A completed and signed Authentication Request Form, which names the destination country (not the USA; for China, mark Mainland, Hong Kong or Macao)",
+   "The document(s), signed by an authorized Michigan official or a commissioned Michigan notary, with original signatures",
+   "$1 per document by check or money order payable to the State of Michigan (no cash)",
+   "A self-addressed stamped envelope or a prepaid air bill (FedEx, UPS or USPS) listing yourself as both sender and receiver; the office does not pay return postage",
+   "An English translation of any document in a foreign language"
+  ],
+  "tips": [
+   "Vital records (birth, marriage, divorce, death) must be certified copies from the Michigan State Registrar, a Michigan county clerk, or a city clerk in Wayne, Macomb or Oakland County.",
+   "Documents from a court clerk, a register of deeds or another state must be notarized before the Office of the Great Seal can authenticate them.",
+   "Stamped, photocopied or facsimile signatures are rejected, and the notary block must show the notary's full name, signature, date, commission expiration date and county of commission (plus county of execution if different).",
+   "Michigan notaries cannot certify that a copy is a true copy; the issuer, or the person named on the document, makes the true copy statement and the notary acknowledges that signature.",
+   "Apostilles are only for Hague Convention countries; other countries get a Certificate of Authority, which has the same requirements and the same $1 fee."
+  ],
+  "sources": [
+   [
+    "Michigan SOS: Document authentication and apostille",
+    "https://www.michigan.gov/sos/all-services/document-authentication-and-apostille"
+   ],
+   [
+    "Michigan SOS: Document authentication FAQs (Office of the Great Seal)",
+    "https://www.michigan.gov/sos/faqs/office-of-the-great-seal/document-authentication"
+   ],
+   [
+    "Michigan SOS: Authentication Request Form (PDF, Rev. 8/23)",
+    "https://www.michigan.gov/sos/-/media/Project/Websites/sos/Notary/OGS_AUTHENTICATION_REQUEST_FORM.pdf"
+   ],
+   [
+    "Michigan SOS: Office of the Great Seal",
+    "https://www.michigan.gov/sos/notary-services/great-seal"
+   ]
+  ],
+  "summary": "Michigan apostilles are issued by the Department of State's Office of the Great Seal for $1 per document, by mail to 7064 Crowner Drive, Lansing, or in person by appointment in Lansing or at eight select Secretary of State offices. The request form says to allow 4 to 6 weeks after receipt, and expedited service is not available.",
+  "last_reviewed": "2026-11-07"
  }
 ]

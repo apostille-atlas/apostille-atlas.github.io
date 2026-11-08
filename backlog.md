@@ -19,7 +19,7 @@ Reordered 2026-10-26: pages for people likely to need a paid service (cost, turn
 - [x] guide: Apostille plus certified translation: when you need both (2026-11-04: /guides/apostille-and-certified-translation/; Q8, Q42, Q48, Q49; HCCH Handbook, Spain Boston/NY, Italy NY/SF, German missions + BVA, GA/TX/NC/NJ fetched today; translation-needed intent; Q-logged destination rules only) [needs official data: destination-country requirement pages; partner translation prices only as published]
 - [x] guide: Power of attorney apostille (2026-11-05: /guides/power-of-attorney-apostille/; Q17, Q21, Q24, Q50, Q51; CA/NY/TX/FL/PA/NC/GA/NJ fetched today, IL unreachable and AZ/OH blocked so earlier verified data used; one Apostille USA paid link, disclosure updated) [needs official data]
 - [x] guide: Divorce decree apostille (2026-11-06: /guides/divorce-decree-apostille/; Q16, Q52; NY/TX/FL/PA/NC/GA/NJ + WA FAQ fetched today; CA has no divorce-specific rule and IL/AZ/OH unreachable so not in table; one Apostille USA paid link, disclosure updated) [needs official data: county clerk certification rules]
-- [ ] state: Michigan (largest U.S. state by population not yet covered) [needs official data: Michigan SOS]
+- [x] state: Michigan (2026-11-07: /states/michigan/; Office of the Great Seal pages, FAQ and request form fetched today; $1 fee; largest U.S. state by population not yet covered) [needs official data: Michigan SOS]
 - [ ] state: Washington (its official FAQ already answers Q4, Q7, Q9, Q18, Q20) [needs official data: WA SOS]
 - [ ] country: China (in force Nov 7, 2023; Q37, Q38) [needs official data]
 - [ ] guide: Corporate documents apostille (articles, certificates of good standing; Q9) [needs official data]
