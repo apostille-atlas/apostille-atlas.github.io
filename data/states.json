@@ -87,15 +87,15 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "Up to two weeks from the day of receipt, per the official page; actual times vary with volume.",
-  "walkin_time": "Same-day service, max 10 documents. Walk-in Monday and Friday only; appointment required Tuesday\u2013Thursday. Drop box for more than 10 documents: about 72 hours.",
+  "walkin_time": "Same-day service, max 10 documents. Walk-in Monday and Friday only; appointment required Tuesday–Thursday. Drop box for more than 10 documents: about 72 hours.",
   "payment": "Mail: check or money order drawn on a U.S. bank and payable to the Office of the Texas Secretary of State, or a funded SOS Client Account. In person: check, money order, credit/debit card, or cash (exact change only).",
   "addresses": [
    "Mail: The Office of the Texas Secretary of State, Authentications Unit, P.O. Box 13550, Austin, TX 78711-3550",
-   "In person: Authentications Unit, 400 West 15th Street, Austin, TX 78701 (8:00am\u20135:00pm, Mon\u2013Fri)"
+   "In person: Authentications Unit, 400 West 15th Street, Austin, TX 78701 (8:00am–5:00pm, Mon–Fri)"
   ],
   "phone": "(512) 463-5705",
   "what_to_send": [
-   "Completed Form 2102 \u2013 Request for Universal Apostille",
+   "Completed Form 2102 – Request for Universal Apostille",
    "The original Texas-notarized document or certified copy of the public record",
    "Payment ($15 per document)",
    "A prepaid, pre-addressed return envelope or printed carrier label (no 'Bill Sender' or handwritten air bills)"
@@ -209,7 +209,7 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "5 to 7 business days after receipt (not including mailing time).",
-  "walkin_time": "Processed while you wait; walk-ins 8 a.m.\u20134:30 p.m. Mon\u2013Fri. The office asks you to arrive by 4 p.m., and notes the public entrance to the North Office Building closes at 3 p.m.",
+  "walkin_time": "Processed while you wait; walk-ins 8 a.m.–4:30 p.m. Mon–Fri. The office asks you to arrive by 4 p.m., and notes the public entrance to the North Office Building closes at 3 p.m.",
   "payment": "Personal check, money order or cashier's check payable to 'Commonwealth of Pennsylvania' (U.S. institution, or U.S. dollars with routing number). No cash by mail.",
   "addresses": [
    "North Office Building, 401 North Street, Room 201, Harrisburg, PA 17120"
@@ -286,7 +286,7 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "Normally one to two business days.",
-  "walkin_time": "Typically under twenty minutes; 9:00 a.m.\u20134:00 p.m. Mon\u2013Fri, no appointment.",
+  "walkin_time": "Typically under twenty minutes; 9:00 a.m.–4:00 p.m. Mon–Fri, no appointment.",
   "payment": "By mail: check or money order payable to GSCCCA, or credit card through the GSCCCA Credit Card Pre-Payment Voucher System. Walk-in: cash, check, money order or credit card.",
   "addresses": [
    "GSCCCA, Attn: Notary Division, 1875 Century Blvd., Ste. 100, Atlanta, GA 30345"
@@ -359,7 +359,7 @@
   "fee_note": "$3 per document. In-person expedite fee: $25 (limit 6 documents). Documents going to Puerto Rico or a U.S. territory need an $18 notarial capacity certificate.",
   "mail": true,
   "walk_in": true,
-  "mail_time": "10\u201320 business days by mail.",
+  "mail_time": "10–20 business days by mail.",
   "walkin_time": "In person (walk-in) with the $25 expedite fee, limit 6 documents. Effective November 2, 2026, Phoenix Business Services is by appointment only (book online); in-person service will no longer be at the 1700 W. Washington St. Executive Tower, and the appointment location is given when you book. Tucson office: 400 West Congress, Suite 221.",
   "payment": "Check or money order payable to \"Arizona Secretary of State.\" Do not send cash by mail.",
   "addresses": [
@@ -493,5 +493,58 @@
   ],
   "summary": "Michigan apostilles are issued by the Department of State's Office of the Great Seal for $1 per document, by mail to 7064 Crowner Drive, Lansing, or in person by appointment in Lansing or at eight select Secretary of State offices. The request form says to allow 4 to 6 weeks after receipt, and expedited service is not available.",
   "last_reviewed": "2026-11-07"
+ },
+ {
+  "slug": "washington",
+  "name": "Washington",
+  "abbr": "WA",
+  "authority": "Washington Secretary of State, Corporations & Charities Division (Apostilles Program)",
+  "fee": 15,
+  "fee_note": "$15 per document (a document can be more than one page), by check or money order in U.S. dollars payable to the Secretary of State. Expedited processing adds $100 per 10 documents; same-day in-person service adds $150 for the first 10 documents.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The office says standard processing is typically 7 to 10 business days after it receives your order, and longer when volumes are high. Expedited processing (extra $100 per 10 documents) is typically 2 to 3 business days. Documents come back by regular first-class mail unless you include a prepaid traceable return label or envelope.",
+  "walkin_time": "Same-day in-person service is offered in Tumwater (Monday to Thursday 8 a.m. to 4 p.m., Friday 8 a.m. to 3 p.m.) and in Cheney (Monday to Wednesday and Friday 9 a.m. to 3 p.m.; closed Thursdays). Documents must arrive 30 minutes before closing, and same-day service can be limited by cutoff times and volume. The fee is $15 per document plus $150 for the first 10 documents ($100 more for each additional 10).",
+  "payment": "Check or money order in U.S. dollars payable to the Secretary of State for mailed requests. The office does not publish on the apostille pages which payment methods it takes for in-person same-day service.",
+  "addresses": [
+   "Mail (Corporations & Charities Division, USPS): PO Box 40234, Olympia, WA 98504-0234 (the apostille request form PDF lists PO Box 40228 with the same ZIP+4; the contact page says the division has only one mailing address, PO Box 40234, so check with the office before mailing)",
+   "In person, same-day (Western Washington): 243 Israel Rd SE, Tumwater, WA 98501 (this address accepts overnight deliveries by commercial carrier only)",
+   "In person, same-day (Eastern Washington): 960 Washington St, Cheney, WA 99004 (cannot receive mail)"
+  ],
+  "phone": "360-725-0377 (option 3 for apostilles on the request form); the office lists an apostille email on its contact page",
+  "what_to_send": [
+   "A completed Apostille Authentication Request Form, which names the country that requested the document, with your name, address, email and phone number",
+   "The original (unaltered) or certified copy of a document issued by a Washington government entity, a certified Washington court document, or a personal document notarized by a Washington notary with a complete notarial certificate",
+   "$15 per document by check or money order payable to the Secretary of State (add $100 per 10 documents to expedite)",
+   "Optional: a prepaid traceable return label or envelope, which the office says to use if the order is time sensitive or going outside the United States"
+  ],
+  "tips": [
+   "Washington issues one universal certificate that works as an apostille for Hague Convention countries or as a certificate of authentication for other countries; documents for non-member countries may need further certification from the U.S. Department of State, the embassy, or both.",
+   "Vital records (birth, death, marriage, divorce, letter of single status) must be apostilled by the state that issued them, and only on an original or certified copy.",
+   "The office does not authenticate federal documents. FBI background checks go to the U.S. Department of State; a Washington State Patrol background check needs a notarized clearance letter from the State Patrol (include the original fingerprint card if the check was fingerprint-based).",
+   "Notary certificates must be complete, show a Washington notary's stamp and signature with matching names, the commission expiration date, the date, the act performed (in English) and the Washington county, and must not be stapled to the document.",
+   "Washington college and university transcripts must be official and signed by the registrar and do not need notarizing; out-of-state school documents, including transcripts and diplomas, are accepted only as copies notarized by a Washington notary (the page says it can process official transcripts only from Washington schools, with diplomas the exception).",
+   "Business records (certificates or certified copies from the Corporations Division) must be ordered at the same time as the apostille using the Business Records Request Form; they cannot be ordered online for this purpose."
+  ],
+  "sources": [
+   [
+    "WA SOS: Apostilles Services & Information",
+    "https://www.sos.wa.gov/corporations-charities/apostilles-program"
+   ],
+   [
+    "WA SOS: Apostille Frequently Asked Questions",
+    "https://www.sos.wa.gov/corporations-charities/apostilles-program/apostille-frequently-asked-questions"
+   ],
+   [
+    "WA SOS: Apostille Authentication Request Form (PDF, rev. 6/2025)",
+    "https://www.sos.wa.gov/sites/default/files/2025-06/6.2025%20-%20Apostilles%20request%20form.pdf"
+   ],
+   [
+    "WA SOS: Contact Us (addresses, hours, in-person services)",
+    "https://www.sos.wa.gov/corporations-charities/contact-us"
+   ]
+  ],
+  "summary": "Washington apostilles are issued by the Secretary of State's Corporations & Charities Division for $15 per document, by mail or in person the same day in Tumwater or Cheney (extra $150 same-day fee). The office says standard processing typically takes 7 to 10 business days and expedited processing 2 to 3 business days (extra $100 per 10 documents).",
+  "last_reviewed": "2026-11-08"
  }
 ]
