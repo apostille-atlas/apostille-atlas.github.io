@@ -83,4 +83,5 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Power of attorney guide (/guides/power-of-attorney-apostille/): 17, 21, 24, 50, 51 (RON detail left to backlog Q23)
 - Hague countries guide: 34–38
 - Divorce decree guide (/guides/divorce-decree-apostille/): 16, 52
+- China country guide (/guides/apostille-for-china/): 37, 38
 - Backlog ideas this suggests: RON (23), corporate documents (9)

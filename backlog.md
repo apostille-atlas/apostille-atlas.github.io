@@ -21,7 +21,7 @@ Reordered 2026-10-26: pages for people likely to need a paid service (cost, turn
 - [x] guide: Divorce decree apostille (2026-11-06: /guides/divorce-decree-apostille/; Q16, Q52; NY/TX/FL/PA/NC/GA/NJ + WA FAQ fetched today; CA has no divorce-specific rule and IL/AZ/OH unreachable so not in table; one Apostille USA paid link, disclosure updated) [needs official data: county clerk certification rules]
 - [x] state: Michigan (2026-11-07: /states/michigan/; Office of the Great Seal pages, FAQ and request form fetched today; $1 fee; largest U.S. state by population not yet covered) [needs official data: Michigan SOS]
 - [x] state: Washington (2026-11-08: /states/washington/; WA SOS apostille page, FAQ, request form PDF and contact page fetched today; $15 fee; form PO Box 40228 vs contact page PO Box 40234 noted) (its official FAQ already answers Q4, Q7, Q9, Q18, Q20) [needs official data: WA SOS]
-- [ ] country: China (in force Nov 7, 2023; Q37, Q38) [needs official data]
+- [x] country: China (2026-11-09: /guides/apostille-for-china/; Q37, Q38; Embassy of China in the U.S. notice, NY + LA consulate pages, HCCH, China MFA fetched today; DoS fee/times from 10-26 verified data (travel.state.gov 403); no official FBI-check recency rule found, page says so)
 - [ ] guide: Corporate documents apostille (articles, certificates of good standing; Q9) [needs official data]
 - [ ] guide: Online (RON) notarized documents: which states will apostille them (Q23) [needs official data]
 - [ ] country: Apostille for documents going to Canada (Convention in force Jan 11, 2024) [needs official data]
