@@ -65,6 +65,8 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 50. "For other documents, such as power of attorney, obtain a notarized copy of the document" (official how-to step, added 2026-11-05) — https://dos.ny.gov/apostille-certificate-authentication
 51. "Georgia Notarized Documents (examples: powers of attorney, affidavits, corporate documents, translations, diplomas or school transcripts, etc.)" (official FAQ category, added 2026-11-05) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
 52. "How do I get an apostille on a divorce decree?" (official FAQ, added 2026-11-06) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
+53. "I need to send our corporate documents filed with the Georgia Secretary of State Corporations Division with an apostille to another country. What should I do?" (official FAQ, added 2026-11-10) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
+54. "Can I get a Universal Apostille for my business filing that is filed with the Office of the Secretary of State?" (official FAQ, added 2026-11-10) — https://www.sos.state.tx.us/authfaqs.shtml
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -84,4 +86,5 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Hague countries guide: 34–38
 - Divorce decree guide (/guides/divorce-decree-apostille/): 16, 52
 - China country guide (/guides/apostille-for-china/): 37, 38
-- Backlog ideas this suggests: RON (23), corporate documents (9)
+- Corporate documents guide (/guides/corporate-documents-apostille/): 9, 53, 54
+- Backlog ideas this suggests: RON (23)
