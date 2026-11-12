@@ -67,6 +67,8 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 52. "How do I get an apostille on a divorce decree?" (official FAQ, added 2026-11-06) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
 53. "I need to send our corporate documents filed with the Georgia Secretary of State Corporations Division with an apostille to another country. What should I do?" (official FAQ, added 2026-11-10) — https://www.gsccca.org/notary-and-apostilles/apostilles/general-apostille-information
 54. "Can I get a Universal Apostille for my business filing that is filed with the Office of the Secretary of State?" (official FAQ, added 2026-11-10) — https://www.sos.state.tx.us/authfaqs.shtml
+55. "How do I get an apostille for my document that was notarized using RON?" (official FAQ, added 2026-11-11) — https://sos.oregon.gov/business/notary/Pages/remote-electronic-notarization-faq.aspx
+56. "Can you authenticate a document that has been signed by a Virginia Electronic Notary Public (eNotary)?" (official FAQ, added 2026-11-11) — https://www.commonwealth.virginia.gov/official-documents/authentications/types-of-documents/
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -87,4 +89,5 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Divorce decree guide (/guides/divorce-decree-apostille/): 16, 52
 - China country guide (/guides/apostille-for-china/): 37, 38
 - Corporate documents guide (/guides/corporate-documents-apostille/): 9, 53, 54
-- Backlog ideas this suggests: RON (23)
+- Online (RON) notarized documents guide (/guides/online-notarized-documents-apostille/): 23, 55, 56
+- Backlog ideas this suggests: RON (23) (done 2026-11-11)
