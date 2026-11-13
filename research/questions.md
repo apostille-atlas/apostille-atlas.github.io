@@ -69,6 +69,8 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 54. "Can I get a Universal Apostille for my business filing that is filed with the Office of the Secretary of State?" (official FAQ, added 2026-11-10) — https://www.sos.state.tx.us/authfaqs.shtml
 55. "How do I get an apostille for my document that was notarized using RON?" (official FAQ, added 2026-11-11) — https://sos.oregon.gov/business/notary/Pages/remote-electronic-notarization-faq.aspx
 56. "Can you authenticate a document that has been signed by a Virginia Electronic Notary Public (eNotary)?" (official FAQ, added 2026-11-11) — https://www.commonwealth.virginia.gov/official-documents/authentications/types-of-documents/
+57. "American Moving to Canada. Do I Need Apostilles? What Documents?" (work permit and spousal sponsorship, added 2026-11-12) — https://www.canadavisa.com/canada-immigration-discussion-board/threads/american-moving-to-canada-do-i-need-apostilles-what-documents.873887/
+58. "Do I need to get my kids' US birth certificates apostilled for crossing into Canada?" (added 2026-11-12) — https://www.reddit.com/r/uscanadaborder/comments/1bnfgoq/crossing_land_border_with_birth_certificates/
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -90,4 +92,5 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - China country guide (/guides/apostille-for-china/): 37, 38
 - Corporate documents guide (/guides/corporate-documents-apostille/): 9, 53, 54
 - Online (RON) notarized documents guide (/guides/online-notarized-documents-apostille/): 23, 55, 56
+- Canada country guide (/guides/apostille-for-canada/): 57, 58
 - Backlog ideas this suggests: RON (23) (done 2026-11-11)

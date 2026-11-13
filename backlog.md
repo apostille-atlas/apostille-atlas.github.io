@@ -24,7 +24,7 @@ Reordered 2026-10-26: pages for people likely to need a paid service (cost, turn
 - [x] country: China (2026-11-09: /guides/apostille-for-china/; Q37, Q38; Embassy of China in the U.S. notice, NY + LA consulate pages, HCCH, China MFA fetched today; DoS fee/times from 10-26 verified data (travel.state.gov 403); no official FBI-check recency rule found, page says so)
 - [x] guide: Corporate documents apostille (2026-11-10: /guides/corporate-documents-apostille/; Q9, Q53, Q54; WA FAQ, TX FAQs + authinfo, FL accepted docs, GSCCCA, PA DOS, MI Great Seal FAQ, Delaware Division of Corporations fetched today; NY/AZ/OH 403 and IL unreachable so not in table; Delaware fee not on its apostille page, not stated)
 - [x] guide: Online (RON) notarized documents: which states will apostille them (2026-11-11: /guides/online-notarized-documents-apostille/; Q23, Q55, Q56; TX authinfo, KY SOS, OR notary FAQ, VA types-of-documents, DE apostille page fetched today; other states publish no RON rule on pages checked, so not in table)
-- [ ] country: Apostille for documents going to Canada (Convention in force Jan 11, 2024) [needs official data]
+- [x] country: Canada (2026-11-12: /guides/apostille-for-canada/; Q57, Q58; Global Affairs Canada requirements + glossary, HCCH Canada news + U.S. competent authorities, IRCC language help page fetched today; DoS $20/5 weeks from earlier verified data (travel.state.gov 403); Canadian law requires no authentication of foreign documents, so no affiliate box)
 - [ ] country: Mexico (Q5) [needs official data]
 - [ ] country: Philippines (Q44) [needs official data]
 - [ ] state: Virginia
