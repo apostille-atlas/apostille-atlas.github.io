@@ -25,7 +25,7 @@ Reordered 2026-10-26: pages for people likely to need a paid service (cost, turn
 - [x] guide: Corporate documents apostille (2026-11-10: /guides/corporate-documents-apostille/; Q9, Q53, Q54; WA FAQ, TX FAQs + authinfo, FL accepted docs, GSCCCA, PA DOS, MI Great Seal FAQ, Delaware Division of Corporations fetched today; NY/AZ/OH 403 and IL unreachable so not in table; Delaware fee not on its apostille page, not stated)
 - [x] guide: Online (RON) notarized documents: which states will apostille them (2026-11-11: /guides/online-notarized-documents-apostille/; Q23, Q55, Q56; TX authinfo, KY SOS, OR notary FAQ, VA types-of-documents, DE apostille page fetched today; other states publish no RON rule on pages checked, so not in table)
 - [x] country: Canada (2026-11-12: /guides/apostille-for-canada/; Q57, Q58; Global Affairs Canada requirements + glossary, HCCH Canada news + U.S. competent authorities, IRCC language help page fetched today; DoS $20/5 weeks from earlier verified data (travel.state.gov 403); Canadian law requires no authentication of foreign documents, so no affiliate box)
-- [ ] country: Mexico (Q5) [needs official data]
+- [x] country: Mexico (2026-11-13: /guides/apostille-for-mexico/; Q5, Q42, Q59, Q60; HCCH status table + U.S. competent authorities, Mexican consulates San Diego/Orlando visa sheets + Atlanta birth registration, INM lineamientos + change-of-status sheets, Colima/Coahuila/Tijuana civil registry pages fetched today; DoS 5 weeks from earlier verified data (travel.state.gov 403), $20 confirmed on HCCH; one Apostille USA paid link, disclosure updated)
 - [ ] country: Philippines (Q44) [needs official data]
 - [ ] state: Virginia
 - [ ] state: Massachusetts
