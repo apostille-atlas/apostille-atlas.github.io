@@ -73,6 +73,10 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 58. "Do I need to get my kids' US birth certificates apostilled for crossing into Canada?" (added 2026-11-12) — https://www.reddit.com/r/uscanadaborder/comments/1bnfgoq/crossing_land_border_with_birth_certificates/
 59. "What documents do I need to get an apostille for?" (Mexico temporary residency, consulate visa then INM canje, added 2026-11-13) — https://www.reddit.com/r/mexicoexpats/comments/1ko47ec/what_documents_do_i_need_to_get_an_apostille_for/
 60. "Apostille Legal Documents" (where to apostille U.S. birth and marriage certificates for use in Mexico, added 2026-11-13) — https://www.reddit.com/r/mexicoexpats/comments/1gf3e37/apostille_legal_documents/
+61. "Apostille US document for marriage license at local civil registrar in Philippines" (added 2026-11-14) — https://www.reddit.com/r/Philippines_Expats/comments/1ouxvg4/apostille_us_document_for_marriage_license_at/
+62. "Getting married in Philippines - Does my US birth certificate need to be Apostilled?" (added 2026-11-14) — https://www.reddit.com/r/Philippines/comments/1rtwokq/getting_married_in_philippines_does_my_us_birth/
+63. "Apostilled Local State Police clearance obtained within the last (6) months" / "applicants apostilled Birth Certificate" (official 13(a) visa requirement list, added 2026-11-14) — https://losangelespcg.org/consular-services-2/visa/spouse-or-unmarried-child-of-filipino-national/
+64. "The Consulate will no longer authenticate the signatures of public documents notarized by any US notary public..." (official notice, added 2026-11-14) — https://newyorkpcg.org/pcgny/consular-services/legalization-notarization/authentication-of-a-public-document-through-apostille/
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -97,3 +101,4 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Canada country guide (/guides/apostille-for-canada/): 57, 58
 - Mexico country guide (/guides/apostille-for-mexico/): 5, 42, 59, 60
 - Backlog ideas this suggests: RON (23) (done 2026-11-11)
+- Philippines country guide (/guides/apostille-for-philippines/): 44, 61, 62, 63, 64
