@@ -546,5 +546,57 @@
   ],
   "summary": "Washington apostilles are issued by the Secretary of State's Corporations & Charities Division for $15 per document, by mail or in person the same day in Tumwater or Cheney (extra $150 same-day fee). The office says standard processing typically takes 7 to 10 business days and expedited processing 2 to 3 business days (extra $100 per 10 documents).",
   "last_reviewed": "2026-11-08"
+ },
+ {
+  "slug": "virginia",
+  "name": "Virginia",
+  "abbr": "VA",
+  "authority": "Office of the Secretary of the Commonwealth, Authentication Division",
+  "fee": 10,
+  "fee_note": "$10 per document (not per page), payable to the Secretary of the Commonwealth. If several documents were signed by the same official (notary, deputy clerk, etc.) on the same date for the same country, it is $10 for the first and $5 for each additional one. Overpayments of $5 or less may not be refunded.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The office says the general turnaround for mailed packages is 7 to 10 business days from when you send them, and it can only check status after that. A notice on its main authentications page (seen 2026-11-15) says that, because of the holiday season and very high mail volume, processing and return shipping currently take approximately 4 weeks. Documents left in the drop box at 400 East Cary Street are processed and returned by mail within 5 to 7 business days.",
+  "walkin_time": "In person is by appointment only, Monday to Thursday, at 400 East Cary Street, Richmond; without an appointment you will not be seen. Appointments are booked online only on Fridays at 10:00 a.m. for the following week, with up to 10 documents per customer or family. The office says it can process most authentications the same day as the appointment if documents are properly notarized or issued.",
+  "payment": "Check or money order payable to the Secretary of the Commonwealth. The office does not publish whether cards are accepted at appointments.",
+  "addresses": [
+   "USPS mail: Secretary of the Commonwealth, Authentication Division, 1111 East Broad Street, Richmond, VA 23219",
+   "FedEx, UPS and DHL: Secretary of the Commonwealth, Authentication Division, 400 East Cary Street, Richmond, VA 23219",
+   "In person (appointment only) and drop box: 400 East Cary Street, Richmond, VA 23219 (behind the Virginia Department of Health)"
+  ],
+  "phone": "804-692-0114; email notary@governor.virginia.gov",
+  "what_to_send": [
+   "A cover letter created through the office's online authentications portal (register or log in to make it)",
+   "The document(s), each held together with a staple or paperclip, with original signatures",
+   "The fee: $10 per document ($5 for each additional document signed by the same official on the same date for the same country), by check or money order payable to the Secretary of the Commonwealth",
+   "A self-addressed, prepaid return mailer (UPS, FedEx, USPS, etc.); for FedEx, UPS or DHL, list your own name and address as both sender and recipient"
+  ],
+  "tips": [
+   "Notarized documents must be notarized by a Virginia notary within the past 12 months, with the county or city, date, notarial statement, notary signature, commission expiration date, registration number and a seal matching the notary's commissioned name exactly. The notarization must be in English.",
+   "Vital records (birth, death, marriage, divorce) cannot be notarized and must be issued by the Virginia Department of Health Vital Records or a local DMV within the past 12 months; circuit court marriage certificates and court records need the Certification of Official Record (triple seal), also within 12 months.",
+   "Virginia will not authenticate documents notarized in another state, out-of-state vital records, out-of-state diplomas or transcripts, or electronic (eNotary) notarizations. FBI checks and other federal documents go to the U.S. Department of State.",
+   "If you list the office as the sender on a FedEx, UPS or DHL return label, your documents come back by regular mail without tracking; packages sent with no return envelope or postage also come back by regular USPS mail without tracking.",
+   "The office does not require translations, does not notarize, and is not affiliated with any apostille company. Virginia staples the apostille to the document, which the Hague Special Commission accepts."
+  ],
+  "sources": [
+   [
+    "Virginia Secretary of the Commonwealth: Authentications",
+    "https://www.commonwealth.virginia.gov/official-documents/authentications/"
+   ],
+   [
+    "Virginia Secretary of the Commonwealth: How to Submit (fees, appointments, mail)",
+    "https://www.commonwealth.virginia.gov/official-documents/authentications/how-to-submit/"
+   ],
+   [
+    "Virginia Secretary of the Commonwealth: Types of Documents",
+    "https://www.commonwealth.virginia.gov/official-documents/authentications/types-of-documents/"
+   ],
+   [
+    "Virginia Secretary of the Commonwealth: Why Would a Document Be Rejected?",
+    "https://www.commonwealth.virginia.gov/official-documents/authentications/document-rejection/"
+   ]
+  ],
+  "summary": "Virginia apostilles come from the Secretary of the Commonwealth's Authentication Division in Richmond for $10 per document ($5 for each additional document signed by the same official on the same date for the same country). Mail them in or book a Monday-to-Thursday appointment, where most are done the same day; mail usually takes 7 to 10 business days, but the office currently warns of about 4 weeks for the holiday season.",
+  "last_reviewed": "2026-11-15"
  }
 ]
