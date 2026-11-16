@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the static site into ./dist from data/states.json and content/guides/*.html.
 Pages marked "draft": true or without sources are skipped (never publish unsourced pages)."""
-import json, re, shutil, html, sys
+import json, re, shutil, html, sys, subprocess
 from pathlib import Path
 R = Path(__file__).parent; OUT = R / "dist"
 C = json.loads((R / "config.json").read_text())
@@ -106,19 +106,58 @@ strip = lambda h: re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", h))).
 AN = lambda n: ("an " if n[:1] in "AEIO" else "a ") + n  # "an Ohio", "a Utah"
 NICE = lambda d: __import__("datetime").date.fromisoformat(d).strftime("%B %-d, %Y")
 
+def git_file_dates(path):
+    """Return (first_commit_date, last_commit_date) as YYYY-MM-DD, or (None, None).
+
+    Used for honest datePublished (first commit) and hub lastmod (newest content commit).
+    Returns None when git history is missing (e.g. a shallow checkout or no .git).
+    """
+    path = Path(path)
+    try:
+        rel = str(path.resolve().relative_to(R.resolve()))
+    except ValueError:
+        rel = str(path)
+    if rel in git_file_dates.cache:
+        return git_file_dates.cache[rel]
+    def log(*args):
+        try:
+            out = subprocess.check_output(
+                ["git", "log", "--follow", *args, "--format=%as", "--", rel],
+                cwd=R, stderr=subprocess.DEVNULL, text=True,
+            ).strip()
+            return [ln for ln in out.splitlines() if ln]
+        except (subprocess.CalledProcessError, FileNotFoundError, OSError):
+            return []
+    added, all_dates = log("--diff-filter=A"), log()
+    first = (added[-1] if added else None) or (all_dates[-1] if all_dates else None)
+    last = all_dates[0] if all_dates else None
+    git_file_dates.cache[rel] = (first, last)
+    return first, last
+git_file_dates.cache = {}
+
+
 def faq_html(faqs):
     if not faqs: return ""
     return '<section class="faq"><h2>Frequently asked questions</h2>' + "".join(
         f'<h3>{e(q)}</h3><p>{a}</p>' for q, a in faqs) + "</section>"
 
 def page(path, title, desc, body, h1=None, sources=None, schema=None, summary=None, faqs=None,
-         crumbs=None, article=True, reviewed=None, related=None, noindex=False):
+         crumbs=None, article=True, reviewed=None, related=None, noindex=False,
+         published=None, modified=None, date_label=None, redirect=None):
     """Write one page. title must be < 60 chars. summary = 2-3 sentence direct answer (confirmed facts only).
-    faqs = [[question, answer_html], ...] from real questions (research/questions.md). crumbs = [(name, path), ...]."""
+    faqs = [[question, answer_html], ...] from real questions (research/questions.md). crumbs = [(name, path), ...].
+    reviewed = source-check date (visible "Last reviewed" and sources footer). modified = sitemap lastmod and
+    JSON-LD dateModified; defaults to reviewed. published = JSON-LD datePublished. date_label overrides the
+    visible date wording (e.g. "Last updated" on hubs). redirect = path to send users to (meta refresh + JS);
+    those pages are noindexed and omitted from the sitemap."""
+    if redirect: noindex = True
     assert len(title) < 60, f"title too long ({len(title)}): {title}"
     assert len(desc) <= 155, f"description too long ({len(desc)}): {desc}"
     url = SITE + path; rv = reviewed or LV
-    if not noindex: PAGES.append(dict(path=path, title=title, desc=desc, lastmod=rv, summary=summary, faqs=faqs))
+    mod = modified or rv
+    pub = published or C.get("launched", LV)
+    label = date_label or "Last reviewed"
+    if not noindex: PAGES.append(dict(path=path, title=title, desc=desc, lastmod=mod, summary=summary, faqs=faqs, date_label=label))
     src = ""
     if sources:
         src = '<section class="sources"><h2>Official sources</h2><ul>' + "".join(
@@ -128,11 +167,11 @@ def page(path, title, desc, body, h1=None, sources=None, schema=None, summary=No
     if schema: graph += schema if isinstance(schema, list) else [schema]
     if article and h1:
         graph.append({"@type": "Article", "headline": h1, "description": desc, "url": url, "mainEntityOfPage": url,
-                      "datePublished": C.get("launched", LV), "dateModified": rv, "author": ORG, "publisher": ORG, "inLanguage": "en-US",
+                      "datePublished": pub, "dateModified": mod, "author": ORG, "publisher": ORG, "inLanguage": "en-US",
                       "image": OG_IMG, "isPartOf": {"@id": SITE + "/#website"}})
     if (not article or not h1) and not noindex:
         graph.append({"@type": "WebPage", "@id": url, "url": url, "name": title, "description": desc, "inLanguage": "en-US",
-                      "isPartOf": {"@id": SITE + "/#website"}, "dateModified": rv, "publisher": ORG})
+                      "isPartOf": {"@id": SITE + "/#website"}, "dateModified": mod, "publisher": ORG})
     if crumbs is not None:
         trail = [("Home", "/")] + crumbs + [(h1 or title, path)]
         graph.append({"@type": "BreadcrumbList", "itemListElement": [
@@ -152,7 +191,9 @@ def page(path, title, desc, body, h1=None, sources=None, schema=None, summary=No
     top = ""
     if h1:
         top = bc + f'<h1>{e(h1)}</h1>'
-        if (reviewed is not None or sources or summary) and not noindex: top += f'<p class="meta">Last reviewed: <time datetime="{rv}">{NICE(rv)}</time></p>'
+        if (reviewed is not None or sources or summary or date_label) and not noindex:
+            shown = mod if label == "Last updated" else rv
+            top += f'<p class="meta">{label}: <time datetime="{shown}">{NICE(shown)}</time></p>'
     if summary: top += f'<div class="answer"><strong>Short answer:</strong> {e(summary)}</div>'
     rel = ""
     if related:
@@ -161,11 +202,11 @@ def page(path, title, desc, body, h1=None, sources=None, schema=None, summary=No
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="YmyOw7HPo4pJcKqyHGGfO-omSdR1MkXOuEQz_9bi9z4" />
 <title>{e(title)}</title><meta name="description" content="{e(desc)}">
-<meta name="robots" content="{'noindex' if noindex else 'index,follow,max-snippet:-1,max-image-preview:large'}">{'' if noindex else f'<link rel="canonical" href="{url}">'}
-<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:site_name" content="{NAME}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta property="og:type" content="{'article' if article and h1 else 'website'}"><meta property="og:image" content="{OG_IMG}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{NAME}: U.S. apostille offices by state"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{OG_IMG}">{f'<meta property="article:modified_time" content="{rv}">' if article and h1 else ''}
+<meta name="robots" content="{'noindex' if noindex else 'index,follow,max-snippet:-1,max-image-preview:large'}">{f'<link rel="canonical" href="{SITE + redirect}">' if redirect else ('' if noindex else f'<link rel="canonical" href="{url}">')}{f'<meta http-equiv="refresh" content="0;url={redirect}">' if redirect else ''}
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:site_name" content="{NAME}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{SITE + redirect if redirect else url}"><meta property="og:type" content="{'article' if article and h1 else 'website'}"><meta property="og:image" content="{OG_IMG}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{NAME}: U.S. apostille offices by state"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{OG_IMG}">{f'<meta property="article:modified_time" content="{mod}">' if article and h1 else ''}
 <style>{CSS}</style>{ld}</head><body>
 <header><div class="wrap"><a class="brand" href="/">{NAME}</a><nav><a href="/directory/">Directory</a><a href="/apostille-fees-by-state/">Fees &amp; times</a><a href="/faq/">FAQ</a><a href="/guides/">Guides</a><a href="/guides/state-or-federal-which-office/">Which office?</a><a href="/guides/hague-apostille-countries/">Hague countries</a><a href="/guides/apostille-services-compared/">DIY vs service</a><a href="/about/">About</a></nav></div></header>
-<main class="wrap">{top}{body}{faq_html(faqs)}{rel}{src}</main>
+<main class="wrap">{top}{body}{faq_html(faqs)}{rel}{src}{f'<script>location.replace({json.dumps(redirect)})</script>' if redirect else ''}</main>
 <footer><div class="wrap">{NAME} is an independent guide, not a government website, and not legal advice. <a href="/disclosure/">Affiliate disclosure</a> · <a href="/about/">About</a> · <a href="/faq/">FAQ</a> · <a href="/sitemap.xml">Sitemap</a></div></footer>
 {GOAT}{AFF_JS if 'data-aff=' in body else ''}
 </body></html>"""
@@ -316,11 +357,21 @@ def main():
                 "https://travel.state.gov/en/replace-certify/authenticate-documents/request-services.html", federal=True))
         gbody = gbody.replace("<!--DIY_TABLE-->", diy_table(states)).replace("<!--WALKIN_TABLE-->", walkin_table(states)).replace("<!--COST_TABLE-->", cost_table(states))
         gbody = re.sub(r"<!--AFF:([a-z-]+):(.*?)-->", lambda mm: alink(AFF_URLS[mm.group(1)], mm.group(1).replace("-orig", ""), slug, mm.group(2)), gbody)
+        pub = meta.get("date_published") or meta.get("datePublished") or meta.get("published") or meta.get("date")
+        if not pub:
+            first, _ = git_file_dates(g); pub = first
         page(f'/guides/{slug}/', meta["title"], meta["description"], gbody, h1=meta["h1"], sources=meta["sources"],
-             summary=meta.get("summary"), faqs=meta.get("faqs"), crumbs=[("Guides", "/guides/")], reviewed=meta.get("last_reviewed", LV), related=rel)
+             summary=meta.get("summary"), faqs=meta.get("faqs"), crumbs=[("Guides", "/guides/")], reviewed=meta.get("last_reviewed", LV), published=pub, related=rel)
     gcards = "".join(f'<a class="card" href="/guides/{sl}/"><span class="badge">{e(m["category"])}</span><br><strong>{e(m["h1"])}</strong></a>' for sl, m in guides)
     scards = "".join(f'<a class="card" href="/states/{s["slug"]}/"><strong>{e(s["name"])}</strong><small>${s["fee"]}/doc · {e(s["authority"].split(",")[0])}</small></a>' for s in states)
     gcards = '<a class="card" href="/faq/"><span class="badge">FAQ</span><br><strong>Frequently asked apostille questions</strong></a>' + gcards
+    # Hub lastmod / "Last updated": newest real content change, not a faked re-check of every source.
+    content_dates = [s["last_reviewed"] for s in states if s.get("last_reviewed")]
+    content_dates += [m["last_reviewed"] for sl, m in guides if m.get("last_reviewed")]
+    for pth in [R / "data/states.json", R / "data/faq.json", *sorted((R / "content/guides").glob("*.html"))]:
+        _first, last = git_file_dates(pth)
+        if last: content_dates.append(last)
+    content_updated = max(content_dates) if content_dates else LV
     # FAQ hub
     fq = json.loads((R / "data/faq.json").read_text())
     fsrc, seen = [], set()
@@ -333,7 +384,8 @@ def main():
              f'<h2>Questions on this page</h2>{toc}<h2>Answers</h2>' + "".join(f'<h3 id="q{i+1}">{e(q)}</h3><p>{a}</p>' for i, (q, a) in enumerate(fitems)) +
              '<p>Next step: open your state in the <a href="/directory/">apostille directory</a>, or read <a href="/guides/state-or-federal-which-office/">state or federal: which office?</a></p>')
     page("/faq/", fq["title"], fq["description"], fbody, h1="Frequently asked apostille questions", sources=fsrc, summary=fq["summary"],
-         crumbs=[("Guides", "/guides/")], related=[(n, p) for n, p in GUIDE_LINKS if p != "/faq/"] + [(f'{s["name"]} apostille', f'/states/{s["slug"]}/') for s in states])
+         crumbs=[("Guides", "/guides/")], related=[(n, p) for n, p in GUIDE_LINKS if p != "/faq/"] + [(f'{s["name"]} apostille', f'/states/{s["slug"]}/') for s in states],
+         reviewed=LV, modified=content_updated, date_label="Last updated")
     # FAQPage JSON-LD for the hub (answers as plain text, without inline citations)
     hub = OUT / "faq/index.html"; d = hub.read_text()
     ld = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a, ss in fq["items"]]}
@@ -341,7 +393,7 @@ def main():
     # guides index
     page("/guides/", f"Apostille Guides: Documents, Offices, Countries", "Plain-language apostille guides for U.S. documents: birth certificates, FBI checks, federal documents, Hague countries and which office to use.",
          f'<p class="lede">Guides for specific documents and situations. Each one cites official government sources.</p><div class="cards">{gcards}</div><h2>Looking for a state?</h2><div class="cards">{scards}</div><p>Or open the full <a href="/directory/">apostille directory</a>, or compare every state\'s <a href="/apostille-fees-by-state/">fees and processing times</a> (with CSV download).</p>',
-         h1="Apostille guides", crumbs=[], article=False, reviewed=LV,
+         h1="Apostille guides", crumbs=[], article=False, modified=content_updated, date_label="Last updated",
          summary="Start with the office: state and locally issued or notarized documents are apostilled by that state, and federal documents such as FBI checks by the U.S. Department of State. Then check whether your destination country accepts apostilles at all.")
     # directory
     rows = "".join(f'<tr data-name="{e(s["name"].lower())} {s["abbr"].lower()}" data-fee="{s["fee"]}" data-walkin="{int(s["walk_in"])}"><td><a href="/states/{s["slug"]}/">{e(s["name"])}</a></td><td>{e(s["authority"])}</td><td>${s["fee"]}</td><td>{"Yes" if s["walk_in"] else "Not listed"}</td></tr>' for s in states)
@@ -355,7 +407,7 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
              f'<h2>Where do federal documents go?</h2><p><a href="/guides/us-department-of-state/">U.S. Department of State Office of Authentications</a>: $20 per document, for FBI checks and other federal records.</p>'
              f'<h2>Guides by category</h2><div class="cards">{gcards}</div>' + js)
     page("/directory/", "Apostille Directory by State: Offices, Fees, Walk-in", "Compare U.S. state apostille offices: issuing office, fee per document and walk-in availability, from official sources.", dbody,
-         h1="Apostille directory", crumbs=[], article=False, reviewed=LV,
+         h1="Apostille directory", crumbs=[], article=False, modified=content_updated, date_label="Last updated",
          schema={"@type": "ItemList", "name": "U.S. apostille offices by state", "numberOfItems": len(states), "itemListElement": [
              {"@type": "ListItem", "position": i + 1, "name": f'{s["name"]} apostille', "url": f'{SITE}/states/{s["slug"]}/'} for i, s in enumerate(states)]},
          summary=f"There is no single national apostille office: each state apostilles its own documents, and the U.S. Department of State handles federal ones for $20. Among the {len(states)} states covered so far, official fees range from ${minfee} to ${maxfee} per document.")
@@ -365,7 +417,7 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
             f'<h2>States</h2><div class="cards">{scards}<a class="card" href="/guides/us-department-of-state/"><strong>Federal (U.S. Dept. of State)</strong><small>$20/doc · FBI checks, federal records</small></a></div>'
             f'<h2>Guides</h2><div class="cards">{gcards}</div>')
     page("/", f"{NAME}: U.S. Apostille Offices by State", "Find the right U.S. apostille office for your document: official fees, addresses, processing times and requirements by state, cited to government sources.", home,
-         article=False, reviewed=LV,
+         article=False, modified=content_updated, date_label="Last updated",
          h1="Get the apostille right the first time",
          summary="A U.S. document is apostilled by the state that issued or notarized it, or by the U.S. Department of State if it is federal (such as an FBI background check). This site lists each office's official fee, address, processing time and requirements, with a link to the government source.")
     page("/about/", f"About {NAME}: How Pages Are Made", f"Who runs {NAME}, how pages are drafted and fact-checked, how the site earns money, and how to report a correction.",
@@ -374,22 +426,27 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
          '<li><strong>Drafted with AI assistance.</strong> Pages are drafted with the help of AI tools. We say so because you should know how the content is produced.</li>'
          '<li><strong>Every fact is checked against the official page.</strong> Before a page is published, each fee, address, processing time and requirement is checked against the official government page linked under "Official sources" on that same page. A page without an official source is not published.</li>'
          '<li><strong>No guessing.</strong> We don\'t publish estimated prices or processing times. Where an office doesn\'t publish a figure, the page says so.</li>'
-         '<li><strong>Honest dates.</strong> "Last reviewed" shows when a page was last compared with its official sources. We change it only after a real re-check, not to make a page look fresh.</li>'
+         '<li><strong>Honest dates.</strong> "Last reviewed" on a state or guide page shows when that page was last compared with its official sources. We change it only after a real re-check, not to make a page look fresh. Hub pages such as the homepage show "Last updated" when a new page is added or existing content changes; that is not a source re-check of every page.</li>'
          '<li><strong>Real questions.</strong> The questions answered on the site come from questions people ask in forums and on official FAQ pages.</li>'
          '<li><strong>No invented experts.</strong> The site is not written by a lawyer or a former government official, and we don\'t claim credentials we don\'t have. Its value is that it puts the official facts in one place, with the source next to each one.</li></ul>'
          '<p>You can see the facts side by side, with a source link next to each value, on the <a href="/apostille-fees-by-state/">fees and processing times by state</a> page (also downloadable as CSV).</p>'
          '<h2 id="money">How does the site make money?</h2><p>Only through affiliate commissions. Some pages link to private apostille services; those links are labelled "(paid link)" and marked <code>rel="sponsored"</code>. If you order through one, we may earn a commission at no extra cost to you. There are no ads, and nobody pays to be listed. Every page explains how to do it yourself directly with the government office for the official fee, which is usually the cheapest option. Commissions never change the official facts on a page. Details: <a href="/disclosure/">affiliate disclosure</a>.</p>'
          '<h2>Privacy</h2><p>This site uses privacy-friendly, cookieless analytics (GoatCounter) to count page views, plus anonymous counts of clicks on paid links (which partner, from which page). No cookies, no personal data, no cross-site tracking.</p>'
          f'<h2 id="corrections">How do I report a correction?</h2><p>Offices change fees, addresses and procedures, and links break. If something on a page no longer matches the official source, email <a href="mailto:{C["contact_email"]}">{C["contact_email"]}</a> with:</p><ol><li>the page on this site (its URL),</li><li>what is wrong or out of date, and</li><li>a link to the official government page that shows the current information, if you have one.</li></ol><p>We check the report against the official source and, if it is right, fix the page and update its "Last reviewed" date. We don\'t change a fact based on a report alone without confirming it on the official page.</p>',
-         h1=f"About {NAME}", article=False, crumbs=[], reviewed=LV,
+         h1=f"About {NAME}", article=False, crumbs=[], modified=content_updated, date_label="Last updated",
          summary=f"{NAME} is an independent, plain-language directory of U.S. apostille offices, not a government website. Pages are drafted with AI assistance, and every fee, address, processing time and requirement is checked against the official government page linked on that page. The site earns money only from affiliate commissions on clearly labelled paid links.")
     page("/disclosure/", f"Affiliate Disclosure | {NAME}", "How Apostille Atlas may earn money and how that affects (and does not affect) our content.",
-         f'<p>Some links on {NAME} may be affiliate links. If you use one to buy a service, such as a private apostille, courier, translation or online notary service, we may earn a commission at no extra cost to you. Affiliate links are marked with <code>rel="sponsored"</code> and appear in highlighted boxes. We count clicks on them anonymously with cookieless GoatCounter (only which partner and which page, never who clicked) to see which pages are useful.</p><p><strong>Current status:</strong> two affiliate partners are live, each labelled "(paid link)" where it appears:</p><ul><li><strong>Fingerprints &amp; Apostilles</strong> (a private service that handles FBI background check apostilles), on our <a href="/guides/fbi-background-check-apostille/">FBI background check guide</a>, <a href="/guides/fastest-fbi-background-check-apostille/">fastest FBI check apostille guide</a>, <a href="/guides/us-department-of-state/">U.S. Department of State guide</a>, <a href="/guides/apostille-for-spain/">Spain guide</a>, <a href="/guides/apostille-for-china/">China guide</a> and <a href="/guides/apostille-services-compared/">apostille services comparison</a>.</li><li><strong>Apostille USA</strong> (a private service that files state and federal apostilles), on every state page, our <a href="/guides/birth-certificate-apostille/">birth certificate guide</a>, our FBI background check guides, our U.S. Department of State guide, our Spain guide, our <a href="/guides/apostille-while-living-abroad/">living-abroad guide</a>, our <a href="/guides/diploma-and-transcript-apostille/">diploma and transcript guide</a>, our <a href="/guides/apostille-for-italy/">Italy citizenship guide</a>, our <a href="/guides/marriage-certificate-apostille/">marriage certificate guide</a>, our <a href="/guides/apostille-and-certified-translation/">apostille and translation guide</a>, our <a href="/guides/power-of-attorney-apostille/">power of attorney guide</a>, our <a href="/guides/divorce-decree-apostille/">divorce decree guide</a>, our <a href="/guides/corporate-documents-apostille/">corporate documents guide</a>, our China guide, our <a href="/guides/apostille-for-mexico/">Mexico guide</a>, our <a href="/guides/apostille-for-philippines/">Philippines guide</a> and our apostille services comparison.</li></ul><p>If you order through one of these links, we may earn a referral commission at no extra cost to you. No other affiliate partnerships are active. Our services comparison also lists services we have no relationship with, because they publish clear prices; we earn nothing from them.</p><p>Including a link does not mean we have tested, ranked or endorse a service over others. It is one option alongside doing it yourself directly with the government office.</p><p>Affiliate relationships never change the official facts on a page. You can always get an apostille directly from the government office for the official fee, and every page explains how.</p><p>This disclosure is meant to follow the U.S. FTC\'s guidance on endorsements (16 CFR Part 255).</p>', h1="Affiliate disclosure", reviewed=LV,
+         f'<p>Some links on {NAME} may be affiliate links. If you use one to buy a service, such as a private apostille, courier, translation or online notary service, we may earn a commission at no extra cost to you. Affiliate links are marked with <code>rel="sponsored"</code> and appear in highlighted boxes. We count clicks on them anonymously with cookieless GoatCounter (only which partner and which page, never who clicked) to see which pages are useful.</p><p><strong>Current status:</strong> two affiliate partners are live, each labelled "(paid link)" where it appears:</p><ul><li><strong>Fingerprints &amp; Apostilles</strong> (a private service that handles FBI background check apostilles), on our <a href="/guides/fbi-background-check-apostille/">FBI background check guide</a>, <a href="/guides/fastest-fbi-background-check-apostille/">fastest FBI check apostille guide</a>, <a href="/guides/us-department-of-state/">U.S. Department of State guide</a>, <a href="/guides/apostille-for-spain/">Spain guide</a>, <a href="/guides/apostille-for-china/">China guide</a> and <a href="/guides/apostille-services-compared/">apostille services comparison</a>.</li><li><strong>Apostille USA</strong> (a private service that files state and federal apostilles), on every state page, our <a href="/guides/birth-certificate-apostille/">birth certificate guide</a>, our FBI background check guides, our U.S. Department of State guide, our Spain guide, our <a href="/guides/apostille-while-living-abroad/">living-abroad guide</a>, our <a href="/guides/diploma-and-transcript-apostille/">diploma and transcript guide</a>, our <a href="/guides/apostille-for-italy/">Italy citizenship guide</a>, our <a href="/guides/marriage-certificate-apostille/">marriage certificate guide</a>, our <a href="/guides/apostille-and-certified-translation/">apostille and translation guide</a>, our <a href="/guides/power-of-attorney-apostille/">power of attorney guide</a>, our <a href="/guides/divorce-decree-apostille/">divorce decree guide</a>, our <a href="/guides/corporate-documents-apostille/">corporate documents guide</a>, our China guide, our <a href="/guides/apostille-for-mexico/">Mexico guide</a>, our <a href="/guides/apostille-for-philippines/">Philippines guide</a> and our apostille services comparison.</li></ul><p>If you order through one of these links, we may earn a referral commission at no extra cost to you. No other affiliate partnerships are active. Our services comparison also lists services we have no relationship with, because they publish clear prices; we earn nothing from them.</p><p>Including a link does not mean we have tested, ranked or endorse a service over others. It is one option alongside doing it yourself directly with the government office.</p><p>Affiliate relationships never change the official facts on a page. You can always get an apostille directly from the government office for the official fee, and every page explains how.</p><p>This disclosure is meant to follow the U.S. FTC\'s guidance on endorsements (16 CFR Part 255).</p>', h1="Affiliate disclosure",
          summary="Some links on this site are affiliate links, labelled \"(paid link)\", for two partners: Fingerprints & Apostilles and Apostille USA. If you order through one, we may earn a commission at no extra cost to you. It never changes the official facts on a page.",
-         sources=[["FTC: Endorsement Guides (16 CFR Part 255)","https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255"]], article=False, crumbs=[])
+         sources=[["FTC: Endorsement Guides (16 CFR Part 255)","https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255"]], article=False, crumbs=[],
+         reviewed=LV, modified=content_updated, date_label="Last updated")
     page("/404.html", f"Page not found | {NAME}", "This page does not exist. Find your state's apostille office in the directory or read the apostille FAQ.",
          f'<p class="lede">That page doesn\'t exist or has moved.</p><h2>Find what you need</h2><ul><li><a href="/directory/">Apostille directory by state</a></li><li><a href="/faq/">Apostille FAQ</a></li><li><a href="/guides/">All guides</a></li><li><a href="/guides/state-or-federal-which-office/">State or federal: which office?</a></li></ul><div class="cards">{scards}</div>',
          h1="Page not found", article=False, noindex=True)
+    # /states/ is a common typo for /directory/; GitHub Pages has no 301, so this static page redirects.
+    page("/states/", f"Apostille Directory by State | {NAME}", "U.S. state apostille offices are listed in the directory.",
+         '<p class="lede">This page has moved to the <a href="/directory/">apostille directory</a>.</p><p>There you can compare issuing offices, fees and walk-in options by state.</p>',
+         h1="This page has moved", article=False, redirect="/directory/")
     sm = "".join(f"<url><loc>{SITE}{p['path']}</loc><lastmod>{p['lastmod']}</lastmod></url>" for p in PAGES)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
     bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Googlebot", "Bingbot", "Applebot", "Applebot-Extended", "CCBot", "Perplexity-User", "Amazonbot", "DuckAssistBot", "Meta-ExternalAgent", "MistralAI-User", "YouBot"]
@@ -397,7 +454,7 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
     byp = {p["path"]: p for p in PAGES}
     L = lambda p: f"- [{byp[p]['title']}]({SITE}{p}): {byp[p]['desc']}"
     llms = (f"# {NAME}\n\n> Independent, plain-language directory of U.S. apostille offices: which office apostilles a document, the official fee, processing time and what to send, "
-            f"cited to official government sources. Not a government site; not legal advice. Last reviewed {LV}.\n\n"
+            f"cited to official government sources. Not a government site; not legal advice. Last updated {content_updated}.\n\n"
             "Key rule: a U.S. document is apostilled by the state that issued or notarized it; federal documents (such as FBI background checks) are apostilled by the U.S. Department of State ($20 per document, Form DS-4194). "
             "Facts on each page link to the official source; where an office publishes no figure, the page says so.\n\n"
             "## Start here\n" + "\n".join(L(p) for p in ["/faq/", "/directory/", "/apostille-fees-by-state/", "/guides/state-or-federal-which-office/", "/guides/apostille-services-compared/"]) +
@@ -409,10 +466,10 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
         f"\n- Federal documents (FBI checks etc.): U.S. Department of State Office of Authentications; $20 per document; Form DS-4194. Details: {SITE}/guides/us-department-of-state/" +
         f"\n\n## Full text\n- [llms-full.txt]({SITE}/llms-full.txt): every page's short answer and FAQ answers in plain text\n\n## Optional\n", 1)
     (OUT / "llms.txt").write_text(llms)
-    full = [f"# {NAME}: full text of short answers and FAQs\n\nIndependent guide, not a government site, not legal advice. Every fact is cited on its page to an official source. Last reviewed {LV}.\n"]
+    full = [f"# {NAME}: full text of short answers and FAQs\n\nIndependent guide, not a government site, not legal advice. Every fact is cited on its page to an official source. Last updated {content_updated}.\n"]
     for pg in PAGES:
         if not (pg["summary"] or pg["faqs"]): continue
-        full.append(f"\n## {pg['title']}\nURL: {SITE}{pg['path']}\nLast reviewed: {pg['lastmod']}\n")
+        full.append(f"\n## {pg['title']}\nURL: {SITE}{pg['path']}\n{pg.get('date_label', 'Last reviewed')}: {pg['lastmod']}\n")
         if pg["summary"]: full.append(f"Short answer: {pg['summary']}\n")
         for q, a in (pg["faqs"] or []): full.append(f"\nQ: {q}\nA: {strip(a)}\n")
     full.append("\n## Apostille FAQ (hub)\nURL: " + SITE + "/faq/\n" + "".join(f"\nQ: {q}\nA: {strip(a)}\n" for q, a, ss in fq["items"]))
