@@ -135,6 +135,46 @@ def git_file_dates(path):
     return first, last
 git_file_dates.cache = {}
 
+def git_json_slug_first_dates(path):
+    """Map each object's slug in a JSON list file to the YYYY-MM-DD it first appeared, or {}."""
+    path = Path(path)
+    try:
+        rel = str(path.resolve().relative_to(R.resolve()))
+    except ValueError:
+        rel = str(path)
+    if rel in git_json_slug_first_dates.cache:
+        return git_json_slug_first_dates.cache[rel]
+    dates = {}
+    try:
+        commits = subprocess.check_output(
+            ["git", "log", "--reverse", "--format=%H %as", "--", rel],
+            cwd=R, stderr=subprocess.DEVNULL, text=True,
+        ).strip().splitlines()
+    except (subprocess.CalledProcessError, FileNotFoundError, OSError):
+        commits = []
+    for line in commits:
+        parts = line.split()
+        if len(parts) < 2:
+            continue
+        sha, day = parts[0], parts[1]
+        try:
+            raw = subprocess.check_output(
+                ["git", "show", f"{sha}:{rel}"],
+                cwd=R, stderr=subprocess.DEVNULL, text=True,
+            )
+            data = json.loads(raw)
+        except (subprocess.CalledProcessError, FileNotFoundError, OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(data, list):
+            continue
+        for item in data:
+            slug = item.get("slug") if isinstance(item, dict) else None
+            if slug and slug not in dates:
+                dates[slug] = day
+    git_json_slug_first_dates.cache[rel] = dates
+    return dates
+git_json_slug_first_dates.cache = {}
+
 
 def faq_html(faqs):
     if not faqs: return ""
@@ -334,15 +374,17 @@ def main():
         if k.suffix in (".txt", ".png", ".ico", ".svg"): shutil.copy(k, OUT / k.name)  # IndexNow key, favicons, OG image
     states = [s for s in json.loads((R / "data/states.json").read_text()) if not s.get("draft") and s.get("sources")]
     states.sort(key=lambda s: s["name"])
+    state_published = git_json_slug_first_dates(R / "data/states.json")
     for s in states:
         title = f'{s["name"]} Apostille: Where to Go, ${s["fee"]} Fee & Steps'
         rel = [(n, p) for n, p in GUIDE_LINKS if p != "/directory/"]
         auth = s["authority"].split(",")[0]
         desc = f'How to get {AN(s["name"])} apostille: {auth}, ${s["fee"]} per document, mail{" and walk-in" if s["walk_in"] else ""} options and what to send. Official sources.'
         if len(desc) > 155: desc = f'{s["name"]} apostille: {auth}, ${s["fee"]} per document, how to apply and what to send. Official sources.'
+        pub = s.get("date_published") or s.get("datePublished") or s.get("published") or s.get("date") or state_published.get(s["slug"])
         page(f'/states/{s["slug"]}/', title, desc,
              state_body(s, states), h1=f'{s["name"]} apostille: where to go, fee and steps', sources=s["sources"],
-             summary=s.get("summary"), faqs=state_faqs(s), crumbs=[("States", "/directory/")], reviewed=s.get("last_reviewed", LV), related=rel,
+             summary=s.get("summary"), faqs=state_faqs(s), crumbs=[("States", "/directory/")], reviewed=s.get("last_reviewed", LV), published=pub, related=rel,
              schema={"@type":"HowTo","name":f'Get an apostille in {s["name"]}',"step":[{"@type":"HowToStep","text":x} for x in s["what_to_send"]]})
     data_page(states)
     guides = []
