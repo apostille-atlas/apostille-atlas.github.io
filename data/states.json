@@ -87,15 +87,15 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "Up to two weeks from the day of receipt, per the official page; actual times vary with volume.",
-  "walkin_time": "Same-day service, max 10 documents. Walk-in Monday and Friday only; appointment required Tuesday–Thursday. Drop box for more than 10 documents: about 72 hours.",
+  "walkin_time": "Same-day service, max 10 documents. Walk-in Monday and Friday only; appointment required Tuesday\u2013Thursday. Drop box for more than 10 documents: about 72 hours.",
   "payment": "Mail: check or money order drawn on a U.S. bank and payable to the Office of the Texas Secretary of State, or a funded SOS Client Account. In person: check, money order, credit/debit card, or cash (exact change only).",
   "addresses": [
    "Mail: The Office of the Texas Secretary of State, Authentications Unit, P.O. Box 13550, Austin, TX 78711-3550",
-   "In person: Authentications Unit, 400 West 15th Street, Austin, TX 78701 (8:00am–5:00pm, Mon–Fri)"
+   "In person: Authentications Unit, 400 West 15th Street, Austin, TX 78701 (8:00am\u20135:00pm, Mon\u2013Fri)"
   ],
   "phone": "(512) 463-5705",
   "what_to_send": [
-   "Completed Form 2102 – Request for Universal Apostille",
+   "Completed Form 2102 \u2013 Request for Universal Apostille",
    "The original Texas-notarized document or certified copy of the public record",
    "Payment ($15 per document)",
    "A prepaid, pre-addressed return envelope or printed carrier label (no 'Bill Sender' or handwritten air bills)"
@@ -209,7 +209,7 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "5 to 7 business days after receipt (not including mailing time).",
-  "walkin_time": "Processed while you wait; walk-ins 8 a.m.–4:30 p.m. Mon–Fri. The office asks you to arrive by 4 p.m., and notes the public entrance to the North Office Building closes at 3 p.m.",
+  "walkin_time": "Processed while you wait; walk-ins 8 a.m.\u20134:30 p.m. Mon\u2013Fri. The office asks you to arrive by 4 p.m., and notes the public entrance to the North Office Building closes at 3 p.m.",
   "payment": "Personal check, money order or cashier's check payable to 'Commonwealth of Pennsylvania' (U.S. institution, or U.S. dollars with routing number). No cash by mail.",
   "addresses": [
    "North Office Building, 401 North Street, Room 201, Harrisburg, PA 17120"
@@ -286,7 +286,7 @@
   "mail": true,
   "walk_in": true,
   "mail_time": "Normally one to two business days.",
-  "walkin_time": "Typically under twenty minutes; 9:00 a.m.–4:00 p.m. Mon–Fri, no appointment.",
+  "walkin_time": "Typically under twenty minutes; 9:00 a.m.\u20134:00 p.m. Mon\u2013Fri, no appointment.",
   "payment": "By mail: check or money order payable to GSCCCA, or credit card through the GSCCCA Credit Card Pre-Payment Voucher System. Walk-in: cash, check, money order or credit card.",
   "addresses": [
    "GSCCCA, Attn: Notary Division, 1875 Century Blvd., Ste. 100, Atlanta, GA 30345"
@@ -359,7 +359,7 @@
   "fee_note": "$3 per document. In-person expedite fee: $25 (limit 6 documents). Documents going to Puerto Rico or a U.S. territory need an $18 notarial capacity certificate.",
   "mail": true,
   "walk_in": true,
-  "mail_time": "10–20 business days by mail.",
+  "mail_time": "10\u201320 business days by mail.",
   "walkin_time": "In person (walk-in) with the $25 expedite fee, limit 6 documents. Effective November 2, 2026, Phoenix Business Services is by appointment only (book online); in-person service will no longer be at the 1700 W. Washington St. Executive Tower, and the appointment location is given when you book. Tucson office: 400 West Congress, Suite 221.",
   "payment": "Check or money order payable to \"Arizona Secretary of State.\" Do not send cash by mail.",
   "addresses": [
@@ -598,5 +598,54 @@
   ],
   "summary": "Virginia apostilles come from the Secretary of the Commonwealth's Authentication Division in Richmond for $10 per document ($5 for each additional document signed by the same official on the same date for the same country). Mail them in or book a Monday-to-Thursday appointment, where most are done the same day; mail usually takes 7 to 10 business days, but the office currently warns of about 4 weeks for the holiday season.",
   "last_reviewed": "2026-11-15"
+ },
+ {
+  "slug": "massachusetts",
+  "name": "Massachusetts",
+  "abbr": "MA",
+  "authority": "Secretary of the Commonwealth, Public Records Division, Commissions Section",
+  "fee": 6,
+  "fee_note": "$6 per document for an apostille or certification, by check or money order payable to the Commonwealth of Massachusetts. Cash is not recommended because the office cannot refund cash lost in transit.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The office says mailed requests are processed within two to three weeks. It does not publish a separate return-shipping time.",
+  "walkin_time": "At the Boston counter (One Ashburton Place, Room 1719) up to three documents per customer are done at the counter; four or more documents can be picked up after 3 p.m. on the next business day, and anything dropped off after 4 p.m. is picked up the next business day, with no exceptions. Requests can also be brought to the Springfield and Fall River offices, where the office says the number of documents and turnaround times vary. Office hours are not published on the apostille page.",
+  "payment": "Check or money order only, payable to the Commonwealth of Massachusetts. Credit cards are not accepted as pre-payment for express mail return services.",
+  "addresses": [
+   "Boston (mail or in person): Secretary of the Commonwealth, Commissions Section, One Ashburton Place, Room 1719, Boston, MA 02108",
+   "Springfield (mail or in person): Secretary of the Commonwealth, 436 Dwight Street, Room 102, Springfield, MA 01103",
+   "Fall River (mail or in person): Secretary of the Commonwealth, 218 South Main Street, Suite 206, Fall River, MA 02721"
+  ],
+  "phone": "617-727-2836 (Boston); 413-784-1376 (Springfield); 508-646-1374 (Fall River); email comm@sec.state.ma.us",
+  "what_to_send": [
+   "The completed Apostille/Certification Request Form",
+   "The original document(s), signed by a Massachusetts notary public, justice of the peace, city or town clerk (or assistant), court clerk (or assistant) or Registrar of Vital Records; photocopied signatures can't be certified",
+   "The country of destination for the documents",
+   "The fee: $6 per document, by check or money order payable to the Commonwealth of Massachusetts",
+   "A prepaid return envelope (first-class mail needs a self-addressed stamped envelope; FedEx, DHL or other express return needs a prepaid envelope with a billing account number)"
+  ],
+  "tips": [
+   "Massachusetts does not authenticate federal or out-of-state documents, and does not authenticate notarized copies of government-issued documents (for example a notarized photocopy of an FBI background check or of another state's certificate of good standing). FBI checks go to the U.S. Department of State.",
+   "For a Massachusetts school transcript or diploma, have the school registrar certify the record in front of a notary, who notarizes the registrar's signature; then send it for the apostille. Out-of-state school records must be certified by their own state.",
+   "Before you go, check that the notary signed exactly as commissioned, completed the notarial certificate, wrote the commission expiration date clearly, and applied a legible seal.",
+   "Certified copies of marriage certificates come from the city or town clerk where the license was filed; divorce decrees from the court clerk where the decree was filed; birth certificates from the Office of Vital Records (617-740-2600) or the local city or town clerk.",
+   "Missing information (such as the destination country) can delay the certification. If nothing is checked for the return method on the form, the order is held at the office for pickup."
+  ],
+  "sources": [
+   [
+    "Massachusetts Secretary of the Commonwealth: Apostilles and Certification of Documents",
+    "https://www.sec.state.ma.us/divisions/commissions/apostilles.htm"
+   ],
+   [
+    "Massachusetts Secretary of the Commonwealth: Information on Apostilles and Certificates of Appointment (PDF)",
+    "https://www.sec.state.ma.us/divisions/commissions/download/apostille_and_certification_information.pdf"
+   ],
+   [
+    "Massachusetts Secretary of the Commonwealth: Apostille/Certification Request Form (PDF)",
+    "https://www.sec.state.ma.us/divisions/commissions/download/authentication-form.pdf"
+   ]
+  ],
+  "summary": "Massachusetts apostilles come from the Secretary of the Commonwealth's Commissions Section for $6 per document, paid by check or money order. Walk in at One Ashburton Place, Room 1719, Boston (up to three documents done at the counter) or at the Springfield or Fall River office, or mail your request, which the office says is processed within two to three weeks.",
+  "last_reviewed": "2026-11-16"
  }
 ]
