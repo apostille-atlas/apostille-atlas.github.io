@@ -32,7 +32,7 @@ Reordered 2026-10-26: pages for people likely to need a paid service (cost, turn
 
 ## States (official Secretary of State / equivalent page required)
 - [x] state: Ohio (fee shown as $5 on the Ohio SOS forms & fees page; re-verify) — https://www.ohiosos.gov/records/apostilles-certifications/
-- [ ] state: Colorado
+- [x] state: Colorado (2026-11-17: /states/colorado/; CO SOS Apostilles and Authentications page, NAUTH request form PDF and Business Organizations fee schedule fetched today; $5 per document mail/drop-off, $15 expedited walk-in; no mail processing time published, office reports longer than normal waits)
 - [ ] state: Maryland
 - [ ] state: Minnesota
 - [ ] state: Tennessee

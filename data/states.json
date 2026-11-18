@@ -647,5 +647,52 @@
   ],
   "summary": "Massachusetts apostilles come from the Secretary of the Commonwealth's Commissions Section for $6 per document, paid by check or money order. Walk in at One Ashburton Place, Room 1719, Boston (up to three documents done at the counter) or at the Springfield or Fall River office, or mail your request, which the office says is processed within two to three weeks.",
   "last_reviewed": "2026-11-16"
+ },
+ {
+  "slug": "colorado",
+  "name": "Colorado",
+  "abbr": "CO",
+  "authority": "Colorado Secretary of State, Authentications Program",
+  "fee": 5,
+  "fee_note": "$5 per apostille or authentication for mail-in or drop-off (routine) service; $15 per apostille for expedited service, which is walk-in only. No credit or debit cards.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The office does not publish a processing time. It says it is experiencing longer than normal wait times, that mailed documents are worked in the order received and sent back as soon as possible, and that its mail goes through a state distribution center before reaching USPS. Documents are not processed on weekends or holidays.",
+  "walkin_time": "Expedited service ($15 per apostille) is for documents hand delivered to the Denver office before 4:30 PM. The office tries to process them while you wait and says expedited service can generally be completed in under an hour, but with heavy demand it may take longer and you may be asked to come back. Routine drop-off ($5) is also available; the office emails or phones you when documents are ready for pickup. Office hours are not published on the apostille page.",
+  "payment": "The request form says cash, check or money order are accepted (no credit or debit cards), but the office's general information page says expedited service must be paid by check or money order, so bring a check or money order to be safe. Make checks and money orders payable to \"Colorado Secretary of State\". Do not send cash through the mail. A CO SOS prepaid account can also be listed on the form.",
+  "addresses": [
+   "Mail or in person: Colorado Secretary of State, Authentications Program, 1700 Broadway, Ste. 550, Denver, CO 80290"
+  ],
+  "phone": "303-894-2200; email Authentications@coloradosos.gov",
+  "what_to_send": [
+   "The original document, with a Colorado notary public signature, or certified by Colorado Vital Records or by a Colorado County Clerk's office",
+   "The completed Apostilles & Authentications Request Form (NAUTH), listing the foreign country where the documents will be presented and the number of apostilles",
+   "Payment: $5 per apostille by check or money order payable to \"Colorado Secretary of State\" (no cash by mail)",
+   "Your return choice: hold for pickup, standard USPS return (free), or a prepaid FedEx or UPS label"
+  ],
+  "tips": [
+   "Colorado will not issue apostilles or authentications for documents used in the United States or its territories (American Samoa, Guam, the Northern Mariana Islands, Puerto Rico and the U.S. Virgin Islands).",
+   "The office does not notarize documents and offers no online apostilles. It does offer a free pre-check: email a PDF of your document to Authentications@coloradosos.gov and staff will review it and give feedback before you submit.",
+   "To avoid delays, signatures must be original (not stamped or photocopied), every blank must be filled in or crossed out, and the notary statement must be complete (state, county and date) and in English, even if the document is in another language.",
+   "Out-of-state government documents (birth, death or marriage certificates) can't be authenticated by Colorado, except as a certified copy made by a Colorado notary. Certificates of Naturalization: get a certified true copy from the U.S. Department of Homeland Security and send it to the U.S. Department of State.",
+   "If you include a prepaid FedEx or UPS label, don't put the Secretary of State's name or address as the return address, or the documents will be returned by standard mail.",
+   "Colorado birth and death certificates come from the Vital Records Office; marriage licenses, divorce decrees and other court documents come from the County Clerk and Recorder or Clerk of the District Court where they were issued."
+  ],
+  "sources": [
+   [
+    "Colorado Secretary of State: Apostilles and Authentications (general information)",
+    "https://www.coloradosos.gov/pubs/apostilles/general.html"
+   ],
+   [
+    "Colorado Secretary of State: Apostilles & Authentications Request Form (PDF)",
+    "https://www.coloradosos.gov/pubs/notary/forms/NAUTH.pdf"
+   ],
+   [
+    "Colorado Secretary of State: Business Organizations Fee Schedule",
+    "https://www.coloradosos.gov/pubs/info_center/fees/business.html"
+   ]
+  ],
+  "summary": "Colorado apostilles come from the Secretary of State's Authentications Program at 1700 Broadway, Suite 550, Denver, for $5 per document by mail or drop-off, or $15 for expedited walk-in service. The office does not publish a mail processing time and currently reports longer than normal waits; expedited walk-ins handed in before 4:30 PM can generally be completed in under an hour.",
+  "last_reviewed": "2026-11-17"
  }
 ]
