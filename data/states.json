@@ -694,5 +694,52 @@
   ],
   "summary": "Colorado apostilles come from the Secretary of State's Authentications Program at 1700 Broadway, Suite 550, Denver, for $5 per document by mail or drop-off, or $15 for expedited walk-in service. The office does not publish a mail processing time and currently reports longer than normal waits; expedited walk-ins handed in before 4:30 PM can generally be completed in under an hour.",
   "last_reviewed": "2026-11-17"
+ },
+ {
+  "slug": "maryland",
+  "name": "Maryland",
+  "abbr": "MD",
+  "authority": "Maryland Secretary of State, Certification Desk",
+  "fee": 5,
+  "fee_note": "$5 per document for an apostille or certification. By mail, pay by U.S. check or U.S. money order made out to the Secretary of State (one payment per order); in person you can also pay by credit or debit card.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The office publishes processing times by how you send it: regular mail is 7 to 14 business days; USPS Priority Mail is a maximum of 3-4 days; FedEx and UPS are around a 3-4 day turnaround. The Certification Desk is closed on Maryland state holidays.",
+  "walkin_time": "The official page currently says walk-in service is not available at this time and in-person service is by scheduled appointment (booked online from the page), with a limit of 10 documents per customer per day and space for no more than 2 family members. It warns that appointments may change because of building construction, and that once construction begins the office will move to mail-in only. Certification hours are 9 a.m. to 1 p.m., Monday through Friday. The page does not say whether in-person documents are done while you wait; call 410-974-5521 before going.",
+  "payment": "By mail: U.S. check or U.S. money order made out to the Secretary of State, one payment per order (don't staple the check). In person: check, money order, or credit or debit card.",
+  "addresses": [
+   "Mail: Certification Desk, Office of the Secretary of State, 16 Francis Street, 1st floor, Annapolis, MD 21401",
+   "In person (by appointment): Office of the Secretary of State, Wineland Building, 16 Francis Street, Annapolis, MD 21401"
+  ],
+  "phone": "410-974-5521 (Certification Desk); 410-260-3852 and email dlCertifications_sos@maryland.gov (certification of documents to be used outside the U.S.)",
+  "what_to_send": [
+   "The original document: a Maryland state or county issued document (for example a birth or death certificate, marriage certificate, divorce decree or criminal records status certification) with the seal and signature of the issuing department, or a notarized document already certified by the Clerk of the Circuit Court",
+   "The completed Mailing Checklist for Documents to be Certified for International Use, including the country where the documents will be used and a daytime phone number and email",
+   "Payment: $5 per document by U.S. check or U.S. money order made out to the Secretary of State (one payment per order; do not staple the check)",
+   "A postage-paid self-addressed return envelope, or a prepaid FedEx, UPS or other express envelope (keep your tracking numbers)"
+  ],
+  "tips": [
+   "Notarized documents need an extra step first: take the document to the Clerk of the Circuit Court in the county where the notary was commissioned (the county is on the notary's seal) to certify the notary, then send it to the Secretary of State. If a former Circuit Court clerk signed that certification, call 410-974-5521 to confirm it can be accepted.",
+   "School records (transcripts, grades, diplomas): get them from the school, have a notary open the sealed envelope and notarize the record, have the Circuit Court clerk in the notary's county certify the notary, then send it to the Secretary of State.",
+   "Federal documents such as FBI background checks, USCIS documents and born-abroad birth certificates go to the U.S. Department of State, not Maryland. Naturalization and immigration documents can't be notarized, whether originals or copies.",
+   "For a Hague Convention country you get an apostille and you're done. For a non-Hague country, Maryland issues a standard certification, which must then go to the U.S. Department of State before the destination country's embassy.",
+   "If you don't have a current copy of a state or county document, call 410-974-5521 to confirm the office can authenticate it. The office says it cannot guarantee that a foreign country will accept the document."
+  ],
+  "sources": [
+   [
+    "Maryland Secretary of State: Certifications and Authentication",
+    "https://sos.maryland.gov/Certifications/Pages/default.aspx"
+   ],
+   [
+    "Maryland Secretary of State: Mailing Checklist for Documents to be Certified for International Use (PDF)",
+    "https://sos.maryland.gov/Certifications/SiteAssets/Pages/default/check%20list%20FOR%20DOCUMENTS%20to%20be%20certified1.pdf"
+   ],
+   [
+    "Maryland Secretary of State: Contact Us",
+    "https://sos.maryland.gov/Pages/Contact-Us.aspx"
+   ]
+  ],
+  "summary": "Maryland apostilles come from the Secretary of State's Certification Desk at 16 Francis Street, Annapolis, for $5 per document. By mail, the office says regular mail takes 7 to 14 business days and USPS Priority, FedEx or UPS about 3-4 days; walk-in service is currently not available, so in-person visits are by appointment (9 a.m. to 1 p.m. weekdays, up to 10 documents).",
+  "last_reviewed": "2026-11-18"
  }
 ]
