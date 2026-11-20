@@ -741,5 +741,55 @@
   ],
   "summary": "Maryland apostilles come from the Secretary of State's Certification Desk at 16 Francis Street, Annapolis, for $5 per document. By mail, the office says regular mail takes 7 to 14 business days and USPS Priority, FedEx or UPS about 3-4 days; walk-in service is currently not available, so in-person visits are by appointment (9 a.m. to 1 p.m. weekdays, up to 10 documents).",
   "last_reviewed": "2026-11-18"
+ },
+ {
+  "slug": "minnesota",
+  "name": "Minnesota",
+  "abbr": "MN",
+  "authority": "Minnesota Secretary of State, Business Services (Apostille Authentication)",
+  "fee": 5,
+  "fee_note": "$5 per apostille certificate, issued per document (the office's example: a Minnesota birth certificate plus a three-page notarized transcript = two documents = $10). By mail, pay by check or money order made out to MN Secretary of State; at an in-person appointment you can also pay by credit card, debit card or cash.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The office does not publish a processing time. Its FAQ says documents are processed in the order they are received; sending your request overnight with a prepaid overnight return label speeds up delivery but does not speed up processing. For urgent requests when appointments are booked out, the office asks you to email apostille.oss@state.mn.us.",
+  "walkin_time": "No walk-ins: in-person service is by appointment only, booked online (sos.mn.gov/appointment) or by calling 651-296-2803, option 2. Appointments open fourteen days in advance and take up to 10 documents. The office does not say whether documents are finished while you wait, and it does not publish counter hours on its apostille page.",
+  "payment": "By mail: check or money order made out to MN Secretary of State (the request form also lists cashier's check, cash at your own risk, or charging a Secretary of State client account; no credit card or wire transfer by mail; U.S. dollars only). In person: credit card, debit card, cash, check or money order.",
+  "addresses": [
+   "Mail: Minnesota Secretary of State, First National Bank Building, 332 Minnesota Street, Suite N201, Saint Paul, MN 55101",
+   "In person (by appointment): same address, First National Bank Building, 332 Minnesota Street, Suite N201, Saint Paul, MN 55101"
+  ],
+  "phone": "651-296-2803, option 2; email apostille.oss@state.mn.us",
+  "what_to_send": [
+   "The original document: a Minnesota certified copy (for example a birth or death certificate from the Minnesota Department of Health, a marriage certificate, divorce decree or judgment certified by the county) or a document properly notarized by a Minnesota Notary Public. Photocopies of certified records are not accepted.",
+   "The completed Apostille/Authentication Request Form, with the number of documents and how you want them returned (pick up, your prepaid return envelope, or regular U.S. mail)",
+   "Payment: $5 per document by check or money order made out to MN Secretary of State",
+   "Optional: a prepaid FedEx, USPS Priority Mail or UPS label if you want tracking; otherwise the office returns documents by regular U.S. mail at no charge and without tracking"
+  ],
+  "tips": [
+   "Minnesota issues only one certificate, an apostille, for every foreign country, Hague member or not (since May 15, 2018). If the destination country does not accept an apostille, the office says to contact that country's embassy or consulate for your options.",
+   "Transcripts and diplomas from Minnesota schools, colleges and universities must be notarized by a Minnesota Notary Public; a school official's signature and seal alone is not accepted. If a school gives you a sealed envelope, the Secretary of State must open it to see the notarization.",
+   "The notarization must be in English and include all six elements of Minn. Stat. 358.65: jurisdiction, notarial statement, the title Notary Public, date, wet-ink signature and notary stamp. The notary's name and expiration date on the stamp must match the commission. The office does not notarize documents.",
+   "Remote or electronic notarization is not accepted: a printed document signed electronically by a Minnesota notary is treated as a copy and must be notarized again before an apostille can be issued.",
+   "FBI background checks go to the U.S. Department of State, not Minnesota. For a Minnesota state background check, get a notarized letter from the Bureau of Criminal Apprehension. Birth, death or school records from another state must be apostilled by that state.",
+   "Driver's licenses and passports: send a photocopy notarized as a true and correct copy by a Minnesota notary, never the original. A translation is apostilled separately from the certified record it translates, so it counts as a second document.",
+   "Conflicts between official pages: the apostille page lists check or money order for mail, while the request form it links to also allows cash (not recommended) or a client account. For more than 10 documents, the FAQ says to mail or drop them off with payment, while the appointment page says to contact the office for special arrangements. Ask apostille.oss@state.mn.us if either matters for you.",
+   "You can verify an apostille Minnesota issued on or after May 15, 2018 at apostille.sos.state.mn.us using its file number and date."
+  ],
+  "sources": [
+   [
+    "Minnesota Secretary of State: Apostille Authentication",
+    "https://www.sos.mn.gov/notary-apostille/apostille-authentication/"
+   ],
+   [
+    "Minnesota Secretary of State: Apostille/Authentication Information and Request Form (PDF)",
+    "https://www.sos.mn.gov/media/2264/authentication-mail-form.pdf"
+   ],
+   [
+    "Minnesota Secretary of State: How to Schedule an Appointment",
+    "https://www.sos.state.mn.us/business-liens/business-help/how-to-schedule-an-appointment/"
+   ]
+  ],
+  "summary": "Minnesota apostilles come from the Secretary of State at 332 Minnesota Street, Suite N201, Saint Paul, for $5 per document, by mail or by in-person appointment (no walk-ins). The office does not publish a processing time; it says requests are processed in the order received.",
+  "last_reviewed": "2026-11-19"
  }
 ]

@@ -78,6 +78,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 63. "Apostilled Local State Police clearance obtained within the last (6) months" / "applicants apostilled Birth Certificate" (official 13(a) visa requirement list, added 2026-11-14) — https://losangelespcg.org/consular-services-2/visa/spouse-or-unmarried-child-of-filipino-national/
 64. "The Consulate will no longer authenticate the signatures of public documents notarized by any US notary public..." (official notice, added 2026-11-14) — https://newyorkpcg.org/pcgny/consular-services/legalization-notarization/authentication-of-a-public-document-through-apostille/
 65. "What must I do to have my school records certified?" (official FAQ, added 2026-11-18) — https://sos.maryland.gov/Certifications/Pages/default.aspx
+66. "Do you accept remote or electronic notarization?" (official FAQ, added 2026-11-19) — https://www.sos.mn.gov/notary-apostille/apostille-authentication/
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -104,3 +105,4 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Backlog ideas this suggests: RON (23) (done 2026-11-11)
 - Philippines country guide (/guides/apostille-for-philippines/): 44, 61, 62, 63, 64
 - Maryland state page (/states/maryland/): the per-state set above, plus 65 (school records, answered in tips)
+- Minnesota state page (/states/minnesota/): the per-state set above, plus 66 (remote/electronic notarization, answered in tips)

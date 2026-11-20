@@ -34,7 +34,7 @@ Reordered 2026-10-26: pages for people likely to need a paid service (cost, turn
 - [x] state: Ohio (fee shown as $5 on the Ohio SOS forms & fees page; re-verify) — https://www.ohiosos.gov/records/apostilles-certifications/
 - [x] state: Colorado (2026-11-17: /states/colorado/; CO SOS Apostilles and Authentications page, NAUTH request form PDF and Business Organizations fee schedule fetched today; $5 per document mail/drop-off, $15 expedited walk-in; no mail processing time published, office reports longer than normal waits)
 - [x] state: Maryland (2026-11-18: /states/maryland/; MD SOS Certifications and Authentication page, mailing checklist PDF and Contact Us page fetched today; $5 per document; regular mail 7–14 business days, USPS Priority/FedEx/UPS about 3–4 days; walk-in not available, in person by appointment, may move to mail-in only during construction; Q65 logged)
-- [ ] state: Minnesota
+- [x] state: Minnesota (2026-11-19: /states/minnesota/; MN SOS Apostille Authentication page, Apostille/Authentication Information and Request Form PDF and How to Schedule an Appointment page fetched today; $5 per document; no processing time published, processed in order received; no walk-ins, in person by appointment only (up to 10 documents, booked 14 days ahead); mail payment wording conflict and >10-document conflict noted on page; Q66 logged)
 - [ ] state: Tennessee
 - [ ] state: Indiana
 - [ ] state: Missouri
