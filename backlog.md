@@ -35,7 +35,7 @@ Reordered 2026-10-26: pages for people likely to need a paid service (cost, turn
 - [x] state: Colorado (2026-11-17: /states/colorado/; CO SOS Apostilles and Authentications page, NAUTH request form PDF and Business Organizations fee schedule fetched today; $5 per document mail/drop-off, $15 expedited walk-in; no mail processing time published, office reports longer than normal waits)
 - [x] state: Maryland (2026-11-18: /states/maryland/; MD SOS Certifications and Authentication page, mailing checklist PDF and Contact Us page fetched today; $5 per document; regular mail 7–14 business days, USPS Priority/FedEx/UPS about 3–4 days; walk-in not available, in person by appointment, may move to mail-in only during construction; Q65 logged)
 - [x] state: Minnesota (2026-11-19: /states/minnesota/; MN SOS Apostille Authentication page, Apostille/Authentication Information and Request Form PDF and How to Schedule an Appointment page fetched today; $5 per document; no processing time published, processed in order received; no walk-ins, in person by appointment only (up to 10 documents, booked 14 days ahead); mail payment wording conflict and >10-document conflict noted on page; Q66 logged)
-- [ ] state: Tennessee
+- [x] state: Tennessee (2026-11-20: /states/tennessee/; TN SOS Apostille & Authentication Guide, SS-4504 request form PDF, accepted-documents flyer PDF, Business Services contact page and TN Office of Vital Records apostille article fetched today; $2 per document; mail time not published; walk-in 3rd floor, same day if in by 2:00 p.m. CT; payment method not on SOS pages (Vital Records: check to TN Secretary of State); hours conflict 4:15 vs 4:30 noted on page; Q67 logged)
 - [ ] state: Indiana
 - [ ] state: Missouri
 - [ ] state: Wisconsin

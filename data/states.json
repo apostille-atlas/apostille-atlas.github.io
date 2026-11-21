@@ -791,5 +791,64 @@
   ],
   "summary": "Minnesota apostilles come from the Secretary of State at 332 Minnesota Street, Suite N201, Saint Paul, for $5 per document, by mail or by in-person appointment (no walk-ins). The office does not publish a processing time; it says requests are processed in the order received.",
   "last_reviewed": "2026-11-19"
+ },
+ {
+  "slug": "tennessee",
+  "name": "Tennessee",
+  "abbr": "TN",
+  "authority": "Tennessee Secretary of State, Business Services Division (Office of Authentications, ATS Section)",
+  "fee": 2,
+  "fee_note": "$2 per apostille or authentication, charged per document (request form SS-4504: number requested x $2.00). Fees must be sent with the request. The Secretary of State's apostille guide and request form do not list accepted payment methods; the Tennessee Office of Vital Records says to pay the apostille fee by check made payable to the Tennessee Secretary of State.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The office does not publish a processing time for mailed requests. Documents sent without a proper prepaid express label are processed and returned by regular mail.",
+  "walkin_time": "Walk-in service at the customer service desk, 312 Rosa L. Parks Ave, 3rd Floor, Nashville, Monday to Friday 8:00 a.m. to 4:15 p.m. Central (closed state holidays). Arrive by 2:00 p.m. to receive same-day service. No appointment is mentioned.",
+  "payment": "Not listed on the Secretary of State's apostille guide or request form. The Tennessee Office of Vital Records says to pay the $2 apostille fee by check made payable to the Tennessee Secretary of State. Ask the Apostilles & Authentications Section (615-741-0536, TNSOS.ATS@tnsos.gov) before paying another way, especially in person.",
+  "addresses": [
+   "Mail: Office of Authentications, Tennessee Secretary of State, Business Services Division, ATTN: ATS Section, 312 Rosa L. Parks Ave, 6th Floor, Nashville, TN 37243",
+   "In person: customer service desk, 312 Rosa L. Parks Ave, 3rd Floor, Nashville, TN 37243"
+  ],
+  "phone": "615-741-0536 (Apostilles & Authentications Section); email TNSOS.ATS@tnsos.gov",
+  "what_to_send": [
+   "The original Tennessee public document: a vital record signed by the State Registrar (birth, death, marriage or divorce certificate) or a Secretary of State document needs no notarization; state and county records must have been certified within the past two years.",
+   "For notarized documents (school transcripts, diplomas, powers of attorney, affidavits): first have it notarized by a Tennessee notary, then have the notary's signature certified by the County Clerk of the county where the notary was commissioned. Tell the office the county of certification.",
+   "The completed Apostille or Authentication Request Form (SS-4504), naming the country where the document will be used (apostille for Hague countries, authentication for others)",
+   "Payment of $2 per document",
+   "Optional: a prepaid FedEx/UPS return label with your own name as both sender and recipient for express return; for an international return address a prepaid USPS International, DHL Express, FedEx International or UPS Worldwide label is required, plus any customs paperwork"
+  ],
+  "tips": [
+   "Tennessee adds a County Clerk step: a notarized document is not accepted until the County Clerk of the county where the notary was commissioned has certified the notary's signature.",
+   "Return labels must show your name as both the sender and the recipient; the office cannot use a label naming the Tennessee Secretary of State as sender. Documents going to an international address without the proper prepaid label are rejected.",
+   "Accepted (per the office's list): Tennessee vital records, state court records, TBI background checks, county records certified within two years, Tennessee school transcripts and diplomas (registrar or president signature notarized and county-certified), Tennessee motor vehicle records, and Tennessee notarized documents. A photocopy of a diploma, driver license or U.S. passport must be attached to an affidavit by the person it was issued to, notarized and county-certified; passport copies get an authentication only.",
+   "Not accepted: out-of-state documents, federal documents (except U.S. passport copies as above), foreign documents, documents to be used inside the U.S., and non-English documents unless a notarized, county-certified translator's statement and English translation are attached. FBI background checks go to the U.S. Department of State.",
+   "If you need a certified copy of a Tennessee vital record too, the Office of Vital Records will forward it to the Secretary of State for the apostille if you include a separate check for $2 per document made payable to the Tennessee Secretary of State.",
+   "An authentication (non-Hague country) must then be certified by the U.S. Department of State Office of Authentications; an apostille needs no further U.S. step.",
+   "Hours conflict between official pages: the apostille guide gives in-person apostille hours as 8:00 a.m. to 4:15 p.m. Central, while the Business Services contact page lists division hours of 8:00 a.m. to 4:30 p.m. Either way, arrive by 2:00 p.m. for same-day service.",
+   "You can verify a Tennessee apostille or authentication with the Secretary of State's online verification tool (tncab.tnsos.gov/portal/apostille-search)."
+  ],
+  "sources": [
+   [
+    "Tennessee Secretary of State: Apostille & Authentication Guide",
+    "https://sos.tn.gov/businesses/guides/apostille-authentication-guide"
+   ],
+   [
+    "Tennessee Secretary of State: Apostille or Authentication Request Form SS-4504 (PDF)",
+    "https://sos-prod.tnsosgovfiles.com/s3fs-public/division/Businesses/document/SS-4504.pdf"
+   ],
+   [
+    "Tennessee Secretary of State: Documents accepted for Apostille or Authentication (PDF)",
+    "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/Apostille%20Flyer.pdf"
+   ],
+   [
+    "Tennessee Secretary of State: Business Services contact page",
+    "https://sos.tn.gov/businesses/pages/contact-us"
+   ],
+   [
+    "Tennessee Department of Health, Office of Vital Records: How do I get an apostille on my certificate?",
+    "https://vitalrecords.tn.gov/hc/en-us/articles/36324720552979-I-have-been-told-that-I-need-to-get-an-apostille-on-my-certificate-How-do-I-do-that"
+   ]
+  ],
+  "summary": "Tennessee apostilles come from the Secretary of State's Office of Authentications at 312 Rosa L. Parks Ave, Nashville, for $2 per document, by mail or walk-in (no appointment mentioned). Arrive at the 3rd-floor counter by 2:00 p.m. Central for same-day service; the office does not publish a processing time for mail.",
+  "last_reviewed": "2026-11-20"
  }
 ]
