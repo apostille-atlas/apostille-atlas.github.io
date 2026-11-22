@@ -850,5 +850,55 @@
   ],
   "summary": "Tennessee apostilles come from the Secretary of State's Office of Authentications at 312 Rosa L. Parks Ave, Nashville, for $2 per document, by mail or walk-in (no appointment mentioned). Arrive at the 3rd-floor counter by 2:00 p.m. Central for same-day service; the office does not publish a processing time for mail.",
   "last_reviewed": "2026-11-20"
+ },
+ {
+  "slug": "indiana",
+  "name": "Indiana",
+  "abbr": "IN",
+  "authority": "Indiana Secretary of State, Business Services Division (Authentications)",
+  "fee": 2,
+  "fee_note": "$2.00 per apostille authentication (nonrefundable). No fee for birth and death certificates, adoption documents, and student transcripts and diplomas; the request form (State Form 56720) also exempts documents prepared by the Secretary of State and words the first item as Indiana birth and death certificates.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Mailed requests are processed daily; the office's FAQ says processing normally takes 1\u20132 business days from the date of receipt, plus return shipping. The office cannot provide expedited shipping, so include a prepaid expedited return label if the documents are time-sensitive.",
+  "walkin_time": "Walk-ins are accepted at 302 W. Washington Street, Room E-018, Indianapolis, Monday to Friday 8:00 a.m. to 4:30 p.m.: without an appointment the office processes up to 5 documents while you wait; with an appointment (priority service, booked online) up to 10. Larger requests need a self-addressed, stamped envelope: documents received by noon are mailed the next business day, after noon within two business days.",
+  "payment": "Mail: check or money order payable to \"Secretary of State\". In person: credit card, debit card, check or money order, paid on arrival.",
+  "addresses": [
+   "Mail: Indiana Secretary of State, Authentications, 302 W. Washington Street, Room E-018, Indianapolis, IN 46204",
+   "In person: same address, Room E-018 (the office says it has no branch offices)"
+  ],
+  "phone": "317-234-9768 (Apostilles and Authentications); email INBiz@sos.in.gov",
+  "what_to_send": [
+   "The original or a certified copy of the Indiana document. Birth, death, marriage and divorce certificates do not need notarization; any other document must be properly notarized, with a completed notarial certificate (notary's signature, seal, jurisdiction, date and signer's name).",
+   "The completed Request for Apostille Authentication (State Form 56720), naming the destination country",
+   "The fee: $2.00 per document unless exempt (birth and death certificates, adoption documents, student transcripts and diplomas)",
+   "A self-addressed, stamped return envelope (a prepaid return envelope is required for any international return); for overnight return include a pre-addressed, prepaid airbill"
+  ],
+  "tips": [
+   "Indiana charges no fee to apostille birth and death certificates, adoption documents, or student transcripts and diplomas, so many personal-document requests cost nothing beyond postage.",
+   "Indiana married couples: the marriage license must first be certified by the current circuit court clerk of the county where the marriage occurred. A divorce decree must be a copy of the final decree from the county where it was entered.",
+   "School transcripts and diplomas: the school's registrar or principal signs a statement certifying the record in front of a notary, who notarizes it; the office publishes a short-form example and advises checking the destination country's preferred method first.",
+   "Translations are not done by the office; a translation must be notarized before the office can process it.",
+   "Since July 1, 2022 Indiana issues one trilingual certificate format (Model Apostille Single Certificate) for all requests, stapled to the front of the signed page with a blue-ink state seal and a unique verification number. Do not remove the certificate: that invalidates it.",
+   "Not accepted: out-of-state documents (contact the issuing state), federal documents such as FBI background checks, citizenship documents and federal court documents (these go to the U.S. Department of State), and documents for use in the United States or Puerto Rico.",
+   "Mail return rules differ slightly between official pages: the web page says a self-addressed stamped envelope must be provided, while the request form says that without an envelope or label documents are returned by regular mail to the U.S. address on the form. Include the envelope to be safe.",
+   "Fee-exemption wording also differs: the web page lists birth and death certificates, adoption documents and transcripts/diplomas; the request form says Indiana birth and death certificates and adds documents prepared by the Secretary of State."
+  ],
+  "sources": [
+   [
+    "Indiana Secretary of State: Authentications (apostille page and FAQ)",
+    "https://www.in.gov/sos/business/apostilleauthentication/"
+   ],
+   [
+    "Indiana Secretary of State: Request for Apostille Authentication, State Form 56720 (PDF)",
+    "https://forms.in.gov/Download.aspx?id=16676"
+   ],
+   [
+    "Indiana Secretary of State: Business Services Division contact page (hours, walk-in, appointments)",
+    "https://www.in.gov/sos/business/contact-us/"
+   ]
+  ],
+  "summary": "Indiana apostilles come from the Secretary of State's Business Services Division, Room E-018, 302 W. Washington Street, Indianapolis, for $2 per document (birth and death certificates, adoption documents and transcripts/diplomas are free). Mail requests normally take 1\u20132 business days from receipt, and walk-ins get up to 5 documents done while they wait (10 with an appointment).",
+  "last_reviewed": "2026-11-21"
  }
 ]

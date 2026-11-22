@@ -80,6 +80,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 65. "What must I do to have my school records certified?" (official FAQ, added 2026-11-18) — https://sos.maryland.gov/Certifications/Pages/default.aspx
 66. "Do you accept remote or electronic notarization?" (official FAQ, added 2026-11-19) — https://www.sos.mn.gov/notary-apostille/apostille-authentication/
 67. "What documents are accepted for Apostille or Authentication?" (official FAQ, added 2026-11-20) — https://sos.tn.gov/businesses/faqs
+68. "I got married in Indiana. Can the Secretary of State authenticate my marriage license?" (official FAQ, added 2026-11-21) — https://www.in.gov/sos/business/apostilleauthentication/
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -108,3 +109,4 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Maryland state page (/states/maryland/): the per-state set above, plus 65 (school records, answered in tips)
 - Minnesota state page (/states/minnesota/): the per-state set above, plus 66 (remote/electronic notarization, answered in tips)
 - Tennessee state page (/states/tennessee/): the per-state set above, plus 67 (accepted documents, answered in tips)
+- Indiana state page (/states/indiana/): the per-state set above, plus 68 (marriage license, answered in tips)
