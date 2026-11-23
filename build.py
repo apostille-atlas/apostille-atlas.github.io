@@ -101,6 +101,9 @@ NEIGHBORS = {"alabama": "florida georgia mississippi tennessee", "alaska": "", "
  "utah": "arizona colorado idaho nevada new-mexico wyoming", "vermont": "massachusetts new-hampshire new-york",
  "virginia": "district-of-columbia kentucky maryland north-carolina tennessee west-virginia", "washington": "idaho oregon",
  "west-virginia": "kentucky maryland ohio pennsylvania virginia", "wisconsin": "illinois iowa michigan minnesota", "wyoming": "colorado idaho montana nebraska south-dakota utah"}
+POPULAR_GUIDES = [("Birth certificate apostille", "/guides/birth-certificate-apostille/"), ("FBI background check apostille", "/guides/fbi-background-check-apostille/"),
+    ("Apostille cost by state", "/guides/apostille-cost-by-state/"), ("Same-day and walk-in apostille offices", "/guides/same-day-and-walk-in-apostille-offices/"),
+    ("Diploma and transcript apostille", "/guides/diploma-and-transcript-apostille/")]
 HIGH_DEMAND = ["california", "new-york", "texas", "florida", "illinois"]  # most-asked states in research/questions.md
 strip = lambda h: re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", h))).strip()
 AN = lambda n: ("an " if n[:1] in "AEIO" else "a ") + n  # "an Ohio", "a Utah"
@@ -268,6 +271,7 @@ def state_body(s, states):
     if near: nearby += f'<h2>Apostilles in states near {e(s["name"])}</h2><div class="cards">' + "".join(card(o) for o in near) + "</div>"
     if pop: nearby += '<h2>Most-requested state apostille offices</h2><div class="cards">' + "".join(card(o) for o in pop) + "</div>"
     n = e(s["name"])
+    nearby += '<h2>Popular apostille guides</h2><ul>' + "".join(f'<li><a href="{u}">{t}</a></li>' for t, u in POPULAR_GUIDES) + '</ul>'
     return (f'<p class="lede">How to get an apostille on {AN(n)} document: which office issues it, the official fee (${s["fee"]} per document), how long it takes, and what to send. Every fact comes from the official {n} source listed at the bottom.</p>'
             + aff_box(s["slug"], s["authority"], s["fee"], s["sources"][0][1]) +
             f'<h2>Where do I send {AN(n)} apostille request, what does it cost, and how long does it take?</h2><table class="facts">{t}</table>'
@@ -373,6 +377,13 @@ GUIDE_LINKS = [("Apostille FAQ", "/faq/"), ("State or federal: which office?", "
                ("Apostille fees and processing times by state (data)", "/apostille-fees-by-state/"),
                ("Apostille directory by state", "/directory/")]
 
+def _most_searched(states):
+    have = {x["slug"]: x for x in states}
+    st = [have[x] for x in HIGH_DEMAND + ["washington", "virginia", "michigan", "arizona"] if x in have]
+    c = "".join(f'<a class="card" href="/states/{x["slug"]}/"><strong>{e(x["name"])} apostille</strong><small>${x["fee"]}/doc · {e(x["authority"].split(",")[0])}</small></a>' for x in st)
+    c += "".join(f'<a class="card" href="{u}"><strong>{t}</strong><small>Guide</small></a>' for t, u in POPULAR_GUIDES[:2])
+    return f'<h2>Most-searched guides</h2><div class="cards">{c}</div>'
+
 def main():
     global URLS, PAGES; URLS = []; PAGES = []
     if OUT.exists(): shutil.rmtree(OUT)
@@ -406,6 +417,10 @@ def main():
                 "https://travel.state.gov/en/replace-certify/authenticate-documents/request-services.html", federal=True))
         gbody = gbody.replace("<!--DIY_TABLE-->", diy_table(states)).replace("<!--WALKIN_TABLE-->", walkin_table(states)).replace("<!--COST_TABLE-->", cost_table(states))
         gbody = re.sub(r"<!--AFF:([a-z-]+):(.*?)-->", lambda mm: alink(AFF_URLS[mm.group(1)], mm.group(1).replace("-orig", ""), slug, mm.group(2)), gbody)
+        have = {x["slug"]: x for x in states}
+        popst = [have[x] for x in HIGH_DEMAND + ["washington", "virginia", "massachusetts"] if x in have]
+        gbody += ('<h2>Popular state apostille guides</h2><div class="cards">' + "".join(f'<a class="card" href="/states/{x["slug"]}/"><strong>{e(x["name"])} apostille</strong><small>${x["fee"]}/doc</small></a>' for x in popst) + '</div>'
+                  + '<p class="meta">Related guides: ' + " · ".join(f'<a href="{u}">{t}</a>' for t, u in POPULAR_GUIDES if u != f"/guides/{slug}/") + '</p>')
         pub = meta.get("date_published") or meta.get("datePublished") or meta.get("published") or meta.get("date")
         if not pub:
             first, _ = git_file_dates(g); pub = first
@@ -462,6 +477,7 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
          summary=f"There is no single national apostille office: each state apostilles its own documents, and the U.S. Department of State handles federal ones for $20. Among the {len(states)} states covered so far, official fees range from ${minfee} to ${maxfee} per document.")
     home = (f'<p class="lede">{e(C["tagline"])} Requests get sent back when a document goes to the wrong office or misses a prep step.</p>'
             '<p><a href="/directory/"><strong>Open the directory →</strong></a> · <a href="/apostille-fees-by-state/"><strong>Compare fees and processing times →</strong></a> · <a href="/faq/"><strong>Read the apostille FAQ →</strong></a></p>'
+            + _most_searched(states) +
             '<h2>Start here</h2><ol><li><a href="/guides/state-or-federal-which-office/">Is your document state or federal?</a></li><li><a href="/guides/hague-apostille-countries/">Does the destination country accept apostilles?</a></li><li>Open your state below.</li></ol>'
             f'<h2>States</h2><div class="cards">{scards}<a class="card" href="/guides/us-department-of-state/"><strong>Federal (U.S. Dept. of State)</strong><small>$20/doc · FBI checks, federal records</small></a></div>'
             f'<h2>Guides</h2><div class="cards">{gcards}</div>')
@@ -497,9 +513,13 @@ function run(){o.textContent='$'+f.value;document.querySelectorAll('#tbl tbody t
          '<p class="lede">This page has moved to the <a href="/directory/">apostille directory</a>.</p><p>There you can compare issuing offices, fees and walk-in options by state.</p>',
          h1="This page has moved", article=False, redirect="/directory/")
     sm = "".join(f"<url><loc>{SITE}{p['path']}</loc><lastmod>{p['lastmod']}</lastmod></url>" for p in PAGES)
-    (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
+    smx = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n'
+    (OUT / "sitemap.xml").write_text(smx); (OUT / "sitemap-pages.xml").write_text(smx)
+    newest = max(p["lastmod"] for p in PAGES)
+    (OUT / "sitemap_index.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>{SITE}/sitemap-pages.xml</loc><lastmod>{newest}</lastmod></sitemap></sitemapindex>\n')
+    (OUT / "sitemap.txt").write_text("".join(f"{SITE}{p['path']}\n" for p in PAGES))
     bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Googlebot", "Bingbot", "Applebot", "Applebot-Extended", "CCBot", "Perplexity-User", "Amazonbot", "DuckAssistBot", "Meta-ExternalAgent", "MistralAI-User", "YouBot"]
-    (OUT / "robots.txt").write_text("".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+    (OUT / "robots.txt").write_text("".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/sitemap_index.xml\nSitemap: {SITE}/sitemap-pages.xml\nSitemap: {SITE}/sitemap.txt\n")
     byp = {p["path"]: p for p in PAGES}
     L = lambda p: f"- [{byp[p]['title']}]({SITE}{p}): {byp[p]['desc']}"
     llms = (f"# {NAME}\n\n> Independent, plain-language directory of U.S. apostille offices: which office apostilles a document, the official fee, processing time and what to send, "
