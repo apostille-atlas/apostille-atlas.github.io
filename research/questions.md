@@ -81,6 +81,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 66. "Do you accept remote or electronic notarization?" (official FAQ, added 2026-11-19) — https://www.sos.mn.gov/notary-apostille/apostille-authentication/
 67. "What documents are accepted for Apostille or Authentication?" (official FAQ, added 2026-11-20) — https://sos.tn.gov/businesses/faqs
 68. "I got married in Indiana. Can the Secretary of State authenticate my marriage license?" (official FAQ, added 2026-11-21) — https://www.in.gov/sos/business/apostilleauthentication/
+69. "I need to get a Missouri SoS apostille for a couple of birth certificates... how long did it take. I am wondering if it's worth driving from St. Louis to Jefferson City" (added 2026-11-22) — https://www.reddit.com/r/missouri/comments/1o2mks9/secretary_of_state_apostille/
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -110,3 +111,4 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Minnesota state page (/states/minnesota/): the per-state set above, plus 66 (remote/electronic notarization, answered in tips)
 - Tennessee state page (/states/tennessee/): the per-state set above, plus 67 (accepted documents, answered in tips)
 - Indiana state page (/states/indiana/): the per-state set above, plus 68 (marriage license, answered in tips)
+- Missouri state page (/states/missouri/): the per-state set above, plus 69 (mail vs driving to Jefferson City, answered in tips)

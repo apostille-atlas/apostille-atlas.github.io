@@ -299,7 +299,8 @@ SRC_FOR = {"texas": {"fee": [3], "mail": [1], "walk": [1]},          # fee: Auth
            "maryland": {"fee": [0, 1], "mail": [0], "walk": [0]},
            "minnesota": {"fee": [0, 1], "mail": [0, 1], "walk": [0, 2]},
            "tennessee": {"fee": [1, 4], "mail": [0], "walk": [0, 3]},
-           "indiana": {"fee": [0, 1], "mail": [0], "walk": [0, 2]}}  # fee/appointments: How to Submit; holiday notice: Authentications   # walk-in: Form 8003 (per data note); others: listed Ohio pages
+           "indiana": {"fee": [0, 1], "mail": [0], "walk": [0, 2]},
+           "missouri": {"fee": [0, 3], "mail": [2], "walk": [1, 2]}}  # fee/appointments: How to Submit; holiday notice: Authentications   # walk-in: Form 8003 (per data note); others: listed Ohio pages
 DATA_PATH = "/apostille-fees-by-state/"; CSV_NAME = "apostille-fees-by-state.csv"
 def srcs(s, field):
     idx = SRC_FOR.get(s["slug"], {}).get(field) or list(range(len(s["sources"])))

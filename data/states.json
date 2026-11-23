@@ -900,5 +900,68 @@
   ],
   "summary": "Indiana apostilles come from the Secretary of State's Business Services Division, Room E-018, 302 W. Washington Street, Indianapolis, for $2 per document (birth and death certificates, adoption documents and transcripts/diplomas are free). Mail requests normally take 1\u20132 business days from receipt, and walk-ins get up to 5 documents done while they wait (10 with an appointment).",
   "last_reviewed": "2026-11-21"
+ },
+ {
+  "slug": "missouri",
+  "name": "Missouri",
+  "abbr": "MO",
+  "authority": "Missouri Secretary of State, Business Services: Notaries & Commissions Unit",
+  "fee": 10,
+  "fee_note": "$10 per certification or authentication (apostille). The office's examples: one document with several notarizations by the same notary is $10; several documents notarized by the same notary are $10 per document; one document with notarizations by different notaries is $10 per notary. State law caps the fee for certain adoption documents at $100 per child per adoption (or per group of children adopted at the same time). Credit card payments add a convenience fee of 2% + $0.25, paid to the e-payment vendor.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The office's Notary Handbook says documents received in the mail are given same-day or next-day service, plus mail time both ways. Documents come back by regular mail unless you include a prepaid envelope with an addressed air bill.",
+  "walkin_time": "Walk-in customers can receive same-day processing at 600 W. Main St., Room 322, Jefferson City (Notary Handbook: walk-in hours 8 a.m. to 4:30 p.m.; contact page: 8:00 a.m. to 4:00 p.m., Monday to Friday except legal holidays). The handbook says branch offices in St. Louis, Kansas City and Springfield can also provide this service.",
+  "payment": "Check or money order payable to the \"Secretary of State's Office\", or MasterCard, Visa, American Express or Discover (by mail, include the completed credit card payment sheet; card payments add a 2% + $0.25 convenience fee).",
+  "addresses": [
+   "Mail (apostille page and cover letter): Commissions, Secretary of State's Office, 600 West Main, Room 322, Jefferson City, MO 65101",
+   "Regular mail (contact page and Notary Handbook): Notaries & Commissions Unit, James C. Kirkpatrick State Information Center, PO Box 784, Jefferson City, MO 65102; use the 600 West Main, Room 322 street address for express deliveries",
+   "In person: James C. Kirkpatrick State Information Center, 600 West Main, Room 322, Jefferson City, MO 65101",
+   "Branch offices: 815 Olive Street, Suite 150, St. Louis, MO 63101 (314-340-7490); Kansas City State Office Building, 615 E. 13th St., Fifth Floor, Suite 513, Kansas City, MO 64106 (816-889-2925); Springfield State Office Building, 149 Park Central Sq., Suite 624, Springfield, MO 65806 (417-895-6330)"
+  ],
+  "phone": "573-751-2783; toll free 866-223-6535 (option 3); email commissions@sos.mo.gov",
+  "what_to_send": [
+   "The Missouri document, prepared as the office requires: birth certificate as a certified copy from the Bureau of Vital Records; marriage license as a certified copy from the Recorder of Deeds of the county of the marriage (or a statement related to marriage from Vital Records); divorce decree as a certified copy from the Circuit Clerk of the county where it is recorded; school documents as a certified copy from the school; notarized documents with the full notarization (notarial paragraph, notary's signature and seal)",
+   "The completed Apostille/Authentication Cover Letter, with the number of documents and the country of use",
+   "Payment: $10 per apostille/authentication by check or money order payable to the Secretary of State's Office, or the completed credit card payment sheet",
+   "A prepaid return envelope with an addressed air bill if you don't want regular-mail return (required for special delivery when paying by card)"
+  ],
+  "tips": [
+   "Mail or drive? The Notary Handbook says mailed documents get same-day or next-day service and walk-ins can get same-day processing, so the main difference is mail transit time both ways. If you go to a branch office (St. Louis, Kansas City, Springfield), call it first: the handbook lists branches for this service, but the apostille web page only gives the Jefferson City address.",
+   "Missouri birth certificates ordered through VitalChek can be forwarded straight to the Secretary of State: choose the \"Apostille/Authentication\" reason when ordering. Vital Records says certificates go to the Secretary of State about once a week, and the Secretary of State then contacts you for details and payment.",
+   "School documents: the registrar or other school authority signs a statement on the back of the diploma or transcript saying it is the original (or a copy of the original) and the date issued, in front of a notary who notarizes it. Don't alter the face of the diploma.",
+   "Missouri notaries cannot certify copies of birth or death certificates, divorce decrees or marriage licenses, and cannot certify documents from other states or countries; get certified copies from the issuing agency.",
+   "The office can forward finished documents directly to a third party (such as a consulate) if you enclose a stamped envelope addressed to them, and returns by overnight mail if you enclose a prepaid self-addressed mailer.",
+   "The destination country decides the certificate: an apostille for Hague Convention countries, an authentication for others.",
+   "Official pages differ on a few details: the contact page lists hours of 8:00 a.m. to 4:00 p.m., while the Notary Handbook gives walk-in hours of 8 a.m. to 4:30 p.m.; the apostille page and cover letter say checks are payable to the Secretary of State's Office, while the handbook says Director of Revenue; and the apostille page says to mail documents to 600 West Main, Room 322, while the contact page and handbook give PO Box 784 for regular mail. Follow the apostille page and cover letter, or call 573-751-2783 to confirm."
+  ],
+  "sources": [
+   [
+    "Missouri Secretary of State: Certification, Authentication, & Apostilles",
+    "https://www.sos.mo.gov/Business/Notary/notary/certify"
+   ],
+   [
+    "Missouri Secretary of State: Contact Notaries & Commissions (addresses, hours, branch offices)",
+    "https://www.sos.mo.gov/Business/Notary/notary/contact"
+   ],
+   [
+    "Missouri Secretary of State: Missouri Notary Handbook (PDF; Document Certification Information, pp. 87\u201389)",
+    "https://www.sos.mo.gov/CMSImages/Business/Notary/NotaryHandbook.pdf"
+   ],
+   [
+    "Missouri Secretary of State: Apostille/Authentication Cover Letter (PDF)",
+    "https://www.sos.mo.gov/CMSImages/Business/Notary/CoverLetterComplete.pdf"
+   ],
+   [
+    "Missouri Secretary of State: E-Payment Convenience Fees",
+    "https://www.sos.mo.gov/business/corporations/e_payment_fees"
+   ],
+   [
+    "Missouri DHSS Bureau of Vital Records: Order a Copy of a Vital Record (Authentication and Apostilles)",
+    "https://health.mo.gov/data/vitalrecords/obtain-vital-record.php"
+   ]
+  ],
+  "summary": "Missouri apostilles come from the Secretary of State's Notaries & Commissions Unit, 600 West Main, Room 322, Jefferson City, for $10 per certification or authentication. The office's Notary Handbook says mailed documents get same-day or next-day service and walk-in customers can get same-day processing; it also lists branch offices in St. Louis, Kansas City and Springfield.",
+  "last_reviewed": "2026-11-22"
  }
 ]
