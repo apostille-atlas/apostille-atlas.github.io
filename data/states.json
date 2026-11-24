@@ -963,5 +963,81 @@
   ],
   "summary": "Missouri apostilles come from the Secretary of State's Notaries & Commissions Unit, 600 West Main, Room 322, Jefferson City, for $10 per certification or authentication. The office's Notary Handbook says mailed documents get same-day or next-day service and walk-in customers can get same-day processing; it also lists branch offices in St. Louis, Kansas City and Springfield.",
   "last_reviewed": "2026-11-22"
+ },
+ {
+  "slug": "wisconsin",
+  "name": "Wisconsin",
+  "abbr": "WI",
+  "authority": "Wisconsin Secretary of State, Certification Desk (apostilles and authentications); the Wisconsin Department of Financial Institutions (DFI) also issues apostilles",
+  "fee": 10,
+  "fee_note": "Secretary of State: $10 per document for standard service, or $35 per document for expedited service (the FAQ describes this as an additional $25 expedited fee). Fees are per certificate issued, and a document can have multiple pages. DFI charges the same: $10 per document standard, $35 per document expedited.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Secretary of State standard service is estimated at 7-20 days from the day the office receives your documents (how-to page; the FAQ says 7-20 business days and the February 2026 order form says 7-10+ business days); expedited is 2-4 business days (how-to page) or 1-3 business days (FAQ and order form). Times are estimates and don't include shipping. DFI, which issues apostilles only, lists 3-7 business days standard and 1-2 business days expedited, not including mail time.",
+  "walkin_time": "Walk-in expedited service is generally available same-day at the Secretary of State's office, Room B41W in the basement of the Wisconsin State Capitol, Madison. Office hours: Monday, Tuesday, Wednesday and Friday 8:00 a.m. to 4:30 p.m.; Thursday 8:00 a.m. to 6:00 p.m.",
+  "payment": "Checks and money orders payable to \"Wisconsin Secretary of State\" (no starter checks, per the order form), or cash. The how-to page also lists card, and the instruction sheet lists Apple Pay and credit cards except American Express, but the FAQ and order form list only cash, check or money order. The office can't make change for bills larger than $50. Orders started in the online portal are paid online. DFI takes payment only through its online portal (credit card, debit card or e-check).",
+  "addresses": [
+   "USPS mail: Secretary of State, Certification Desk, P.O. Box 7848, Madison, WI 53707-7848",
+   "FedEx or UPS courier: Secretary of State, Certification Desk, State Capitol Mailroom, 17 W. Main Street, Madison, WI 53703-3960",
+   "In person / drop-off: Wisconsin State Capitol, Room B41W (basement level), Madison, WI 53703",
+   "DFI (apostilles only, order online first): Wisconsin Department of Financial Institutions, PO Box 7838, Madison, WI 53707-7838; physical address Division of Corporate and Consumer Services, 4822 Madison Yards Way, North Tower, Madison, WI 53705"
+  ],
+  "phone": "Secretary of State: (608) 266-8888 (ext. 5 on the denied-request checklist); Apostilles@wisconsin.gov. DFI: (608) 266-8915; DFIApostille@dfi.wisconsin.gov",
+  "what_to_send": [
+   "The Authentication & Apostille Order Form (one per destination country, and one per service speed if you split an order), naming the country that will receive the document; the office doesn't issue certificates for use in the United States or its territories",
+   "One original document for each certificate requested: a certified copy from the Wisconsin official who issued it (for example, a vital record from a Register of Deeds or the State Registrar), or a document fully notarized by a Wisconsin notary with wet-ink signature and a stamped or embossed seal",
+   "Payment: $10 per document standard or $35 per document expedited",
+   "A prepaid return USPS envelope or a self-addressed prepaid FedEx or UPS label, or tick in-person pickup in Room B41W (no DHL or FedEx Ground)"
+  ],
+  "tips": [
+   "Where is my document? The Secretary of State processes documents in the order received, with expedited orders first. Its FAQ asks you not to request a status update until more than 7 days after it received an expedited order, or more than 30 days for standard; email Apostilles@wisconsin.gov with the last name on the order form, the destination country, the date sent or received, and how you submitted it (drop off, USPS, FedEx, UPS).",
+   "Wisconsin has two competent authorities: the Secretary of State and the Department of Financial Institutions. Both issue apostilles for Hague Convention countries; only the Secretary of State issues authentications for non-Hague countries. DFI orders start in its online portal (free account), and DFI also offers e-Apostilles, but not for vital records.",
+   "Notarized documents: the Secretary of State accepts only wet-ink, stamped or embossed notarizations by a Wisconsin notary and cannot accept digital or electronic notarizations. Each notarization must show the venue (State of Wisconsin, county), an approved notarial statement, the date, and the notary's signature, seal and commission expiration date.",
+   "Vital records: don't alter or copy them; photocopies or notarized copies of vital records can't be processed. Hospital-created birth certificates and church-signed marriage certificates are refused; get a certified copy from the Register of Deeds or the State Registrar at the Vital Records Office.",
+   "School documents not issued by the University of Wisconsin (including high school and private college records) must first be certified by the school's registrar or another authorized official, with signature and title, and that signature notarized by a Wisconsin notary. The office won't process documents from schools outside Wisconsin.",
+   "The office cannot process federal documents (including FBI background checks), federal court documents, or vital records and other documents issued by another state or country.",
+   "You can start a Secretary of State order and pay in its online order portal (MyWisconsinID login required), but you still mail or deliver the documents; online orders are subject to cancellation if documents aren't received within 60 days.",
+   "Official pages differ on a few details: standard processing is 7-20 days (how-to page), 7-20 business days (FAQ) or 7-10+ business days (order form, rev. 2/2026); expedited is 2-4 business days (how-to page) or 1-3 business days (FAQ and order form); and the how-to page and instruction sheet list card payments (the sheet adds Apple Pay, no American Express) while the FAQ and order form list only cash, check or money order. DFI's own pages also differ: 3-7 and 1-2 business days on its fee page, up to 7 and 2 business days or less in its FAQ. Call (608) 266-8888 or email Apostilles@wisconsin.gov to confirm."
+  ],
+  "sources": [
+   [
+    "Wisconsin Secretary of State: Apostilles and Authentications (how-to, processing & fees, notarizing and school documents)",
+    "https://sos.wi.gov/Pages/Apostilles/howto.aspx"
+   ],
+   [
+    "Wisconsin Secretary of State: Apostilles FAQ",
+    "https://sos.wi.gov/Pages/Apostilles/FAQ.aspx"
+   ],
+   [
+    "Wisconsin Secretary of State: Authentication & Apostille Instructions (PDF)",
+    "https://sos.wi.gov/Documents/SOSWIApostille%26AuthenticationInstructionSheet.pdf"
+   ],
+   [
+    "Wisconsin Secretary of State: Authentication & Apostille Order Form (PDF, rev. 2/2026)",
+    "https://sos.wi.gov/Documents/SOSWIApostille%26AuthenticationOrderForm.pdf"
+   ],
+   [
+    "Wisconsin Secretary of State: Reasons for Denied Certificate Requests (PDF)",
+    "https://sos.wi.gov/Documents/DeniedCertificateRequestsChecklist2026.pdf"
+   ],
+   [
+    "Wisconsin DFI: Apostille General Information",
+    "https://dfi.wi.gov/Pages/ConsumerServices/ApostilleServices/GeneralInformation.aspx"
+   ],
+   [
+    "Wisconsin DFI: Apostille Fees",
+    "https://dfi.wi.gov/Pages/ConsumerServices/ApostilleServices/Fees.aspx"
+   ],
+   [
+    "Wisconsin DFI: Apostille FAQ",
+    "https://dfi.wi.gov/Pages/ConsumerServices/ApostilleServices/FAQApostille.aspx"
+   ],
+   [
+    "Wisconsin DFI: Online Filings (Apostille and e-Apostille)",
+    "https://dfi.wi.gov/Pages/ConsumerServices/ApostilleServices/OnlineFilings.aspx"
+   ]
+  ],
+  "summary": "Wisconsin apostilles and authentications come from the Secretary of State, Room B41W in the State Capitol in Madison, for $10 per document (standard, estimated 7-20 days) or $35 per document (expedited, a few business days); walk-in expedited service is generally same-day. The Department of Financial Institutions also issues apostilles online for the same fees.",
+  "last_reviewed": "2026-11-23"
  }
 ]
