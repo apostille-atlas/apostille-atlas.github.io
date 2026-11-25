@@ -83,6 +83,7 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 68. "I got married in Indiana. Can the Secretary of State authenticate my marriage license?" (official FAQ, added 2026-11-21) — https://www.in.gov/sos/business/apostilleauthentication/
 69. "I need to get a Missouri SoS apostille for a couple of birth certificates... how long did it take. I am wondering if it's worth driving from St. Louis to Jefferson City" (added 2026-11-22) — https://www.reddit.com/r/missouri/comments/1o2mks9/secretary_of_state_apostille/
 70. "Where is my document? When will my document be ready?" (official FAQ, added 2026-11-23) — https://sos.wi.gov/Pages/Apostilles/FAQ.aspx
+71. "Can I get documents authenticated in Portland?" (official FAQ, added 2026-11-24) — https://sos.oregon.gov/business/Pages/authenticating-documents-faq.aspx
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -114,3 +115,4 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Indiana state page (/states/indiana/): the per-state set above, plus 68 (marriage license, answered in tips)
 - Missouri state page (/states/missouri/): the per-state set above, plus 69 (mail vs driving to Jefferson City, answered in tips)
 - Wisconsin state page (/states/wisconsin/): the per-state set above, plus 70 (order status / when ready, answered in tips)
+- Oregon state page (/states/oregon/): the per-state set above, plus 71 (Portland vs Salem office, answered in tips)

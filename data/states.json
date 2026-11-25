@@ -1039,5 +1039,71 @@
   ],
   "summary": "Wisconsin apostilles and authentications come from the Secretary of State, Room B41W in the State Capitol in Madison, for $10 per document (standard, estimated 7-20 days) or $35 per document (expedited, a few business days); walk-in expedited service is generally same-day. The Department of Financial Institutions also issues apostilles online for the same fees.",
   "last_reviewed": "2026-11-23"
+ },
+ {
+  "slug": "oregon",
+  "name": "Oregon",
+  "abbr": "OR",
+  "authority": "Oregon Secretary of State, Corporation Division (authentications and apostilles)",
+  "fee": 10,
+  "fee_note": "$10 per document (per apostille or authentication). You need a separate apostille for each notarized document, or, as the brochure puts it, for each original public official signature, but one request form can list several documents. Oregon uses the same certificate for apostilles and authentications, so the fee is the same for every country.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The brochure says to allow 10 business days for regular mail; requests sent by FedEx or UPS (overnight or 2nd day) get priority handling and are processed within 2-3 business days. USPS Priority Mail and Express Mail get normal handling. The office's \"Where's My Form?\" box shows which receipt date it is working on: on 2026-11-24 it was processing apostille/authentication requests received 11/17/2026.",
+  "walkin_time": "In-person counter at the Public Service Building, 255 Capitol St. NE, Suite 151, Salem, open 8 a.m. to 5 p.m. Monday through Friday, excluding holidays. Arrive by 4:00 p.m. to ensure same-day processing; the office says some requests can take longer and can't be finished the same day. No appointment requirement is published, and there is no office in Portland.",
+  "payment": "Check or money order, or credit card (Visa, MasterCard, Discover or American Express) entered on the request form. The request form (rev. 6/25) says to make checks payable to \"Corporation Division\"; the 2022 brochure says \"State of Oregon\". Cash is not accepted by mail. The official pages don't separately list which payment methods the walk-in counter takes.",
+  "addresses": [
+   "Mail, FedEx/UPS and in person: Oregon Secretary of State, Corporation Division, Public Service Building, 255 Capitol St. NE, Suite 151, Salem, OR 97310-1327"
+  ],
+  "phone": "(503) 986-2200 (Contact Center: Monday-Thursday 8 a.m.-4:30 p.m., Friday 8 a.m.-12 p.m.); fax (503) 986-2300 (on the request form); email corporation.division@sos.oregon.gov (brochure) or the Corporation Division's online question form",
+  "what_to_send": [
+   "The Request for Apostille/Authentication form (or a brief cover letter with your name, phone number and contact details), naming the destination country and listing each document and the names on it",
+   "Each original notarized document (with a complete Oregon notarial certificate) or original certified copy; photocopies are not accepted",
+   "$10 per document by check, money order or credit card",
+   "A self-addressed stamped envelope (large size, to avoid damage), or a prepaid, pre-printed FedEx or UPS label for express return (for international return, FedEx, UPS or DHL); or choose pick-up in person"
+  ],
+  "tips": [
+   "Can I get documents authenticated in Portland? No. The Secretary of State's office is in Salem; mail or deliver your request to the Corporation Division, 255 Capitol St. NE, Suite 151, Salem, OR 97310. Oregon Vital Records (Center for Health Statistics) is in Portland, at 800 N.E. Oregon St., Suite 205, but it issues the certified copies, not the apostille.",
+   "Vital records: get an original certified copy from the Oregon Center for Health Statistics or the Oregon county where the event took place (marriage and divorce certificates from the Center for Health Statistics). County copies must show the printed name of the certifying clerk. Oregon can only authenticate Oregon vital records. If you order through VitalChek you can ship the record straight to the Corporation Division and send the request form, fee and return envelope or label separately; the office matches them up.",
+   "School records: the registrar (or principal) must sign a statement on the transcript or diploma certifying it, in front of an Oregon notary who notarizes that statement. The brochure has sample wording and says the statement should go on the back or on a separate sheet stapled to the document, not on its face.",
+   "Background checks from the Oregon State Police or a local sheriff or police department must be signed by an official from that office and that signature notarized. Oregon cannot authenticate a records check obtained online or an FBI check (those go to the U.S. Department of State); don't send fingerprint cards.",
+   "Court and county documents (for example divorce decrees and name changes) must be original certified copies showing the official's signature, printed name and title. Business documents on file with the Corporation Division can be apostilled as certified copies; bylaws or minutes not on file must be notarized first.",
+   "Electronic or remote (RON) notarizations: the Secretary of State says it currently can't attach apostilles to electronic documents, but a printout can be apostilled if the notary completes and attaches a certificate for special circumstances.",
+   "Translations: the office doesn't translate. Get the translation done and notarized, then send it for the apostille. Don't remove an apostille once attached; removal invalidates it.",
+   "Don't use a hand-written prepaid shipping label or just a card or account number: the office can't use them and will return the documents by regular mail.",
+   "Official pages differ on a few details: the request form (rev. 6/25) says checks are payable to \"Corporation Division\" while the 2022 brochure says \"State of Oregon\"; the delivery-options page and request form accept FedEx, UPS or DHL labels for international return, but the how-to page and FAQ mention only FedEx and UPS; and the help box on the delivery-options page lists phone hours as Monday-Thursday 8 a.m.-4:30 p.m. without the Friday 8 a.m.-12 p.m. hours shown on the contact page. The office doesn't publish a regular-mail processing time on its web pages; the 10-business-day figure is from the 2022 brochure. Call (503) 986-2200 to confirm."
+  ],
+  "sources": [
+   [
+    "Oregon Secretary of State: How to Get an Authentication (or Apostille)",
+    "https://sos.oregon.gov/business/Pages/how-to-get-authentication-apostille.aspx"
+   ],
+   [
+    "Oregon Secretary of State: Authenticating Documents (Apostille) FAQ",
+    "https://sos.oregon.gov/business/Pages/authenticating-documents-faq.aspx"
+   ],
+   [
+    "Oregon Secretary of State: Delivery Options (counter hours, FedEx/UPS processing, Where's My Form?)",
+    "https://sos.oregon.gov/business/Pages/delivery-options.aspx"
+   ],
+   [
+    "Oregon Secretary of State: Request for Apostille/Authentication form (PDF, rev. 6/25)",
+    "https://sos.oregon.gov/business/Documents/notary-forms/notary-request-for-authentication.pdf"
+   ],
+   [
+    "Oregon Secretary of State: Authentications and Apostilles brochure (PDF, 08/2022)",
+    "https://sos.oregon.gov/business/Documents/notary-pamphlets/1502-apost-auth.pdf"
+   ],
+   [
+    "Oregon Secretary of State: Contact Us (Corporation Division)",
+    "https://sos.oregon.gov/Pages/contact-us.aspx"
+   ],
+   [
+    "Oregon Secretary of State: Remote and Electronic Notarization FAQs",
+    "https://sos.oregon.gov/business/notary/Pages/remote-electronic-notarization-faq.aspx"
+   ]
+  ],
+  "summary": "Oregon apostilles and authentications come from the Secretary of State's Corporation Division, 255 Capitol St. NE, Suite 151, Salem, for $10 per document. Walk in by 4:00 p.m. (Monday-Friday) for same-day processing; FedEx or UPS requests are processed within 2-3 business days, and the brochure says to allow 10 business days for regular mail.",
+  "last_reviewed": "2026-11-24"
  }
 ]
