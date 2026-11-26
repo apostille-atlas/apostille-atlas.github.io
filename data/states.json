@@ -1105,5 +1105,76 @@
   ],
   "summary": "Oregon apostilles and authentications come from the Secretary of State's Corporation Division, 255 Capitol St. NE, Suite 151, Salem, for $10 per document. Walk in by 4:00 p.m. (Monday-Friday) for same-day processing; FedEx or UPS requests are processed within 2-3 business days, and the brochure says to allow 10 business days for regular mail.",
   "last_reviewed": "2026-11-24"
+ },
+ {
+  "slug": "nevada",
+  "name": "Nevada",
+  "abbr": "NV",
+  "authority": "Nevada Secretary of State, Copies Division (apostilles and certifications)",
+  "fee": 20,
+  "fee_note": "$20 per apostille or certification (Nevada issues an apostille for Hague Convention countries and a certification for non-Hague countries, at the same fee). Optional expedite fees are charged on top of the $20, per notary or official whose signature is authenticated: $75 for 24-hour, $125 for 4-hour, $500 for 2-hour and $1,000 for 1-hour service. Example from the fee schedule: one marriage certificate with 24-hour expedite = $95. Paying by credit card adds a non-refundable 2.5% processing fee.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "The official pages give different regular processing times: the main apostille page says \"Standard processing time 2 weeks\", the fee schedule page says regular processing is completed in approximately 4-6 weeks, and the order form (rev. 12/6/2024) says 4 weeks. On the Processing Dates page (last updated 11/24/2026) the office was processing apostille requests received 11/17/2026. Expedited requests are processed within the time frame selected (24, 4, 2 or 1 hour), counted from when the office receives the request in fileable form; the office can extend that if a signature can't be verified or during extreme volume. Mailing time is extra: documents are returned by First-Class Mail, even when expedited, unless you include a prepaid self-addressed envelope.",
+  "walkin_time": "Carson City: the counter at the Paul Laxalt Building, 401 North Carson Street, accepts drop-off requests during hours of operation (walk-ins welcome), and Hold for Pick-Up orders can be collected there. Las Vegas: drop box at the Civic Center office, 70 E. Bonneville Ave., during regular business hours (drop boxes are picked up at 10:30 a.m. and 2:30 p.m.; expedites start at those times); counter service is by appointment only, appointments are only offered for 1-hour or 2-hour expedited service, apostille pick-ups are only at the Civic Center office, and Las Vegas pick-up is only for expedited requests. The only faster turnaround the office publishes is paid expedite service (24, 4, 2 or 1 hour). The apostille pages don't list counter hours; customer service is Monday-Friday, 8 a.m.-5 p.m.",
+  "payment": "Check or money order payable to \"The Office of the Secretary of State\" (the main apostille page mentions only money order and card), or Visa, MasterCard, American Express or Discover using the ePayment Checklist (2.5% non-refundable card fee). The checklist says you can pay in person by cash, check or money order, but the contact page says cash is not accepted at the Las Vegas locations (credit card, check or money order only). Don't email the form or card details.",
+  "addresses": [
+   "Mail and Carson City walk-in drop-off: Nevada Secretary of State, 401 North Carson St., Carson City, NV 89701 (Paul Laxalt Building)",
+   "Las Vegas (drop box; appointment-only counter for 1-hour/2-hour expedites; apostille pick-up for expedited requests): Nevada Secretary of State, 70 E. Bonneville Ave., Las Vegas, NV 89101 (Civic Center Plaza)"
+  ],
+  "phone": "775-684-5708 (Copies Division / customer service, Monday-Friday 8 a.m.-5 p.m.); fax 775-684-5725; email sosmail@sos.nv.gov",
+  "what_to_send": [
+   "One completed, printed and signed Apostille/Certification Order Form (rev. 12/6/2024). Unsigned forms are rejected, and requests without a destination country are not processed (if sending to a consulate, enter that consulate's country). Give an email address and a valid return address. One form can cover several documents.",
+   "The original document: a certified copy of the Nevada record (photocopies are rejected) or a document notarized by a Nevada notary. Send only the complete documents you want authenticated.",
+   "Payment of $20 per apostille/certification plus any expedite fee: a check or money order payable to \"The Office of the Secretary of State\", or the ePayment Checklist for a card",
+   "Optional: a prepaid, self-addressed return envelope or label if you want tracked or courier return; otherwise documents come back by First-Class Mail (the office says requests without shipping are returned by First-Class Mail International, without tracking)"
+  ],
+  "tips": [
+   "How many forms and envelopes do I need for several documents? The office says you may use one order form for multiple documents and must submit the form, payment and documents together. The fee is $20 for each apostille, so five birth certificates are five apostilles ($100). If you want tracked return, include one prepaid self-addressed envelope or label big enough for the whole order; the office doesn't say it needs one envelope per document.",
+   "Why is my Nevada apostille taking so long? The official pages quote 2 weeks (main page), 4 weeks (order form) or about 4-6 weeks (fee schedule) for regular service, plus mailing time. Check the Processing Dates page, which shows the receipt date the office is working on (11/17/2026 as of the 11/24/2026 update), and call 775-684-5708 if your request is older. Expedite fees ($75-$1,000) are the only published way to speed it up.",
+   "Vital records and court records: order the certified copy first. Birth certificates come from the state Office of Vital Records and Statistics; marriage certificates from the County Clerk's Office where the license was issued (the Secretary of State lists every county clerk and recorder); divorce decrees from the court that granted the divorce. Photocopies are rejected.",
+   "Documents filed with the Secretary of State's Commercial Recordings (business filings) follow a different procedure: call the Copies Division at 775-684-5708 for instructions before sending.",
+   "Shipping labels: labels marked \"Bill to Sender\" with the Secretary of State listed as the sender can't be used; use \"Bill to Recipient\" if applicable. A prepaid return label can show your own address as both sender and recipient. FedEx doesn't allow handwritten address information.",
+   "The office can't call international phone numbers, so give an email address on the form if you live abroad.",
+   "The apostille is stapled to the front of the page bearing the notary's or official's signature, with Nevada's red state stamp placed across both. Don't remove the staple.",
+   "Under NRS 240.1657 you sign a declaration on the form that the document won't be used for a fraudulent or unlawful purpose; the office can refuse documents that weren't notarized under Nevada law.",
+   "Official pages differ on a few details: regular processing time (2 weeks on the main page, 4 weeks on the order form, about 4-6 weeks on the fee schedule); payment (the main page lists money order and card, while the submission instructions also accept checks); and cash (the ePayment Checklist mentions paying cash in person, but the contact page says the Las Vegas locations don't take cash). The apostille pages don't say whether electronically or remotely notarized documents can be apostilled, and don't list counter hours. Call 775-684-5708 to confirm."
+  ],
+  "sources": [
+   [
+    "Nevada Secretary of State: Apostille",
+    "https://www.nvsos.gov/businesses/apostille"
+   ],
+   [
+    "Nevada Secretary of State: Apostille Fee Schedule",
+    "https://www.nvsos.gov/businesses/apostille/fees"
+   ],
+   [
+    "Nevada Secretary of State: Submission Instructions for Authentication of Signature Request",
+    "https://www.nvsos.gov/businesses/apostille/completing-request-form"
+   ],
+   [
+    "Nevada Secretary of State: Apostille/Certification Fees, Instructions, Request Form and ePayment Checklist (PDF, rev. 12/6/2024)",
+    "https://www.nvsos.gov/home/showpublisheddocument/485/638693389611500000"
+   ],
+   [
+    "Nevada Secretary of State: How to Complete the Authentication Request Form (PDF)",
+    "https://www.nvsos.gov/home/showpublisheddocument/12501/638342630187570000"
+   ],
+   [
+    "Nevada Secretary of State: Contact Us (office locations, Las Vegas appointments and drop boxes)",
+    "https://www.nvsos.gov/sos-information/contact-us"
+   ],
+   [
+    "Nevada Secretary of State: Processing Dates (paper filings)",
+    "https://www.nvsos.gov/businesses/processing-dates"
+   ],
+   [
+    "Nevada Secretary of State: Nevada Clerks & Recorders",
+    "https://www.nvsos.gov/businesses/apostille/nevada-clerks-recorders"
+   ]
+  ],
+  "summary": "Nevada apostilles come from the Secretary of State, 401 North Carson St., Carson City (mail or walk-in drop-off), or the Las Vegas office drop box at 70 E. Bonneville Ave., for $20 per document. Regular processing is quoted as 2 to 4-6 weeks depending on the official page; 24-, 4-, 2- or 1-hour expedites cost $75-$1,000 extra.",
+  "last_reviewed": "2026-11-25"
  }
 ]
