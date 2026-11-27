@@ -86,6 +86,8 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 71. "Can I get documents authenticated in Portland?" (official FAQ, added 2026-11-24) — https://sos.oregon.gov/business/Pages/authenticating-documents-faq.aspx
 72. "How many envelopes do I need to apostille 5 birth certificates?" (do I need 5 forms and 5 return envelopes? apostille from Nevada; added 2026-11-25) — https://www.reddit.com/r/expats/comments/1rs7z09/how_many_envelopes_do_i_need_to_apostille_5_birth/
 73. "Has anyone sent documents to the state Secretary to get a apostille recently... I've been waiting 5 weeks already" (Nevada wait time; added 2026-11-25) — https://www.reddit.com/r/vegaslocals/comments/1ndbl26/apostille/
+74. "I'm on the need of getting a Certificate of Existence + getting it apostille... Getting the certificate at Utah's Division of Commerce office, apostille at Lt. Governor's Office" (Utah business document; added 2026-11-26) — https://www.reddit.com/r/SaltLakeCity/comments/1b9b71e/legit_agencybusiness_that_gets_official_documents/
+75. "Do I need to schedule an appointment to visit in person?" (official FAQ, Utah; added 2026-11-26) — https://authentications.utah.gov/frequently-asked-questions/
 
 ## Mapping to pages
 - FAQ hub (/guides/apostille-faq/): 1–4, 7, 10, 13, 16–18, 20, 23, 26, 34, 36, 42, 43, 39
@@ -119,3 +121,4 @@ X note: two X searches (`search_posts_all`) returned mostly service-provider ads
 - Wisconsin state page (/states/wisconsin/): the per-state set above, plus 70 (order status / when ready, answered in tips)
 - Oregon state page (/states/oregon/): the per-state set above, plus 71 (Portland vs Salem office, answered in tips)
 - Nevada state page (/states/nevada/): the per-state set above, plus 72 (forms/envelopes for several documents) and 73 (processing wait), answered in tips
+- Utah state page (/states/utah/): the per-state set above, plus 74 (Commerce certificate then Lt. Governor apostille) and 75 (appointment required), answered in tips

@@ -1176,5 +1176,83 @@
   ],
   "summary": "Nevada apostilles come from the Secretary of State, 401 North Carson St., Carson City (mail or walk-in drop-off), or the Las Vegas office drop box at 70 E. Bonneville Ave., for $20 per document. Regular processing is quoted as 2 to 4-6 weeks depending on the official page; 24-, 4-, 2- or 1-hour expedites cost $75-$1,000 extra.",
   "last_reviewed": "2026-11-25"
+ },
+ {
+  "slug": "utah",
+  "name": "Utah",
+  "abbr": "UT",
+  "authority": "Utah Office of the Lieutenant Governor, Authentications (apostilles and certificates of authentication)",
+  "fee": 5,
+  "fee_note": "$5 per document for mail-in paper requests (not same-day), and $5 per adoption document. In-person, same-day service at an appointment costs $20 per document; if 2 or more documents are signed by the same public official or notary, each additional document after the first costs $5 (\"Same Signer\" fee). Example from the official FAQ: 3 documents presented in person, all signed by the same Utah notary = $20 + $5 + $5 = $30. Inter-governmental authentications cost $20 per document. Digital (electronic) certificates cost the $5 state fee plus a vendor charge, which the official pages state differently: $55 (FAQ and the Document Authentication page's \"State Fees + $55\" label; the FAQ and the in-person form give $60 per digital document in total) or $69.95 (a note on the same Document Authentication page, collected by the state's contracted provider). Utah issues one universal certificate that works as an apostille for Hague countries and as a certificate of authentication for other countries, at the same fee.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Mail-in requests are processed within 1 to 3 business days from the date the office receives them; mailing time is extra, and USPS mail takes a couple of extra days because it goes through State Mail and a security check (the office suggests FedEx or UPS). Online orders (digital certificates) and in-person appointments are processed the same day. Documents are not processed on weekends or state and federal holidays, and the office says it offers no other expedited service. Mail-in requests must be started online first through the state's ApostilleXpress portal.",
+  "walkin_time": "No walk-ins: in-person service at the Utah State Capitol, 350 North State Street, Suite 220, Salt Lake City, is by appointment only. Advance appointments open 2 weeks ahead; limited day-of appointments open at 10 a.m. each business day for same-day afternoon slots. Documents are ready about 10 to 15 minutes after your appointment time (the FAQ and the Document Authentication page differ) and up to 2 hours on busy days. Office hours are Monday to Friday, 8 a.m. to 5 p.m., excluding state and federal holidays; the pages don't list appointment times.",
+  "payment": "All major credit cards, checks or money orders payable to \"State of Utah\", or cash in person (the office strongly discourages mailing cash). Payment is due at the time of processing. Online orders are paid online; for mail-in, the Document Authentication page says to include a check, money order or card information on the form, while the FAQ and news pages describe paying online, so check which applies when you place the order.",
+  "addresses": [
+   "In person (appointment only) and courier (UPS, FedEx): Office of the Lieutenant Governor, Utah State Capitol Building, 350 North State Street, Suite 220, Salt Lake City, UT 84114 (parking on the east side of the Capitol Hill complex)",
+   "USPS mail: Office of the Lieutenant Governor, PO Box 142325, Salt Lake City, UT 84114",
+   "Online (digital certificates, and the first step of every mail-in request): the state's contracted ApostilleXpress portal, apostille-xpress.com/utah"
+  ],
+  "phone": "801-538-1041; fax 801-538-1133; email authentications@utah.gov (listed on the request form)",
+  "what_to_send": [
+   "Mail-in: first submit your request online through ApostilleXpress (apostille-xpress.com/utah), then mail a printed copy of your online order delivery form",
+   "The original document(s): a certified copy issued by a Utah state agency, court or county clerk (for example a birth certificate from Vital Records or a divorce decree from the District Court Clerk), or a document properly notarized by a Utah notary with a complete notarial certificate",
+   "Payment of $5 per document (check or money order payable to \"State of Utah\", or card information on the form, per the Document Authentication page)",
+   "A self-addressed return envelope, ideally prepaid with tracking; without a prepaid label the office returns documents by USPS First Class Mail with no tracking. Mailed documents can't be picked up in person, and the office drop box has been discontinued.",
+   "In person (appointment only): bring the In-Person Document Authentication Request Form, completely filled out before your appointment, with the original documents and payment ($20 per document, $5 per additional same-signer document)"
+  ],
+  "tips": [
+   "Do I need an appointment in Utah? Yes. The official FAQ says the office does not accept walk-ins. Book up to 2 weeks ahead, try the limited day-of slots that open at 10 a.m. each business day, or order online instead. Arrive with the paper form completely filled out, or other appointments may be processed ahead of yours.",
+   "Utah business documents (for example a Certificate of Existence): the document must be a certified copy from the Utah Department of Commerce and notarized at the Department. Emailed or printed copies are not accepted. Then submit it to the Lieutenant Governor's office.",
+   "Digital (e-Apostille) option: since September 3, 2026 you can order online and receive the certificate by email, verifiable on the state's e-Register (verifyapostille.utah.gov). Digital certificates are not available for birth or death certificates or anything issued by the Utah Division of Vital Records and Statistics. Check that your destination authority accepts digital apostilles before ordering.",
+   "Power of attorney: the office authenticates it only if the notary does not attest to the contents of the document (unless the notary is also a licensed attorney). The office can't notarize and authenticate in the same visit, and doesn't translate documents.",
+   "Utah only authenticates Utah documents and Utah notarizations. FBI background checks and other federal documents go to the U.S. Department of State; federal court documents are authenticated by the federal court that issued them.",
+   "Official pages differ on a few details: the digital vendor charge ($55 on top of the $5 state fee, i.e. $60 per document, in the FAQ, on the Document Authentication page and on the in-person form, but $69.95 in a separate note on the Document Authentication page); how soon in-person documents are ready (10 minutes in the FAQ, 15 minutes on the Document Authentication page, up to 2 hours on both); how mail-in requests are paid (check or card information on the form vs paying online); and walk-ins (the address section is labelled \"Walk-ins & Physical Address\", but the FAQ says walk-ins are not accepted). The Contact Us page still shows an older closure list than the home page. The pages don't say whether electronically or remotely notarized documents can be authenticated. Call 801-538-1041 to confirm."
+  ],
+  "sources": [
+   [
+    "Utah Lieutenant Governor: Document Authentication (Apostille / Certificate): fees, processing, payment, mail-in and addresses",
+    "https://authentications.utah.gov/process-from-home-page/"
+   ],
+   [
+    "Utah Lieutenant Governor: Authentications FAQs",
+    "https://authentications.utah.gov/frequently-asked-questions/"
+   ],
+   [
+    "Utah Lieutenant Governor: Schedule An Appointment",
+    "https://authentications.utah.gov/schedule/"
+   ],
+   [
+    "Utah Lieutenant Governor: Types of Documents",
+    "https://authentications.utah.gov/type-of-document-from-home-page/"
+   ],
+   [
+    "Utah Lieutenant Governor: Request Forms",
+    "https://authentications.utah.gov/request-form/"
+   ],
+   [
+    "Utah Lieutenant Governor: In-Person Document Authentication Request Form (PDF)",
+    "https://authentications.utah.gov/wp-content/uploads/In-Person-Form-Nov-23.pdf"
+   ],
+   [
+    "Utah Lieutenant Governor: Changes Effective July 1st 2026",
+    "https://authentications.utah.gov/updates/changes-effective-july-1st-2026/"
+   ],
+   [
+    "Utah Lieutenant Governor: Online Ordering Now Available (September 3, 2026)",
+    "https://authentications.utah.gov/updates/online-ordering-now-available-for-apostille-and-authentication-requests/"
+   ],
+   [
+    "Utah Lieutenant Governor: Authentications Contact Us (address, phone, office hours)",
+    "https://authentications.utah.gov/contact-us/"
+   ],
+   [
+    "Utah Lieutenant Governor: Authentications home page (2026 closure notice, office hours)",
+    "https://authentications.utah.gov/"
+   ]
+  ],
+  "summary": "Utah apostilles come from the Lieutenant Governor's office, 350 North State Street, Suite 220, Salt Lake City: $5 per document by mail (processed in 1-3 business days after receipt, plus mailing time) or $20 per document at a same-day in-person appointment (no walk-ins). You can also order a digital certificate online for the $5 state fee plus a vendor charge.",
+  "last_reviewed": "2026-11-26"
  }
 ]
