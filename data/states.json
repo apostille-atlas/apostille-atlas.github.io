@@ -1254,5 +1254,71 @@
   ],
   "summary": "Utah apostilles come from the Lieutenant Governor's office, 350 North State Street, Suite 220, Salt Lake City: $5 per document by mail (processed in 1-3 business days after receipt, plus mailing time) or $20 per document at a same-day in-person appointment (no walk-ins). You can also order a digital certificate online for the $5 state fee plus a vendor charge.",
   "last_reviewed": "2026-11-26"
+ },
+ {
+  "slug": "connecticut",
+  "name": "Connecticut",
+  "abbr": "CT",
+  "authority": "Connecticut Secretary of the State, Authentications and Apostilles",
+  "fee": 40,
+  "fee_note": "$40 per document, or $15 per document when it is for the adoption of a child (Connecticut General Statutes \u00a73-99a, confirmed by Public Act 26-81 for both apostilles and authentications). Expedited service adds $50 (the statute's expedite fee; the Secretary's 2022 order form lists expedited as $90 per document, i.e. $40 + $50). Adoption documents can't be expedited, and a rejected document forfeits the expedite fee (order forms). Under Public Act 26-81 an e-Apostille costs the same as a paper one. The Secretary's current apostille page doesn't list fees; the amounts above come from the statute, the Legislature's summary of PA 26-81 and the Secretary's order forms, which can no longer be used to order.",
+  "mail": true,
+  "walk_in": true,
+  "mail_time": "Regular orders are processed within 5-7 business days of the Authentications and Apostilles unit receiving the documents; expedited orders and e-Apostilles within 24 hours of receipt (the page's FAQ says an e-Apostille is processed within 1 business day of a complete application). Mailing time is extra; the office calls USPS the slower method and FedEx, UPS or DHL the preferred one. Every order must first be placed online at sots.service.ct.gov/apostille (paper order forms are not accepted).",
+  "walkin_time": "You can hand-deliver documents (after placing the order online) to 165 Capitol Avenue, Suite 1000, Hartford, but the official page doesn't describe any same-day or counter service, and the Secretary's 2022 order form says expedited service is not available while you wait. Expedited orders are processed within 24 hours of receipt. Drop-off hours aren't published; customer support is Monday to Friday, 8:30 a.m. to 4:00 p.m.",
+  "payment": "Not stated on the current apostille page. The Secretary's older paper order forms (now retired, since orders must be placed online) accepted credit card, check payable to \"Secretary of the State\", or cash (not by mail). Check the payment options in the online system when you order.",
+  "addresses": [
+   "FedEx, UPS, DHL or hand delivery (preferred): Secretary of the State, Authentications and Apostilles, 165 Capitol Avenue, Suite 1000, Hartford, CT 06106",
+   "USPS mail (slower): Secretary of the State, Authentications and Apostilles, P.O. Box 150470, Hartford, CT 06115-0470",
+   "Online ordering (required for every order; upload documents here for an e-Apostille): sots.service.ct.gov/apostille"
+  ],
+  "phone": "860-509-6002 (option 4), Monday to Friday 8:30 a.m. to 4:00 p.m.; email BSD@ct.gov",
+  "what_to_send": [
+   "First, create an account and place your order online at sots.service.ct.gov/apostille (paper order forms are not accepted). For an e-Apostille, upload the document there instead of mailing it.",
+   "The original or a certified copy of each document, signed by a Connecticut public official or notarized by a Connecticut notary, with an original signature and/or seal, notarized or certified within the last 10 years",
+   "Your printed order receipt; if you can't print it, write your APO Work Order number on a note with your documents",
+   "A prepaid, pre-addressed return envelope or prepaid shipping label (FedEx, UPS, DHL or USPS). Without prepaid shipping, documents come back by first-class mail; international return requires a prepaid label.",
+   "Send it to Suite 1000, 165 Capitol Avenue, Hartford, CT 06106 by courier or hand delivery, or to P.O. Box 150470, Hartford, CT 06115-0470 by USPS"
+  ],
+  "tips": [
+   "Can a copy be authenticated? Yes, according to the official FAQ, if the copy comes with a written statement that it is true and accurate, sworn to and signed before a Connecticut notary public.",
+   "How will my document come back? By the prepaid FedEx, UPS, DHL or USPS label you include; if you don't include prepaid shipping, by first-class mail. For return to an address outside the U.S. you must provide a prepaid shipping label.",
+   "e-Apostille: since July 6, 2026 Connecticut issues electronic apostilles for eligible documents. Vital records (birth, death, marriage and adoption certificates) still need a paper apostille. An e-Apostille is not valid if printed; confirm the receiving agency accepts it before ordering. Paper and e-Apostilles can be checked on the state's verification portal (sots.service.ct.gov/apostille/apostilleverification).",
+   "Documents the office can't authenticate: anything signed by an out-of-state notary, federal documents (send those to the U.S. Department of State), out-of-state vital records, court papers or school transcripts, and documents an attorney signed as a Commissioner of the Superior Court. Certified copies of Connecticut birth, death and marriage records come from your Town Clerk or the Department of Public Health Vital Records Unit.",
+   "No apostille for U.S. territories: Connecticut won't issue one for documents going to Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa or the Northern Mariana Islands, because they aren't foreign countries. Since July 21, 2025 the office issues a single certificate type for all legalization requests.",
+   "Official sources differ or are silent on a few details: fees and payment methods aren't on the current apostille page (fees come from the statute, PA 26-81 and the older order forms, and the forms list expedited either as an \"additional $50\" or as \"$90 per document\"); e-Apostille processing is \"within 24 hours\" in one section and \"within one (1) business day\" in the FAQ; the phone number is 860-509-6002 on the current page but 860-509-6100 on the older order form. The page doesn't say whether remotely notarized documents are accepted, whether the expedite fee applies to e-Apostilles, or what the hand-delivery hours are. Call 860-509-6002 (option 4) to confirm."
+  ],
+  "sources": [
+   [
+    "Connecticut General Assembly: General Statutes Chapter 33, \u00a73-99a (fees: $40 per document, $15 adoption, $50 expedite)",
+    "https://www.cga.ct.gov/current/pub/chap_033.htm"
+   ],
+   [
+    "Connecticut Secretary of the State: Authentication of Documents and the Apostille (online ordering, addresses, processing times, FAQ, contact)",
+    "https://portal.ct.gov/sots/legislative-services/authentication-of-documents-and-the-apostille"
+   ],
+   [
+    "Connecticut General Assembly, Office of Legislative Research: Public Act 26-81 summary (apostille/authentication fee $40, $15 adoption, same fee for electronic format)",
+    "https://prdext2.cga.ct.gov/2026/sum/pdf/2026SUM00081-R01SB-00294-SUM.pdf"
+   ],
+   [
+    "Connecticut Secretary of the State: Authentication/Apostille Order Form (updated 2.16.2022, PDF; paper orders no longer accepted)",
+    "https://portal.ct.gov/-/media/sots/mgmtsupservices/forms/updated_authentications_form_rev2-2022.pdf"
+   ],
+   [
+    "Connecticut Secretary of the State: older Authentication/Apostille Order Form (PDF)",
+    "https://portal.ct.gov/-/media/SOTS/Authentication/Authentication-Order-Form.pdf"
+   ],
+   [
+    "Connecticut Secretary of the State: Making Apostilles Easy, new online tool (press release, 09/02/2025)",
+    "https://portal.ct.gov/sots/press-releases/previous-years/2025-press-releases/making-apostilles-easy---secretary-thomas-unveils-new-online-tool"
+   ],
+   [
+    "HCCH: e-APP notification No. 10 of 2026 (Connecticut e-Apostilles, e-Register, online-only orders since September 2025)",
+    "https://assets.hcch.net/docs/1623ae44-4c9f-43ed-8cf0-df18703d4a7d.pdf"
+   ]
+  ],
+  "summary": "Connecticut apostilles come from the Secretary of the State's Authentications and Apostilles unit in Hartford: you order online at sots.service.ct.gov/apostille, then mail or hand-deliver the documents (or upload them for an e-Apostille). The fee set by state law is $40 per document ($15 for child adoption documents), plus $50 for expedited service. Regular orders are processed within 5-7 business days of receipt; expedited orders and e-Apostilles within 24 hours.",
+  "last_reviewed": "2026-11-27"
  }
 ]
